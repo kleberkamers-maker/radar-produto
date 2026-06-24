@@ -1,0 +1,259 @@
+/* ============================================================================
+   Avantpro Design System — Colors & Typography
+   Canonical tokens for avantpro-ml, avantpro-shp, avantpro-amz.
+   Source of truth: brandbook.md §6, §7, §8 + visual-foundations.md
+   ============================================================================ */
+
+/* ---------- Font: Roboto (official family font) -------------------------- */
+/* Loaded from Google Fonts CDN. Weights: 300 / 400 / 500 / 700 / 800.
+   No local .ttf files required; if a project needs to self-host,
+   drop the weights into fonts/ and adjust @font-face here. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&display=swap");
+
+:root {
+  /* ======================================================================
+     1. BRAND PALETTE  — blue is the recognition axis
+     ====================================================================== */
+  --color-brand-50:   #E7F5FC;   /* soft backgrounds, light states */
+  --color-brand-400:  #00BFFF;   /* accents, links, gradient support */
+  --color-brand-500:  #1278F9;   /* focus, hover, active border, interaction */
+  --color-brand-700:  #271BEF;   /* primary CTA, highlight, active */
+
+  /* ======================================================================
+     2. SURFACE / NEUTRAL  — operational shell
+     ====================================================================== */
+  --color-surface-base:    #FBFBFC;  /* application background */
+  --color-surface-raised:  #FFFFFF;  /* cards, dialogs, elevated */
+  --color-border-default:  #D3D4D6;  /* borders, dividers, fields */
+  --color-neutral-900:     #1C1F26;  /* strong contrast */
+
+  /* ======================================================================
+     3. TEXT
+     ====================================================================== */
+  --color-text-default:  #1C1F26;   /* primary text */
+  --color-text-muted:    #626262;   /* secondary, metadata, placeholder */
+  --color-text-on-brand: #FFFFFF;   /* text on brand.700 and gradients */
+
+  /* ======================================================================
+     4. FEEDBACK (semantic — use only with real meaning)
+     ====================================================================== */
+  --color-success:  #16A34A;
+  --color-danger:   #DB0000;
+
+  /* ======================================================================
+     5. OFFICIAL GRADIENTS  — signature, not default texture
+     ====================================================================== */
+  --gradient-brand:      linear-gradient(135deg, #00BFFF 0%, #271BEF 100%);
+  --gradient-brand-dark: linear-gradient(135deg, #271BEF 0%, #1C1F26 100%);
+
+  /* ======================================================================
+     6. MARKETPLACE ACCENTS  (contextual only — never full recolor of shell)
+     ====================================================================== */
+  --mp-ml-yellow:    #FFE400;
+  --mp-ml-orange:    #F4AB00;
+  --mp-ml-blue:      #040994;
+
+  --mp-amz-orange:   #FE9E2F;
+  --mp-amz-orange-2: #EA7D00;
+  --mp-amz-navy:     #20344C;
+
+  --mp-shp-orange:   #FF774A;
+  --mp-shp-red:      #FF2E1C;
+  --mp-shp-gray:     #EAEAEA;
+
+  --mp-tiktok-pink:  #FF3F7A;
+  --mp-tiktok-red:   #FF0350;
+  --mp-tiktok-cyan:  #00F7EE;
+
+  --mp-shein-dark:   #232323;
+  --mp-shein-black:  #0D0D0D;
+  --mp-shein-gray:   #EAEAEA;
+
+  --mp-magalu-sky:   #57B1FF;
+  --mp-magalu-blue:  #0189FF;
+  --mp-magalu-gray:  #EAEAEA;
+
+  /* ======================================================================
+     7. TYPOGRAPHY  — base
+     ====================================================================== */
+  --font-family-brand: "Roboto", ui-sans-serif, system-ui, -apple-system,
+                       "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Weights actually used by the family */
+  --font-weight-light:       300;
+  --font-weight-regular:     400;
+  --font-weight-medium:      500;
+  --font-weight-bold:        700;
+  --font-weight-extrabold:   800;
+
+  /* Type scale — see brandbook §8.2 / visual-foundations §5.2 */
+  --font-size-display-hero: 64px;
+  --font-size-h1:           40px;
+  --font-size-h2:           32px;
+  --font-size-h3:           24px;
+  --font-size-body-lg:      20px;
+  --font-size-body-md:      16px;
+  --font-size-body-sm:      14px;
+
+  --line-height-display: 1.0;
+  --line-height-heading: 1.1;
+  --line-height-body:    1.4;   /* 140% — mandatory for body */
+
+  --letter-spacing-default: 0;   /* keep letter-spacing at 0 */
+
+  /* ======================================================================
+     8. SPACING SCALE  (short, repeatable — visual-foundations §6.1)
+     ====================================================================== */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  /* ======================================================================
+     9. CONTROL HEIGHTS
+     ====================================================================== */
+  --control-height-sm: 32px;
+  --control-height-md: 40px;
+  --control-height-lg: 48px;
+  --row-height-table:  44px;
+
+  /* ======================================================================
+     10. ICON SIZES — Lucide outline
+     ====================================================================== */
+  --icon-size-xs: 16px;   /* helper text, table, inline */
+  --icon-size-sm: 20px;   /* forms, menus, lists */
+  --icon-size-md: 24px;   /* headers, cards */
+  --icon-size-lg: 32px;   /* empty states, onboarding */
+
+  /* ======================================================================
+     11. RADIUS
+     ====================================================================== */
+  --radius-sm:   6px;    /* badges */
+  --radius-md:   8px;    /* default Button, Input, Card */
+  --radius-lg:   12px;   /* Dialog, Popover, highlight cards */
+  --radius-full: 9999px; /* pills, chips */
+
+  /* ======================================================================
+     12. SHADOW  (discreet — brandbook §7.3)
+     ====================================================================== */
+  --shadow-xs:    0 1px 2px rgba(28, 31, 38, 0.04);
+  --shadow-sm:    0 1px 3px rgba(28, 31, 38, 0.06), 0 1px 2px rgba(28, 31, 38, 0.04);
+  --shadow-md:    0 4px 12px rgba(28, 31, 38, 0.08);
+  --shadow-lg:    0 10px 24px rgba(28, 31, 38, 0.10);
+  --shadow-focus: 0 0 0 3px rgba(18, 120, 249, 0.25);  /* brand.500 @ 25% */
+
+  /* ======================================================================
+     13. MOTION — minimal, no bounce
+     ====================================================================== */
+  --motion-fast:   120ms;
+  --motion-base:   180ms;
+  --motion-slow:   240ms;
+  --motion-easing: cubic-bezier(0.2, 0, 0, 1);  /* ease-out, operational */
+}
+
+/* ============================================================================
+   SEMANTIC ELEMENT STYLES
+   ============================================================================ */
+
+html, body {
+  font-family: var(--font-family-brand);
+  font-size:   var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+  letter-spacing: var(--letter-spacing-default);
+  color: var(--color-text-default);
+  background: var(--color-surface-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- Headings ---- */
+.avantpro-display {
+  font-size:   var(--font-size-display-hero);
+  font-weight: var(--font-weight-light);     /* hero is light; use 800 only on emphasis words */
+  line-height: var(--line-height-display);
+  letter-spacing: -0.02em;
+}
+.avantpro-display strong,
+.avantpro-display em {
+  font-weight: var(--font-weight-extrabold);
+  font-style: normal;
+}
+
+h1, .avantpro-h1 {
+  font-size:   var(--font-size-h1);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-heading);
+}
+
+h2, .avantpro-h2 {
+  font-size:   var(--font-size-h2);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-heading);
+}
+
+h3, .avantpro-h3 {
+  font-size:   var(--font-size-h3);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-height-heading);
+}
+
+/* ---- Body ---- */
+p, .avantpro-body {
+  font-size:   var(--font-size-body-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.avantpro-body-lg {
+  font-size:   var(--font-size-body-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.avantpro-body-sm,
+small,
+.avantpro-label,
+.avantpro-helper {
+  font-size:   var(--font-size-body-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-body);
+}
+
+.avantpro-label {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-default);
+}
+
+.avantpro-helper,
+.avantpro-muted {
+  color: var(--color-text-muted);
+}
+
+/* ---- Links ---- */
+a {
+  color: var(--color-brand-500);
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--motion-easing);
+}
+a:hover   { color: var(--color-brand-700); text-decoration: underline; }
+a:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+  border-radius: 2px;
+}
+
+/* ---- Focus ring (universal rule) ---- */
+.avantpro-focus:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus);
+}

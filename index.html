@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/avantpro-design-system-ea63d63d-1f35-41ae-acf3-cf8dd4557a5d/colors_and_type.css">
+<script src="_ds/avantpro-design-system-ea63d63d-1f35-41ae-acf3-cf8dd4557a5d/_ds_bundle.js"></script>
+<style>
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  .radar-dot{transition:transform 160ms cubic-bezier(0.2,0,0,1), box-shadow 160ms;}
+  .radar-dot:hover{transform:scale(1.35)!important; z-index:8!important;}
+  .demand-card{transition:border-color 160ms, box-shadow 160ms;}
+  .demand-card:hover{border-color:#1278F9!important; box-shadow:0 4px 12px rgba(28,31,38,0.08)!important;}
+  .chip{transition:background 140ms, color 140ms, border-color 140ms;}
+  .scroll::-webkit-scrollbar{width:8px;height:8px;}
+  .scroll::-webkit-scrollbar-thumb{background:#D3D4D6;border-radius:4px;}
+  .scroll::-webkit-scrollbar-track{background:transparent;}
+</style>
+</helmet>
+<div style="min-height:100vh;background:#FBFBFC;font-family:'Roboto',system-ui,sans-serif;color:#1C1F26;">
+  <div style="max-width:1320px;margin:0 auto;padding:24px 28px 48px;">
+
+    <!-- Header -->
+    <div style="display:flex;align-items:flex-start;gap:14px;margin-bottom:22px;">
+      <div style="width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,#00BFFF 0%,#271BEF 100%);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 1px 3px rgba(28,31,38,0.06);">
+        <img src="https://unpkg.com/lucide-static@latest/icons/radar.svg" width="22" height="22" alt="" aria-hidden="true" style="filter:brightness(0) invert(1);">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <div style="display:flex;align-items:baseline;gap:10px;">
+          <h1 style="margin:0;font-size:28px;font-weight:300;line-height:1.1;color:#1C1F26;">Radar de produto</h1>
+          <span style="font-size:12px;font-weight:500;color:#626262;letter-spacing:.04em;text-transform:uppercase;">Avantpro</span>
+        </div>
+        <p style="margin:4px 0 0;font-size:14px;color:#626262;max-width:680px;">Quanto mais ao centro, mais quente a demanda. As direções do radar são as business units.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:18px;flex-shrink:0;">
+        <div style="text-align:right;">
+          <div style="font-size:24px;font-weight:300;line-height:1;">{{ total }}</div>
+          <div style="font-size:12px;color:#626262;">demandas</div>
+        </div>
+        <div style="width:1px;height:34px;background:#D3D4D6;"></div>
+        <div style="text-align:right;">
+          <div style="font-size:24px;font-weight:300;line-height:1;color:#DB0000;">{{ hotCount }}</div>
+          <div style="font-size:12px;color:#626262;">quentes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter toolbar -->
+    <div style="background:#fff;border:1px solid #D3D4D6;border-radius:12px;padding:14px 16px;margin-bottom:20px;display:flex;flex-wrap:wrap;align-items:center;gap:18px;box-shadow:0 1px 2px rgba(28,31,38,0.04);">
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:12px;font-weight:500;color:#626262;">Business unit</span>
+        <div style="display:flex;gap:6px;">
+          <sc-for list="{{ buChips }}" as="chip" hint-placeholder-count="5">
+            <button type="button" class="chip" onClick="{{ chip.onClick }}" style="{{ chip.styleObj }}">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="width:1px;height:24px;background:#E5E7EB;"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:12px;font-weight:500;color:#626262;">Temperatura</span>
+        <div style="display:flex;gap:6px;">
+          <sc-for list="{{ tempChips }}" as="chip" hint-placeholder-count="4">
+            <button type="button" class="chip" onClick="{{ chip.onClick }}" style="{{ chip.styleObj }}">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="flex:1;"></div>
+      <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;background:#fff;border:1px solid #D3D4D6;border-radius:8px;min-width:220px;">
+        <img src="https://unpkg.com/lucide-static@latest/icons/search.svg" width="16" height="16" alt="" aria-hidden="true" style="opacity:.5;">
+        <input value="{{ q }}" onInput="{{ onSearch }}" placeholder="Buscar por título, responsável..." style="flex:1;min-width:0;border:0;outline:0;background:transparent;font-family:inherit;font-size:14px;color:#1C1F26;">
+      </div>
+      <button type="button" onClick="{{ onClear }}" class="chip" style="display:flex;align-items:center;gap:6px;height:36px;padding:0 12px;background:transparent;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:13px;font-weight:500;color:#626262;cursor:pointer;">
+        <img src="https://unpkg.com/lucide-static@latest/icons/rotate-ccw.svg" width="14" height="14" alt="" aria-hidden="true" style="opacity:.6;">Limpar
+      </button>
+    </div>
+
+    <!-- Loading / error states -->
+    <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
+      <div style="text-align:center;padding:72px 24px;">
+        <div style="font-size:15px;color:#626262;">Carregando demandas da planilha…</div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#FEE2E2;border:1px solid #FECACA;border-radius:12px;padding:16px 20px;margin-bottom:20px;color:#DB0000;font-size:14px;">
+        Erro ao carregar planilha: {{ error }}
+      </div>
+    </sc-if>
+
+    <!-- Main grid -->
+    <div style="display:grid;grid-template-columns:560px 1fr;gap:22px;align-items:start;">
+
+      <!-- Radar panel -->
+      <div style="background:#fff;border:1px solid #D3D4D6;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(28,31,38,0.06);position:sticky;top:24px;">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;flex-wrap:wrap;">
+          <span style="font-size:13px;font-weight:500;color:#1C1F26;">Temperatura</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#626262;"><span style="width:10px;height:10px;border-radius:50%;background:#DB0000;"></span>Quente</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#626262;"><span style="width:10px;height:10px;border-radius:50%;background:#F59E0B;"></span>Morno</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#626262;"><span style="width:10px;height:10px;border-radius:50%;background:#1278F9;"></span>Frio</span>
+        </div>
+
+        <div style="position:relative;width:520px;height:520px;margin:6px auto 0;">
+          <svg width="520" height="520" viewBox="0 0 520 520" style="position:absolute;inset:0;">
+            <circle cx="260" cy="260" r="234" fill="#F2F8FE"></circle>
+            <circle cx="260" cy="260" r="159" fill="#FFFBEB"></circle>
+            <circle cx="260" cy="260" r="84" fill="#FEF2F2"></circle>
+            <circle cx="260" cy="260" r="234" fill="none" stroke="#D3D4D6" stroke-width="1"></circle>
+            <circle cx="260" cy="260" r="159" fill="none" stroke="#E5E7EB" stroke-width="1"></circle>
+            <circle cx="260" cy="260" r="84" fill="none" stroke="#E5E7EB" stroke-width="1"></circle>
+            <line x1="260" y1="260" x2="26"  y2="260" stroke="#D3D4D6" stroke-width="1"></line>
+            <line x1="260" y1="260" x2="161" y2="48"  stroke="#D3D4D6" stroke-width="1"></line>
+            <line x1="260" y1="260" x2="394" y2="68"  stroke="#D3D4D6" stroke-width="1"></line>
+            <line x1="260" y1="260" x2="485" y2="325" stroke="#D3D4D6" stroke-width="1"></line>
+            <line x1="260" y1="260" x2="260" y2="494" stroke="#D3D4D6" stroke-width="1"></line>
+            <circle cx="260" cy="260" r="3" fill="#9CA3AF"></circle>
+          </svg>
+
+          <!-- BU labels — 5 sectors -->
+          <div style="position:absolute;top:10px;left:12px;text-align:left;">
+            <div style="font-size:15px;font-weight:700;color:#271BEF;">OM</div>
+            <div style="font-size:11px;color:#626262;">Operations management</div>
+          </div>
+          <div style="position:absolute;top:10px;left:50%;transform:translateX(-50%);text-align:center;">
+            <div style="font-size:15px;font-weight:700;color:#271BEF;">Partner</div>
+          </div>
+          <div style="position:absolute;top:140px;right:12px;text-align:right;">
+            <div style="font-size:15px;font-weight:700;color:#271BEF;">DA</div>
+            <div style="font-size:11px;color:#626262;">Data analysis</div>
+          </div>
+          <div style="position:absolute;bottom:60px;right:12px;text-align:right;">
+            <div style="font-size:15px;font-weight:700;color:#271BEF;">Admin</div>
+            <div style="font-size:11px;color:#626262;">Avantpro admin: dados</div>
+          </div>
+          <div style="position:absolute;bottom:10px;left:12px;text-align:left;">
+            <div style="font-size:15px;font-weight:700;color:#271BEF;">IO</div>
+            <div style="font-size:11px;color:#626262;">Internal operations</div>
+          </div>
+
+          <!-- Dots -->
+          <sc-for list="{{ dots }}" as="dot" hint-placeholder-count="0">
+            <button type="button" class="radar-dot" onClick="{{ dot.select }}" onMouseEnter="{{ dot.onEnter }}" onMouseLeave="{{ dot.onLeave }}" style="{{ dot.styleObj }}"></button>
+          </sc-for>
+
+          <!-- Hover summary card -->
+          <sc-if value="{{ hovered }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ hovered.style }}">
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;">
+                <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:11px;font-weight:500;">{{ hovered.buLabel }}</span>
+                <span style="{{ hovered.tempBadge }}">{{ hovered.tempLabel }}</span>
+              </div>
+              <div style="font-size:14px;font-weight:500;color:#1C1F26;line-height:1.3;">{{ hovered.title }}</div>
+              <div style="margin-top:4px;font-size:12px;color:#626262;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ hovered.desc }}</div>
+              <div style="display:flex;align-items:center;gap:6px;margin-top:10px;padding-top:8px;border-top:1px solid #F1F2F4;font-size:12px;color:#626262;">
+                <img src="https://unpkg.com/lucide-static@latest/icons/user.svg" width="13" height="13" alt="" aria-hidden="true" style="opacity:.55;">{{ hovered.responsavel }}
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </div>
+
+      <!-- Demands list -->
+      <div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+          <h2 style="margin:0;font-size:18px;font-weight:500;color:#1C1F26;">Demandas</h2>
+          <span style="font-size:13px;color:#626262;">{{ count }} de {{ total }}</span>
+        </div>
+
+        <sc-if value="{{ hasNone }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#fff;border:1px solid #D3D4D6;border-radius:12px;padding:48px 24px;text-align:center;">
+            <img src="https://unpkg.com/lucide-static@latest/icons/search-x.svg" width="32" height="32" alt="" aria-hidden="true" style="opacity:.4;">
+            <div style="margin-top:12px;font-size:15px;font-weight:500;">Nenhuma demanda encontrada</div>
+            <div style="margin-top:4px;font-size:14px;color:#626262;">Ajuste os filtros para ver mais resultados.</div>
+          </div>
+        </sc-if>
+
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <sc-for list="{{ list }}" as="item" hint-placeholder-count="6">
+            <div class="demand-card" onClick="{{ item.select }}" style="{{ item.cardStyle }}">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+                <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ item.buLabel }}</span>
+                <span style="{{ item.tempBadge }}">{{ item.tempLabel }}</span>
+                <span style="{{ item.statusBadge }}">{{ item.statusLabel }}</span>
+                <span style="flex:1;"></span>
+                <span style="font-size:12px;color:#9CA3AF;font-weight:500;">{{ item.jira }}</span>
+              </div>
+              <div style="font-size:16px;font-weight:500;color:#1C1F26;line-height:1.35;">{{ item.title }}</div>
+              <div style="margin-top:4px;font-size:14px;color:#626262;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">{{ item.desc }}</div>
+              <div style="display:flex;align-items:center;gap:16px;margin-top:12px;padding-top:12px;border-top:1px solid #F1F2F4;">
+                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#626262;">
+                  <img src="https://unpkg.com/lucide-static@latest/icons/inbox.svg" width="14" height="14" alt="" aria-hidden="true" style="opacity:.55;">{{ item.origem }}
+                </span>
+                <span style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#626262;">
+                  <img src="https://unpkg.com/lucide-static@latest/icons/user.svg" width="14" height="14" alt="" aria-hidden="true" style="opacity:.55;">{{ item.responsavel }}
+                </span>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail drawer -->
+  <sc-if value="{{ selected }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ onClose }}" style="position:fixed;inset:0;background:rgba(28,31,38,0.4);z-index:40;"></div>
+    <div class="scroll" style="position:fixed;top:0;right:0;height:100vh;width:460px;max-width:92vw;background:#fff;box-shadow:0 10px 24px rgba(28,31,38,0.18);z-index:50;overflow-y:auto;">
+      <div style="padding:24px 26px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;">
+          <div style="flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+            <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ selected.buLabel }} · {{ selected.buName }}</span>
+            <span style="{{ selected.tempBadge }}">{{ selected.tempLabel }}</span>
+          </div>
+          <button type="button" onClick="{{ onClose }}" class="chip" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid #D3D4D6;border-radius:8px;background:#fff;cursor:pointer;flex-shrink:0;">
+            <img src="https://unpkg.com/lucide-static@latest/icons/x.svg" width="16" height="16" alt="Fechar" style="opacity:.6;">
+          </button>
+        </div>
+
+        <h2 style="margin:0 0 6px;font-size:22px;font-weight:500;line-height:1.25;color:#1C1F26;">{{ selected.title }}</h2>
+        <p style="margin:0 0 20px;font-size:15px;line-height:1.5;color:#3F4147;">{{ selected.desc }}</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:20px;">
+          <div>
+            <div style="font-size:12px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;">Status</div>
+            <span style="{{ selected.statusBadge }}">{{ selected.statusLabel }}</span>
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;">Origem</div>
+            <div style="font-size:14px;color:#1C1F26;">{{ selected.origem }}</div>
+          </div>
+          <div>
+            <div style="font-size:12px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;">Responsável</div>
+            <div style="font-size:14px;color:#1C1F26;">{{ selected.responsavel }}</div>
+          </div>
+        </div>
+
+        <div style="{{ selected.whyBox }}">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="width:10px;height:10px;border-radius:50%;background:{{ selected.tempColor }};"></span>
+            <span style="font-size:13px;font-weight:700;color:{{ selected.tempColor }};">Por que {{ selected.tempLabelLower }}</span>
+          </div>
+          <p style="margin:0;font-size:14px;line-height:1.5;color:#3F4147;">{{ selected.porqueTemp }}</p>
+        </div>
+
+        <div style="margin-top:20px;">
+          <div style="font-size:12px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.04em;margin-bottom:10px;">Próximos passos</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <sc-for list="{{ selected.proximosPassos }}" as="step" hint-placeholder-count="3">
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <img src="https://unpkg.com/lucide-static@latest/icons/arrow-right.svg" width="16" height="16" alt="" aria-hidden="true" style="opacity:.5;margin-top:2px;flex-shrink:0;">
+                <span style="font-size:14px;line-height:1.45;color:#1C1F26;">{{ step }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding-top:18px;border-top:1px solid #E5E7EB;display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <span style="font-size:13px;color:#626262;">Ticket <strong style="color:#1C1F26;font-weight:500;">{{ selected.jira }}</strong></span>
+          <a href="{{ selected.jiraUrl }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 18px;background:#271BEF;color:#fff;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none;white-space:nowrap;flex-shrink:0;">
+            <img src="https://unpkg.com/lucide-static@latest/icons/external-link.svg" width="16" height="16" alt="" aria-hidden="true" style="filter:brightness(0) invert(1);">Abrir no Jira
+          </a>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  // ─── CONFIG: URL do Apps Script ──────────────────────────────────────────
+  SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyedW0aBf9YKp4D7zI_2arpppptAcmf3V-nn6N-pIjHClbF6z_Bb-Gjdcb0fTXl3dTFTA/exec';
+  // ─────────────────────────────────────────────────────────────────────────
+
+  state = {
+    filters: { bu: 'all', temp: 'all', q: '' },
+    selectedId: null,
+    hoverId: null,
+    demands: [],
+    loading: true,
+    error: null,
+  };
+
+  BUS = {
+    OM:      { label: 'OM',      name: 'Operations management', sector: [-168, -120] },
+    Partner: { label: 'Partner', name: 'Partner',               sector: [-110,  -60] },
+    DA:      { label: 'DA',      name: 'Data analysis',         sector:  [-50,   12] },
+    Admin:   { label: 'Admin',   name: 'Avantpro admin: dados', sector:   [20,   80] },
+    IO:      { label: 'IO',      name: 'Internal operations',   sector:  [100,  168] },
+  };
+
+  TEMPS = {
+    quente: { label: 'Quente', lower: 'está quente', color: '#DB0000', dot: '#DB0000', bg: '#FEE2E2', fg: '#DB0000', r: 0.18 },
+    morno:  { label: 'Morno',  lower: 'está morno',  color: '#B45309', dot: '#F59E0B', bg: '#FEF3C7', fg: '#92400E', r: 0.50 },
+    frio:   { label: 'Frio',   lower: 'está frio',   color: '#1278F9', dot: '#1278F9', bg: '#E7F5FC', fg: '#1278F9', r: 0.83 },
+  };
+
+  STATUSES = {
+    'Ready-to-dev': { bg: '#D1FAE5', fg: '#065F46' },
+    'Discovery':    { bg: '#EDE9FE', fg: '#5B21B6' },
+    'Refinando':    { bg: '#DBEAFE', fg: '#1E40AF' },
+    'Pausado':      { bg: '#F3F4F6', fg: '#6B7280' },
+    'Entregue':     { bg: '#DCFCE7', fg: '#166534' },
+  };
+
+  INACTIVE_STATUSES = ['Pausado', 'Entregue'];
+
+  componentDidMount() {
+    fetch(this.SCRIPT_URL)
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(rows => this.setState({ demands: this.parseRows(rows), loading: false }))
+      .catch(err => {
+        console.error('[Radar] Falha ao carregar dados:', err);
+        this.setState({ loading: false, error: String(err.message || err) });
+      });
+  }
+
+  parseRows(rows) {
+    return rows
+      .map((row, i) => ({
+        id:             row.id || ('d' + i),
+        bu:             row.bu,
+        temp:           row.temp,
+        status:         row.status || '',
+        title:          row.title,
+        desc:           row.desc,
+        origem:         row.origem,
+        responsavel:    row.responsavel,
+        jira:           row.jira,
+        porqueTemp:     row.porqueTemp || '',
+        proximosPassos: row.proximosPassos
+          ? row.proximosPassos.split('|').map(s => s.trim()).filter(Boolean)
+          : [],
+      }))
+      .filter(d => d.bu && d.temp && d.title);
+  }
+
+  setFilter(k, v) { this.setState(s => ({ filters: { ...s.filters, [k]: v } })); }
+  clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', q: '' } }); }
+  select(id) { this.setState({ selectedId: id }); }
+  close() { this.setState({ selectedId: null }); }
+
+  chipStyle(active) {
+    return {
+      height: '30px', padding: '0 12px', borderRadius: '9999px', cursor: 'pointer',
+      fontFamily: 'inherit', fontSize: '13px', fontWeight: 500,
+      border: active ? '1px solid #271BEF' : '1px solid #D3D4D6',
+      background: active ? '#271BEF' : '#fff',
+      color: active ? '#fff' : '#626262',
+    };
+  }
+
+  tempBadgeStyle(t) {
+    return 'display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:' + t.bg + ';color:' + t.fg + ';font-size:12px;font-weight:500;';
+  }
+
+  statusBadgeStyle(status) {
+    const s = this.STATUSES[status];
+    if (!s) return 'display:none;';
+    return 'display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:' + s.bg + ';color:' + s.fg + ';font-size:12px;font-weight:500;';
+  }
+
+  renderVals() {
+    const demands = this.state.demands;
+    const F = this.state.filters;
+    const q = F.q.trim().toLowerCase();
+    const matches = (d) =>
+      (F.bu === 'all' || d.bu === F.bu) &&
+      (F.temp === 'all' || d.temp === F.temp) &&
+      (q === '' || (d.title + ' ' + d.desc + ' ' + d.responsavel + ' ' + d.origem + ' ' + d.jira).toLowerCase().includes(q));
+
+    const filtered = demands.filter(matches);
+    const isInactive = d => this.INACTIVE_STATUSES.includes(d.status);
+    const sorted = [...filtered].sort((a, b) => Number(isInactive(a)) - Number(isInactive(b)));
+
+    const list = sorted.map(d => {
+      const t = this.TEMPS[d.temp];
+      if (!t) return null;
+      const inactive = isInactive(d);
+      return {
+        ...d,
+        buLabel: this.BUS[d.bu] ? this.BUS[d.bu].label : d.bu,
+        tempLabel: t.label,
+        tempBadge: this.tempBadgeStyle(t),
+        statusLabel: d.status || '',
+        statusBadge: this.statusBadgeStyle(d.status),
+        select: () => this.select(d.id),
+        cardStyle: {
+          background: inactive ? '#FAFAFA' : '#fff',
+          border: '1px solid #D3D4D6', borderRadius: '12px',
+          padding: '16px 18px', cursor: 'pointer',
+          boxShadow: '0 1px 2px rgba(28,31,38,0.04)',
+          opacity: inactive ? 0.6 : 1,
+        },
+      };
+    }).filter(Boolean);
+
+    const center = 260, maxR = 234;
+    const groups = {};
+    filtered.filter(d => !isInactive(d)).forEach(d => { (groups[d.bu] = groups[d.bu] || []).push(d); });
+    const dots = [];
+    const dotMeta = {};
+    Object.keys(groups).forEach(bu => {
+      if (!this.BUS[bu]) return;
+      const arr = groups[bu];
+      const [a0, a1] = this.BUS[bu].sector;
+      arr.forEach((d, i) => {
+        const t = this.TEMPS[d.temp];
+        if (!t) return;
+        const frac = arr.length === 1 ? 0.5 : (i + 1) / (arr.length + 1);
+        const angDeg = a0 + (a1 - a0) * frac;
+        const ang = angDeg * Math.PI / 180;
+        const jitter = ((i % 3) - 1) * 0.05 * maxR;
+        const r = Math.max(20, t.r * maxR + jitter);
+        const x = center + r * Math.cos(ang);
+        const y = center + r * Math.sin(ang);
+        const sel = d.id === this.state.selectedId;
+        const size = 20;
+        dotMeta[d.id] = { x, y, d, t };
+        dots.push({
+          title: d.title + ' — ' + t.label,
+          select: () => this.select(d.id),
+          onEnter: () => this.setState({ hoverId: d.id }),
+          onLeave: () => this.setState(s => (s.hoverId === d.id ? { hoverId: null } : null)),
+          styleObj: {
+            position: 'absolute', left: (x - size / 2) + 'px', top: (y - size / 2) + 'px',
+            width: size + 'px', height: size + 'px', borderRadius: '50%',
+            background: t.dot, border: '2px solid #fff', padding: 0, cursor: 'pointer',
+            zIndex: sel ? 7 : 3,
+            boxShadow: sel
+              ? '0 0 0 5px rgba(18,120,249,0.35), 0 4px 12px rgba(28,31,38,0.18)'
+              : '0 1px 3px rgba(28,31,38,0.25)',
+          },
+        });
+      });
+    });
+
+    let hovered = null;
+    const hm = this.state.hoverId && dotMeta[this.state.hoverId];
+    if (hm) {
+      const { x, y, d, t } = hm;
+      const cardW = 248;
+      const below = y < 200;
+      const clampedLeft = Math.max(cardW / 2 + 4, Math.min(520 - cardW / 2 - 4, x));
+      hovered = {
+        title: d.title,
+        desc: d.desc,
+        buLabel: this.BUS[d.bu] ? this.BUS[d.bu].label : d.bu,
+        buName: this.BUS[d.bu] ? this.BUS[d.bu].name : d.bu,
+        tempLabel: t.label,
+        tempBadge: this.tempBadgeStyle(t),
+        responsavel: d.responsavel,
+        style: {
+          position: 'absolute', left: clampedLeft + 'px', top: (below ? y + 18 : y - 18) + 'px',
+          transform: below ? 'translate(-50%, 0)' : 'translate(-50%, -100%)',
+          width: cardW + 'px', background: '#fff', border: '1px solid #D3D4D6',
+          borderRadius: '10px', padding: '12px 14px', boxShadow: '0 10px 24px rgba(28,31,38,0.16)',
+          zIndex: 9, pointerEvents: 'none',
+        },
+      };
+    }
+
+    const buChips = [{ key: 'all', label: 'Todas' }].concat(
+      Object.keys(this.BUS).map(k => ({ key: k, label: this.BUS[k].label }))
+    ).map(c => ({
+      label: c.label,
+      onClick: () => this.setFilter('bu', c.key),
+      styleObj: this.chipStyle(F.bu === c.key),
+    }));
+
+    const tempChips = [{ key: 'all', label: 'Todas' }].concat(
+      Object.keys(this.TEMPS).map(k => ({ key: k, label: this.TEMPS[k].label }))
+    ).map(c => ({
+      label: c.label,
+      onClick: () => this.setFilter('temp', c.key),
+      styleObj: this.chipStyle(F.temp === c.key),
+    }));
+
+    const sd = demands.find(d => d.id === this.state.selectedId);
+    let selected = null;
+    if (sd) {
+      const t = this.TEMPS[sd.temp];
+      selected = {
+        ...sd,
+        buLabel: this.BUS[sd.bu] ? this.BUS[sd.bu].label : sd.bu,
+        buName: this.BUS[sd.bu] ? this.BUS[sd.bu].name : sd.bu,
+        tempLabel: t.label,
+        tempLabelLower: t.lower,
+        tempColor: t.color,
+        tempBadge: this.tempBadgeStyle(t),
+        statusLabel: sd.status || '',
+        statusBadge: this.statusBadgeStyle(sd.status),
+        jiraUrl: 'https://avantpro.atlassian.net/browse/' + sd.jira,
+        whyBox: { background: t.bg, borderRadius: '10px', padding: '14px 16px' },
+      };
+    }
+
+    return {
+      buChips, tempChips, dots, list, hovered,
+      q: F.q,
+      onSearch: (e) => this.setFilter('q', e.target.value),
+      onClear: () => this.clearFilters(),
+      onClose: () => this.close(),
+      selected,
+      loading: this.state.loading,
+      error: this.state.error,
+      count: filtered.length,
+      total: demands.length,
+      hotCount: demands.filter(d => d.temp === 'quente').length,
+      hasNone: filtered.length === 0 && !this.state.loading,
+    };
+  }
+}
+</script>
+</body>
+</html>

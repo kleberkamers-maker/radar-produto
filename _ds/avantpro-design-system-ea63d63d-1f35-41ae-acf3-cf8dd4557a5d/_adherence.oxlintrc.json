@@ -1,0 +1,219 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/avantpro-app/**",
+              "ui_kits/avantpro-ml/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Roboto))/i]",
+        "message": "Font not provided by the design system. Available: Roboto."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--color-border-default",
+      "--color-brand-400",
+      "--color-brand-50",
+      "--color-brand-500",
+      "--color-brand-700",
+      "--color-danger",
+      "--color-neutral-900",
+      "--color-success",
+      "--color-surface-base",
+      "--color-surface-raised",
+      "--color-text-default",
+      "--color-text-muted",
+      "--color-text-on-brand",
+      "--control-height-lg",
+      "--control-height-md",
+      "--control-height-sm",
+      "--font-family-brand",
+      "--font-size-body-lg",
+      "--font-size-body-md",
+      "--font-size-body-sm",
+      "--font-size-display-hero",
+      "--font-size-h1",
+      "--font-size-h2",
+      "--font-size-h3",
+      "--font-weight-bold",
+      "--font-weight-extrabold",
+      "--font-weight-light",
+      "--font-weight-medium",
+      "--font-weight-regular",
+      "--gradient-brand",
+      "--gradient-brand-dark",
+      "--icon-size-lg",
+      "--icon-size-md",
+      "--icon-size-sm",
+      "--icon-size-xs",
+      "--letter-spacing-default",
+      "--line-height-body",
+      "--line-height-display",
+      "--line-height-heading",
+      "--motion-base",
+      "--motion-easing",
+      "--motion-fast",
+      "--motion-slow",
+      "--mp-amz-navy",
+      "--mp-amz-orange",
+      "--mp-amz-orange-2",
+      "--mp-magalu-blue",
+      "--mp-magalu-gray",
+      "--mp-magalu-sky",
+      "--mp-ml-blue",
+      "--mp-ml-orange",
+      "--mp-ml-yellow",
+      "--mp-shein-black",
+      "--mp-shein-dark",
+      "--mp-shein-gray",
+      "--mp-shp-gray",
+      "--mp-shp-orange",
+      "--mp-shp-red",
+      "--mp-tiktok-cyan",
+      "--mp-tiktok-pink",
+      "--mp-tiktok-red",
+      "--radius-full",
+      "--radius-lg",
+      "--radius-md",
+      "--radius-sm",
+      "--row-height-table",
+      "--shadow-focus",
+      "--shadow-lg",
+      "--shadow-md",
+      "--shadow-sm",
+      "--shadow-xs",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-8"
+    ],
+    "tokenKinds": {
+      "--color-brand-50": "color",
+      "--color-brand-400": "color",
+      "--color-brand-500": "color",
+      "--color-brand-700": "color",
+      "--color-surface-base": "color",
+      "--color-surface-raised": "color",
+      "--color-border-default": "color",
+      "--color-neutral-900": "color",
+      "--color-text-default": "font",
+      "--color-text-muted": "font",
+      "--color-text-on-brand": "font",
+      "--color-success": "color",
+      "--color-danger": "color",
+      "--gradient-brand": "other",
+      "--gradient-brand-dark": "other",
+      "--mp-ml-yellow": "color",
+      "--mp-ml-orange": "color",
+      "--mp-ml-blue": "color",
+      "--mp-amz-orange": "color",
+      "--mp-amz-orange-2": "color",
+      "--mp-amz-navy": "color",
+      "--mp-shp-orange": "color",
+      "--mp-shp-red": "color",
+      "--mp-shp-gray": "color",
+      "--mp-tiktok-pink": "color",
+      "--mp-tiktok-red": "color",
+      "--mp-tiktok-cyan": "color",
+      "--mp-shein-dark": "color",
+      "--mp-shein-black": "color",
+      "--mp-shein-gray": "color",
+      "--mp-magalu-sky": "color",
+      "--mp-magalu-blue": "color",
+      "--mp-magalu-gray": "color",
+      "--font-family-brand": "font",
+      "--font-weight-light": "font",
+      "--font-weight-regular": "font",
+      "--font-weight-medium": "font",
+      "--font-weight-bold": "font",
+      "--font-weight-extrabold": "font",
+      "--font-size-display-hero": "font",
+      "--font-size-h1": "font",
+      "--font-size-h2": "font",
+      "--font-size-h3": "font",
+      "--font-size-body-lg": "font",
+      "--font-size-body-md": "font",
+      "--font-size-body-sm": "font",
+      "--line-height-display": "font",
+      "--line-height-heading": "font",
+      "--line-height-body": "font",
+      "--letter-spacing-default": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-8": "spacing",
+      "--control-height-sm": "spacing",
+      "--control-height-md": "spacing",
+      "--control-height-lg": "spacing",
+      "--row-height-table": "spacing",
+      "--icon-size-xs": "spacing",
+      "--icon-size-sm": "spacing",
+      "--icon-size-md": "spacing",
+      "--icon-size-lg": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-lg": "radius",
+      "--radius-full": "radius",
+      "--shadow-xs": "shadow",
+      "--shadow-sm": "shadow",
+      "--shadow-md": "shadow",
+      "--shadow-lg": "shadow",
+      "--shadow-focus": "shadow",
+      "--motion-fast": "other",
+      "--motion-base": "other",
+      "--motion-slow": "other",
+      "--motion-easing": "other"
+    },
+    "fontFamilies": [
+      "Roboto"
+    ]
+  }
+}
