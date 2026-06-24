@@ -83,12 +83,12 @@
     <!-- Loading / error states -->
     <sc-if value="{{ loading }}" hint-placeholder-val="{{ false }}">
       <div style="text-align:center;padding:72px 24px;">
-        <div style="font-size:15px;color:#626262;">Carregando demandas da planilha…</div>
+        <div style="font-size:15px;color:#626262;">Carregando...</div>
       </div>
     </sc-if>
     <sc-if value="{{ error }}" hint-placeholder-val="{{ false }}">
       <div style="background:#FEE2E2;border:1px solid #FECACA;border-radius:12px;padding:16px 20px;margin-bottom:20px;color:#DB0000;font-size:14px;">
-        Erro ao carregar planilha: {{ error }}
+        Erro ao carregar dados: {{ error }}
       </div>
     </sc-if>
 
