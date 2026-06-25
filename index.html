@@ -52,12 +52,17 @@
     </div>
 
     <!-- View tabs -->
-    <div style="display:flex;gap:6px;margin-bottom:14px;">
-      <button type="button" onClick="{{ onSetRadar }}" style="{{ radarTabStyle }}">
-        <img src="https://unpkg.com/lucide-static@latest/icons/radar.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ radarTabIconStyle }}">Radar
-      </button>
-      <button type="button" onClick="{{ onSetKanban }}" style="{{ kanbanTabStyle }}">
-        <img src="https://unpkg.com/lucide-static@latest/icons/columns.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ kanbanTabIconStyle }}">Kanban
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:14px;">
+      <div style="display:flex;gap:6px;">
+        <button type="button" onClick="{{ onSetRadar }}" style="{{ radarTabStyle }}">
+          <img src="https://unpkg.com/lucide-static@latest/icons/radar.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ radarTabIconStyle }}">Radar
+        </button>
+        <button type="button" onClick="{{ onSetKanban }}" style="{{ kanbanTabStyle }}">
+          <img src="https://unpkg.com/lucide-static@latest/icons/columns.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ kanbanTabIconStyle }}">Kanban
+        </button>
+      </div>
+      <button type="button" onClick="{{ onNewDemand }}" style="display:flex;align-items:center;gap:6px;height:34px;padding:0 14px;background:#271BEF;color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:13px;font-weight:500;cursor:pointer;">
+        <img src="https://unpkg.com/lucide-static@latest/icons/plus.svg" width="15" height="15" alt="" aria-hidden="true" style="filter:brightness(0) invert(1);">Nova demanda
       </button>
     </div>
 
@@ -256,16 +261,21 @@
   </div>
 
   <!-- Detail drawer -->
-  <sc-if value="{{ selected }}" hint-placeholder-val="{{ false }}">
+  <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
     <div onClick="{{ onClose }}" style="position:fixed;inset:0;background:rgba(28,31,38,0.4);z-index:40;"></div>
     <div class="scroll" style="position:fixed;top:0;right:0;height:100vh;width:460px;max-width:92vw;background:#fff;box-shadow:0 10px 24px rgba(28,31,38,0.18);z-index:50;overflow-y:auto;">
       <div style="padding:24px 26px;">
         <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;">
           <div style="flex:1;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-            <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ selected.buLabel }} · {{ selected.buName }}</span>
-            <span style="{{ selected.tempBadge }}">{{ selected.tempLabel }}</span>
+            <sc-if value="{{ selected }}" hint-placeholder-val="{{ false }}">
+              <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ selected.buLabel }} · {{ selected.buName }}</span>
+              <span style="{{ selected.tempBadge }}">{{ selected.tempLabel }}</span>
+            </sc-if>
+            <sc-if value="{{ creating }}" hint-placeholder-val="{{ false }}">
+              <span style="font-size:18px;font-weight:500;color:#1C1F26;">Nova demanda</span>
+            </sc-if>
           </div>
-          <sc-if value="{{ !isEditing }}" hint-placeholder-val="{{ true }}">
+          <sc-if value="{{ showEditBtn }}" hint-placeholder-val="{{ false }}">
             <button type="button" onClick="{{ onStartEdit }}" class="chip" style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;background:#fff;font-family:inherit;font-size:13px;font-weight:500;color:#626262;cursor:pointer;flex-shrink:0;">
               <img src="https://unpkg.com/lucide-static@latest/icons/pencil.svg" width="13" height="13" alt="" aria-hidden="true" style="opacity:.6;">Editar
             </button>
@@ -274,7 +284,7 @@
             <img src="https://unpkg.com/lucide-static@latest/icons/x.svg" width="16" height="16" alt="Fechar" style="opacity:.6;">
           </button>
         </div>
-        <sc-if value="{{ !isEditing }}" hint-placeholder-val="{{ true }}">
+        <sc-if value="{{ showReadonly }}" hint-placeholder-val="{{ true }}">
 
         <h2 style="margin:0 0 6px;font-size:22px;font-weight:500;line-height:1.25;color:#1C1F26;">{{ selected.title }}</h2>
         <p style="margin:0 0 20px;font-size:15px;line-height:1.5;color:#3F4147;">{{ selected.desc }}</p>
@@ -322,7 +332,7 @@
         </div>
         </sc-if>
 
-        <sc-if value="{{ isEditing }}" hint-placeholder-val="{{ false }}">
+        <sc-if value="{{ showForm }}" hint-placeholder-val="{{ false }}">
           <div style="margin-bottom:14px;">
             <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Título</label>
             <input value="{{ editDraft.title }}" onInput="{{ onPatchTitle }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;">
@@ -401,7 +411,7 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   // ─── CONFIG: URL do Apps Script ──────────────────────────────────────────
-  SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxsFEwxj82flNy9J4wW4aBKY1q9EnnO7SMzPSh29sTKS7PsuWWnWLiOezhPfuqa1HbJ1A/exec';
+  SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyXF0bL-8JmByi2-ngjGM3e8M_AsNFbtnIHIR5kLJkjq12ozbhOqLvPMhmF2a89Mdci2w/exec';
   // ─────────────────────────────────────────────────────────────────────────
 
   state = {
@@ -415,6 +425,7 @@ class Component extends DCLogic {
     error: null,
     editingId: null,
     editDraft: null,
+    creating: false,
     saving: false,
     saveError: null,
   };
@@ -479,7 +490,20 @@ class Component extends DCLogic {
   toggleReadyOnly() { this.setState(s => ({ readyOnly: !s.readyOnly })); }
   setView(v) { this.setState({ view: v }); }
   select(id) { this.setState({ selectedId: id }); }
-  close() { this.setState({ selectedId: null, editingId: null, editDraft: null, saveError: null }); }
+  close() { this.setState({ selectedId: null, editingId: null, editDraft: null, creating: false, saveError: null }); }
+
+  newDemand() {
+    this.setState({
+      selectedId: null,
+      editingId: null,
+      creating: true,
+      editDraft: {
+        title: '', desc: '', bu: 'OM', temp: 'morno', status: 'Discovery',
+        origem: '', responsavel: '', jira: '', porqueTemp: '', proximosPassos: '',
+      },
+      saveError: null,
+    });
+  }
 
   startEdit(id) {
     const d = this.state.demands.find(d => d.id === id);
@@ -501,18 +525,26 @@ class Component extends DCLogic {
   }
 
   cancelEdit() {
-    this.setState({ editingId: null, editDraft: null, saveError: null });
+    this.setState({ editingId: null, editDraft: null, creating: false, saveError: null });
   }
 
   saveEdit() {
     const draft = this.state.editDraft;
+    const creating = this.state.creating;
     const id = this.state.editingId;
-    if (!draft || !id) return;
+    if (!draft || (!creating && !id)) return;
+    if (creating && !String(draft.title || '').trim()) {
+      this.setState({ saveError: 'Informe ao menos o título da demanda.' });
+      return;
+    }
     this.setState({ saving: true, saveError: null });
+    const payload = creating
+      ? { action: 'create', ...draft }
+      : { action: 'update', id, ...draft };
     fetch(this.SCRIPT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain' },
-      body: JSON.stringify({ id, ...draft }),
+      body: JSON.stringify(payload),
     })
       .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
       .then(res => {
@@ -520,10 +552,19 @@ class Component extends DCLogic {
         const proximosPassos = draft.proximosPassos
           ? draft.proximosPassos.split('|').map(s => s.trim()).filter(Boolean)
           : [];
-        this.setState(s => ({
-          demands: s.demands.map(d => d.id === id ? { ...d, ...draft, proximosPassos } : d),
-          editingId: null, editDraft: null, saving: false,
-        }));
+        if (creating) {
+          const nova = { ...draft, id: res.id, proximosPassos };
+          this.setState(s => ({
+            demands: [...s.demands, nova],
+            creating: false, editDraft: null, saving: false,
+            selectedId: res.id,
+          }));
+        } else {
+          this.setState(s => ({
+            demands: s.demands.map(d => d.id === id ? { ...d, ...draft, proximosPassos } : d),
+            editingId: null, editDraft: null, saving: false,
+          }));
+        }
       })
       .catch(err => this.setState({ saving: false, saveError: String(err.message || err) }));
   }
@@ -723,6 +764,11 @@ class Component extends DCLogic {
 
     const isEditing = !!this.state.editingId;
     const editDraft = this.state.editDraft || {};
+    const creating = this.state.creating;
+    const drawerOpen = !!selected || creating;
+    const showForm = isEditing || creating;
+    const showReadonly = !!selected && !isEditing;
+    const showEditBtn = !!selected && !isEditing;
 
     const readyOnlyActive = this.state.readyOnly;
     return {
@@ -759,9 +805,16 @@ class Component extends DCLogic {
       kanbanCols,
       isEditing,
       editDraft,
+      creating,
+      drawerOpen,
+      showForm,
+      showReadonly,
+      showEditBtn,
+      formTitle: creating ? 'Nova demanda' : 'Editar demanda',
       saving: this.state.saving,
       saveError: this.state.saveError,
-      saveLabel: this.state.saving ? 'Salvando...' : 'Salvar',
+      saveLabel: this.state.saving ? 'Salvando...' : (creating ? 'Criar demanda' : 'Salvar'),
+      onNewDemand: () => this.newDemand(),
       onStartEdit: () => this.state.selectedId && this.startEdit(this.state.selectedId),
       onCancelEdit: () => this.cancelEdit(),
       onSaveEdit: () => this.saveEdit(),

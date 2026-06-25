@@ -58,10 +58,12 @@ function doGet() {
 }
 
 /**
- * POST — atualiza UMA demanda.
+ * POST — cria OU atualiza uma demanda.
  * Corpo esperado (Content-Type: text/plain, para evitar preflight CORS):
- *   { "id": "d1", "bu": "...", "temp": "...", "status": "...", ... }
- * Resposta: { ok: true } | { ok: false, erro: "..." }
+ *   update: { "action": "update", "id": "2", "bu": "...", ... }
+ *   create: { "action": "create", "bu": "...", "temp": "...", ... }
+ *   (sem `action`: vira create quando não há `id`, senão update)
+ * Resposta: { ok: true, id: <id> } | { ok: false, erro: "..." }
  */
 function doPost(e) {
   try {
@@ -69,8 +71,15 @@ function doPost(e) {
       throw new Error('Requisição sem corpo');
     }
     var dados = JSON.parse(e.postData.contents);
-    atualizarDemanda(dados);
-    return json_({ ok: true });
+    var acao = dados.action || (dados.id ? 'update' : 'create');
+    var id;
+    if (acao === 'create') {
+      id = criarDemanda(dados);
+    } else {
+      atualizarDemanda(dados);
+      id = dados.id;
+    }
+    return json_({ ok: true, id: id });
   } catch (err) {
     return json_({ ok: false, erro: err.message || String(err) });
   }
@@ -103,4 +112,35 @@ function atualizarDemanda(dados) {
       sheet.getRange(rowNum, col + 1).setValue(dados[campo]);
     }
   });
+}
+
+/**
+ * Cria uma nova demanda: gera o próximo `id` numérico (maior id + 1),
+ * monta a linha na ordem dos cabeçalhos e adiciona ao final da planilha.
+ * Retorna o id gerado.
+ */
+function criarDemanda(dados) {
+  var sheet = planilha_();
+  var valores = sheet.getDataRange().getValues();
+  var headers = valores[0].map(function (h) { return String(h).trim(); });
+
+  var idCol = headers.indexOf('id');
+  if (idCol === -1) throw new Error('Coluna "id" não encontrada na planilha');
+
+  // Próximo id = maior id numérico existente + 1.
+  var maxId = 0;
+  for (var i = 1; i < valores.length; i++) {
+    var n = parseInt(valores[i][idCol], 10);
+    if (!isNaN(n) && n > maxId) maxId = n;
+  }
+  var novoId = maxId + 1;
+
+  // Monta a linha respeitando a ordem das colunas da planilha.
+  var linha = headers.map(function (h) {
+    if (h === 'id') return novoId;
+    return dados[h] !== undefined ? dados[h] : '';
+  });
+  sheet.appendRow(linha);
+
+  return novoId;
 }

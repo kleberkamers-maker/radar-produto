@@ -1,0 +1,78 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - img [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "Radar de produto" [level=1] [ref=e11]
+        - generic [ref=e12]: Avantpro
+      - paragraph [ref=e13]: Quanto mais ao centro, mais quente a demanda. As direções do radar são as business units.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: "0"
+        - generic [ref=e17]: demandas
+      - generic [ref=e19]:
+        - generic [ref=e20]: "0"
+        - generic [ref=e21]: quentes
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - button "Radar" [ref=e24] [cursor=pointer]:
+        - img [ref=e25]
+        - text: Radar
+      - button "Kanban" [ref=e26] [cursor=pointer]:
+        - img [ref=e27]
+        - text: Kanban
+    - button "Nova demanda" [ref=e28] [cursor=pointer]:
+      - img [ref=e29]
+      - text: Nova demanda
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e32]: Business unit
+      - generic [ref=e33]:
+        - button "Todas" [ref=e34] [cursor=pointer]
+        - button "OM" [ref=e35] [cursor=pointer]
+        - button "Partner" [ref=e36] [cursor=pointer]
+        - button "DA" [ref=e37] [cursor=pointer]
+        - button "Admin" [ref=e38] [cursor=pointer]
+        - button "IO" [ref=e39] [cursor=pointer]
+    - generic [ref=e41]:
+      - generic [ref=e42]: Temperatura
+      - generic [ref=e43]:
+        - button "Todas" [ref=e44] [cursor=pointer]
+        - button "Quente" [ref=e45] [cursor=pointer]
+        - button "Morno" [ref=e46] [cursor=pointer]
+        - button "Frio" [ref=e47] [cursor=pointer]
+    - button "Ready to dev" [ref=e49] [cursor=pointer]:
+      - img [ref=e50]
+      - text: Ready to dev
+    - generic [ref=e51]:
+      - img [ref=e52]
+      - textbox "Buscar por título, responsável..." [ref=e53]
+    - button "Limpar" [ref=e54] [cursor=pointer]:
+      - img [ref=e55]
+      - text: Limpar
+  - generic [ref=e57]: Carregando...
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - generic [ref=e60]:
+        - generic [ref=e61]: Temperatura
+        - generic [ref=e62]: Quente
+        - generic [ref=e64]: Morno
+        - generic [ref=e66]: Frio
+      - generic [ref=e68]:
+        - img [ref=e69]
+        - generic [ref=e80]:
+          - generic [ref=e81]: OM
+          - generic [ref=e82]: Operations management
+        - generic [ref=e84]: Partner
+        - generic [ref=e85]:
+          - generic [ref=e86]: DA
+          - generic [ref=e87]: Data analysis
+        - generic [ref=e88]:
+          - generic [ref=e89]: Admin
+          - generic [ref=e90]: "Avantpro admin: dados"
+        - generic [ref=e91]:
+          - generic [ref=e92]: IO
+          - generic [ref=e93]: Internal operations
+    - generic [ref=e95]:
+      - heading "Demandas" [level=2] [ref=e96]
+      - generic [ref=e97]: 0 de 0
