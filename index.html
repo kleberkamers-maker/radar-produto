@@ -351,11 +351,12 @@ class Component extends DCLogic {
   };
 
   STATUSES = {
-    'Ready-to-dev': { bg: '#D1FAE5', fg: '#065F46' },
-    'Discovery':    { bg: '#EDE9FE', fg: '#5B21B6' },
-    'Refinando':    { bg: '#DBEAFE', fg: '#1E40AF' },
-    'Pausado':      { bg: '#F3F4F6', fg: '#6B7280' },
-    'Entregue':     { bg: '#DCFCE7', fg: '#166534' },
+    'Ready-to-dev':           { bg: '#D1FAE5', fg: '#065F46' },
+    'Discovery':              { bg: '#EDE9FE', fg: '#5B21B6' },
+    'Refinamento de negócio': { bg: '#FEF3C7', fg: '#92400E' },
+    'Refinamento técnico':    { bg: '#DBEAFE', fg: '#1E40AF' },
+    'Pausado':                { bg: '#F3F4F6', fg: '#6B7280' },
+    'Entregue':               { bg: '#DCFCE7', fg: '#166534' },
   };
 
   INACTIVE_STATUSES = ['Pausado', 'Entregue'];
@@ -554,7 +555,7 @@ class Component extends DCLogic {
       };
     }
 
-    const STATUS_ORDER = ['Discovery', 'Refinando', 'Ready-to-dev', 'Entregue', 'Pausado'];
+    const STATUS_ORDER = ['Discovery', 'Refinamento de negócio', 'Refinamento técnico', 'Ready-to-dev', 'Entregue', 'Pausado'];
     const kanbanCols = STATUS_ORDER.map(sk => {
       const sc = this.STATUSES[sk];
       const cards = filtered.filter(d => d.status === sk).map(d => {
