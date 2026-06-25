@@ -1,0 +1,887 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - img [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - heading "Radar de produto" [level=1] [ref=e11]
+          - generic [ref=e12]: Avantpro
+        - paragraph [ref=e13]: Quanto mais ao centro, mais quente a demanda. As direções do radar são as business units.
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]: "130"
+          - generic [ref=e17]: demandas
+        - generic [ref=e19]:
+          - generic [ref=e20]: "10"
+          - generic [ref=e21]: quentes
+    - generic [ref=e22]:
+      - button "Radar" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+        - text: Radar
+      - button "Kanban" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - text: Kanban
+    - generic [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: Business unit
+        - generic [ref=e30]:
+          - button "Todas" [ref=e31] [cursor=pointer]
+          - button "OM" [ref=e32] [cursor=pointer]
+          - button "Partner" [ref=e33] [cursor=pointer]
+          - button "DA" [ref=e34] [cursor=pointer]
+          - button "Admin" [ref=e35] [cursor=pointer]
+          - button "IO" [ref=e36] [cursor=pointer]
+      - generic [ref=e38]:
+        - generic [ref=e39]: Temperatura
+        - generic [ref=e40]:
+          - button "Todas" [ref=e41] [cursor=pointer]
+          - button "Quente" [ref=e42] [cursor=pointer]
+          - button "Morno" [ref=e43] [cursor=pointer]
+          - button "Frio" [ref=e44] [cursor=pointer]
+      - button "Ready to dev" [ref=e46] [cursor=pointer]:
+        - img [ref=e47]
+        - text: Ready to dev
+      - generic [ref=e48]:
+        - img [ref=e49]
+        - textbox "Buscar por título, responsável..." [ref=e50]
+      - button "Limpar" [ref=e51] [cursor=pointer]:
+        - img [ref=e52]
+        - text: Limpar
+    - generic [ref=e3673]:
+      - generic [ref=e3674]:
+        - generic [ref=e3675]:
+          - generic [ref=e3677]: Discovery
+          - generic [ref=e3678]: "115"
+        - generic [ref=e3679]:
+          - generic [ref=e3680] [cursor=pointer]:
+            - generic [ref=e3681]:
+              - generic [ref=e3683]: DA
+              - generic [ref=e3685]: Frio
+            - generic [ref=e3686]: Central de notificação
+            - img [ref=e3688]
+          - generic [ref=e3689] [cursor=pointer]:
+            - generic [ref=e3690]:
+              - generic [ref=e3692]: DA
+              - generic [ref=e3694]: Morno
+            - generic [ref=e3695]: Evolução análise de catálogo
+            - img [ref=e3697]
+          - generic [ref=e3698] [cursor=pointer]:
+            - generic [ref=e3699]:
+              - generic [ref=e3701]: DA
+              - generic [ref=e3703]: Quente
+            - generic [ref=e3704]: App mobile
+            - img [ref=e3706]
+          - generic [ref=e3707] [cursor=pointer]:
+            - generic [ref=e3708]:
+              - generic [ref=e3710]: OM
+              - generic [ref=e3712]: Frio
+            - generic [ref=e3713]: Central de notificação
+            - img [ref=e3715]
+          - generic [ref=e3716] [cursor=pointer]:
+            - generic [ref=e3717]:
+              - generic [ref=e3719]: OM
+              - generic [ref=e3721]: Morno
+            - generic [ref=e3722]: Gestão de ADS
+            - img [ref=e3724]
+          - generic [ref=e3725] [cursor=pointer]:
+            - generic [ref=e3726]:
+              - generic [ref=e3728]: OM
+              - generic [ref=e3730]: Morno
+            - generic [ref=e3731]: Métricas no whatsapp
+            - img [ref=e3733]
+          - generic [ref=e3734] [cursor=pointer]:
+            - generic [ref=e3735]:
+              - generic [ref=e3737]: Admin
+              - generic [ref=e3739]: Morno
+            - generic [ref=e3740]: Gestão de fornecedor
+            - img [ref=e3742]
+          - generic [ref=e3743] [cursor=pointer]:
+            - generic [ref=e3744]:
+              - generic [ref=e3746]: DA
+              - generic [ref=e3748]: Quente
+            - generic [ref=e3749]: Busca avançada
+            - img [ref=e3751]
+          - generic [ref=e3752] [cursor=pointer]:
+            - generic [ref=e3753]:
+              - generic [ref=e3755]: DA
+              - generic [ref=e3757]: Morno
+            - generic [ref=e3758]: Chatbot no whatsapp que faz pesquisa de produtos
+            - img [ref=e3760]
+          - generic [ref=e3761] [cursor=pointer]:
+            - generic [ref=e3762]:
+              - generic [ref=e3764]: Partner
+              - generic [ref=e3766]: Quente
+            - generic [ref=e3767]: Dados do seller
+            - img [ref=e3769]
+          - generic [ref=e3770] [cursor=pointer]:
+            - generic [ref=e3771]:
+              - generic [ref=e3773]: Partner
+              - generic [ref=e3775]: Frio
+            - generic [ref=e3776]: Central de notificação
+            - img [ref=e3778]
+          - generic [ref=e3779] [cursor=pointer]:
+            - generic [ref=e3780]:
+              - generic [ref=e3782]: DA
+              - generic [ref=e3784]: Morno
+            - generic [ref=e3785]: Tendências Avantpro
+            - img [ref=e3787]
+          - generic [ref=e3788] [cursor=pointer]:
+            - generic [ref=e3789]:
+              - generic [ref=e3791]: OM
+              - generic [ref=e3793]: Morno
+            - generic [ref=e3794]: calculadora de DIFAL
+            - img [ref=e3796]
+          - generic [ref=e3797] [cursor=pointer]:
+            - generic [ref=e3798]:
+              - generic [ref=e3800]: DA
+              - generic [ref=e3802]: Quente
+            - generic [ref=e3803]: Métricas na tela de search
+            - img [ref=e3805]
+          - generic [ref=e3806] [cursor=pointer]:
+            - generic [ref=e3807]:
+              - generic [ref=e3809]: DA
+              - generic [ref=e3811]: Quente
+            - generic [ref=e3812]: Monitoramento de vendedores
+            - img [ref=e3814]
+          - generic [ref=e3815] [cursor=pointer]:
+            - generic [ref=e3816]:
+              - generic [ref=e3818]: DA
+              - generic [ref=e3820]: Quente
+            - generic [ref=e3821]: aplicação para DA, over marketplace
+            - img [ref=e3823]
+          - generic [ref=e3824] [cursor=pointer]:
+            - generic [ref=e3825]:
+              - generic [ref=e3827]: OM
+              - generic [ref=e3829]: Morno
+            - generic [ref=e3830]: Calculadora de importação
+            - img [ref=e3832]
+          - generic [ref=e3833] [cursor=pointer]:
+            - generic [ref=e3834]:
+              - generic [ref=e3836]: OM
+              - generic [ref=e3838]: Morno
+            - generic [ref=e3839]: Inventário de estoque
+            - img [ref=e3841]
+          - generic [ref=e3842] [cursor=pointer]:
+            - generic [ref=e3843]:
+              - generic [ref=e3845]: DA
+              - generic [ref=e3847]: Morno
+            - generic [ref=e3848]: Mapear os critérios "invisíveis" do ranking do ML
+            - img [ref=e3850]
+          - generic [ref=e3851] [cursor=pointer]:
+            - generic [ref=e3852]:
+              - generic [ref=e3854]: DA
+              - generic [ref=e3856]: Morno
+            - generic [ref=e3857]: Melhorias na tela de Dados do Catálogo (ML)
+            - img [ref=e3859]
+          - generic [ref=e3860] [cursor=pointer]:
+            - generic [ref=e3861]:
+              - generic [ref=e3863]: IO
+              - generic [ref=e3865]: Quente
+            - generic [ref=e3866]: Newsletter do Avantpro
+            - img [ref=e3868]
+          - generic [ref=e3869] [cursor=pointer]:
+            - generic [ref=e3870]:
+              - generic [ref=e3872]: OM
+              - generic [ref=e3874]: Frio
+            - generic [ref=e3875]: Verifica a API do INPI pra avisar sobre marca registrada
+            - img [ref=e3877]
+          - generic [ref=e3878] [cursor=pointer]:
+            - generic [ref=e3879]:
+              - generic [ref=e3881]: OM
+              - generic [ref=e3883]: Morno
+            - generic [ref=e3884]: Pilares de objetivos dentro do POST do ML
+            - img [ref=e3886]
+          - generic [ref=e3887] [cursor=pointer]:
+            - generic [ref=e3888]:
+              - generic [ref=e3890]: DA
+              - generic [ref=e3892]: Frio
+            - generic [ref=e3893]: Gerador de EAN com registro no GS1
+            - img [ref=e3895]
+          - generic [ref=e3896] [cursor=pointer]:
+            - generic [ref=e3897]:
+              - generic [ref=e3899]: IO
+              - generic [ref=e3901]: Frio
+            - generic [ref=e3902]: Politica de Privacidade das Extensões
+            - img [ref=e3904]
+          - generic [ref=e3905] [cursor=pointer]:
+            - generic [ref=e3906]:
+              - generic [ref=e3908]: DA
+              - generic [ref=e3910]: Frio
+            - generic [ref=e3911]: Análise de Buy Box (AOD - All Offers Display)
+            - img [ref=e3913]
+          - generic [ref=e3914] [cursor=pointer]:
+            - generic [ref=e3915]:
+              - generic [ref=e3917]: DA
+              - generic [ref=e3919]: Frio
+            - generic [ref=e3920]: Validação de dados de vendas do anúncio
+            - img [ref=e3922]
+          - generic [ref=e3923] [cursor=pointer]:
+            - generic [ref=e3924]:
+              - generic [ref=e3926]: DA
+              - generic [ref=e3928]: Frio
+            - generic [ref=e3929]: Categorias da amazon, sem análise Avantpro
+            - img [ref=e3931]
+          - generic [ref=e3932] [cursor=pointer]:
+            - generic [ref=e3933]:
+              - generic [ref=e3935]: OM
+              - generic [ref=e3937]: Quente
+            - generic [ref=e3938]: Calculadora Avantpro V2
+            - img [ref=e3940]
+          - generic [ref=e3941] [cursor=pointer]:
+            - generic [ref=e3942]:
+              - generic [ref=e3944]: DA
+              - generic [ref=e3946]: Morno
+            - generic [ref=e3947]: Pesquisa por IA
+            - img [ref=e3949]
+          - generic [ref=e3950] [cursor=pointer]:
+            - generic [ref=e3951]:
+              - generic [ref=e3953]: DA
+              - generic [ref=e3955]: Frio
+            - generic [ref=e3956]: Número de vendas
+            - img [ref=e3958]
+          - generic [ref=e3959] [cursor=pointer]:
+            - generic [ref=e3960]:
+              - generic [ref=e3962]: DA
+              - generic [ref=e3964]: Frio
+            - generic [ref=e3965]: Persistência de dados Avantdata ML
+            - img [ref=e3967]
+          - generic [ref=e3968] [cursor=pointer]:
+            - generic [ref=e3969]:
+              - generic [ref=e3971]: DA
+              - generic [ref=e3973]: Frio
+            - generic [ref=e3974]: Avantpro finance
+            - img [ref=e3976]
+          - generic [ref=e3977] [cursor=pointer]:
+            - generic [ref=e3978]:
+              - generic [ref=e3980]: DA
+              - generic [ref=e3982]: Frio
+            - generic [ref=e3983]: NPS
+            - img [ref=e3985]
+          - generic [ref=e3986] [cursor=pointer]:
+            - generic [ref=e3987]:
+              - generic [ref=e3989]: Admin
+              - generic [ref=e3991]: Frio
+            - generic [ref=e3992]: Disparo em massa no Avant Chat
+            - img [ref=e3994]
+          - generic [ref=e3995] [cursor=pointer]:
+            - generic [ref=e3996]:
+              - generic [ref=e3998]: Admin
+              - generic [ref=e4000]: Frio
+            - generic [ref=e4001]: Dashboard de Churn
+            - img [ref=e4003]
+          - generic [ref=e4004] [cursor=pointer]:
+            - generic [ref=e4005]:
+              - generic [ref=e4007]: Admin
+              - generic [ref=e4009]: Frio
+            - generic [ref=e4010]: Dados Financeiros do Cliente — Tabela de Clientes no Admin
+            - img [ref=e4012]
+          - generic [ref=e4013] [cursor=pointer]:
+            - generic [ref=e4014]:
+              - generic [ref=e4016]: Admin
+              - generic [ref=e4018]: Frio
+            - generic [ref=e4019]: Dados do seller
+            - img [ref=e4021]
+          - generic [ref=e4022] [cursor=pointer]:
+            - generic [ref=e4023]:
+              - generic [ref=e4025]: Admin
+              - generic [ref=e4027]: Frio
+            - generic [ref=e4028]: Moderação de Fornecedores
+            - img [ref=e4030]
+          - generic [ref=e4031] [cursor=pointer]:
+            - generic [ref=e4032]:
+              - generic [ref=e4034]: DA
+              - generic [ref=e4036]: Frio
+            - generic [ref=e4037]: Encontrar fornecedor com Avantpro Supplier
+            - img [ref=e4039]
+          - generic [ref=e4040] [cursor=pointer]:
+            - generic [ref=e4041]:
+              - generic [ref=e4043]: DA
+              - generic [ref=e4045]: Frio
+            - generic [ref=e4046]: Portal do fornecedor
+            - img [ref=e4048]
+          - generic [ref=e4049] [cursor=pointer]:
+            - generic [ref=e4050]:
+              - generic [ref=e4052]: DA
+              - generic [ref=e4054]: Frio
+            - generic [ref=e4055]: Avantpro para TikTok Shop
+            - img [ref=e4057]
+          - generic [ref=e4058] [cursor=pointer]:
+            - generic [ref=e4059]:
+              - generic [ref=e4061]: DA
+              - generic [ref=e4063]: Frio
+            - generic [ref=e4064]: Avantpro intelligence
+            - img [ref=e4066]
+          - generic [ref=e4067] [cursor=pointer]:
+            - generic [ref=e4068]:
+              - generic [ref=e4070]: DA
+              - generic [ref=e4072]: Frio
+            - generic [ref=e4073]: Visualização de informações de faturamento da conta nas extensões Avantpro
+            - img [ref=e4075]
+          - generic [ref=e4076] [cursor=pointer]:
+            - generic [ref=e4077]:
+              - generic [ref=e4079]: DA
+              - generic [ref=e4081]: Frio
+            - generic [ref=e4082]: Avantpro Ads — otimização de Mercado Ads com IA
+            - img [ref=e4084]
+          - generic [ref=e4085] [cursor=pointer]:
+            - generic [ref=e4086]:
+              - generic [ref=e4088]: Admin
+              - generic [ref=e4090]: Frio
+            - generic [ref=e4091]: Régua de cobrança - Ajustes
+            - img [ref=e4093]
+          - generic [ref=e4094] [cursor=pointer]:
+            - generic [ref=e4095]:
+              - generic [ref=e4097]: DA
+              - generic [ref=e4099]: Frio
+            - generic [ref=e4100]: Mytrend
+            - img [ref=e4102]
+          - generic [ref=e4103] [cursor=pointer]:
+            - generic [ref=e4104]:
+              - generic [ref=e4106]: DA
+              - generic [ref=e4108]: Frio
+            - generic [ref=e4109]: Top seller por keywork
+            - img [ref=e4111]
+          - generic [ref=e4112] [cursor=pointer]:
+            - generic [ref=e4113]:
+              - generic [ref=e4115]: DA
+              - generic [ref=e4117]: Frio
+            - generic [ref=e4118]: Marcas mais vendidas por keyword
+            - img [ref=e4120]
+          - generic [ref=e4121] [cursor=pointer]:
+            - generic [ref=e4122]:
+              - generic [ref=e4124]: DA
+              - generic [ref=e4126]: Frio
+            - generic [ref=e4127]: Filtros por avaliação
+            - img [ref=e4129]
+          - generic [ref=e4130] [cursor=pointer]:
+            - generic [ref=e4131]:
+              - generic [ref=e4133]: DA
+              - generic [ref=e4135]: Frio
+            - generic [ref=e4136]: Marcas mais vendidas por keyword
+            - img [ref=e4138]
+          - generic [ref=e4139] [cursor=pointer]:
+            - generic [ref=e4140]:
+              - generic [ref=e4142]: DA
+              - generic [ref=e4144]: Frio
+            - generic [ref=e4145]: Sistema de Devolução
+            - img [ref=e4147]
+          - generic [ref=e4148] [cursor=pointer]:
+            - generic [ref=e4149]:
+              - generic [ref=e4151]: DA
+              - generic [ref=e4153]: Frio
+            - generic [ref=e4154]: Controle de Estoque = Flex X Full
+            - img [ref=e4156]
+          - generic [ref=e4157] [cursor=pointer]:
+            - generic [ref=e4158]:
+              - generic [ref=e4160]: DA
+              - generic [ref=e4162]: Frio
+            - generic [ref=e4163]: Conciliação Bancaria
+            - img [ref=e4165]
+          - generic [ref=e4166] [cursor=pointer]:
+            - generic [ref=e4167]:
+              - generic [ref=e4169]: DA
+              - generic [ref=e4171]: Frio
+            - generic [ref=e4172]: Informações sobre catalogo no WhatsApp
+            - img [ref=e4174]
+          - generic [ref=e4175] [cursor=pointer]:
+            - generic [ref=e4176]:
+              - generic [ref=e4178]: DA
+              - generic [ref=e4180]: Frio
+            - generic [ref=e4181]: Régua de comunicação
+            - img [ref=e4183]
+          - generic [ref=e4184] [cursor=pointer]:
+            - generic [ref=e4185]:
+              - generic [ref=e4187]: DA
+              - generic [ref=e4189]: Frio
+            - generic [ref=e4190]: Estratégia de tags
+            - img [ref=e4192]
+          - generic [ref=e4193] [cursor=pointer]:
+            - generic [ref=e4194]:
+              - generic [ref=e4196]: DA
+              - generic [ref=e4198]: Frio
+            - generic [ref=e4199]: Scraper via Open Crawl
+            - img [ref=e4201]
+          - generic [ref=e4202] [cursor=pointer]:
+            - generic [ref=e4203]:
+              - generic [ref=e4205]: DA
+              - generic [ref=e4207]: Frio
+            - generic [ref=e4208]: Conciliação Bancária
+            - img [ref=e4210]
+          - generic [ref=e4211] [cursor=pointer]:
+            - generic [ref=e4212]:
+              - generic [ref=e4214]: DA
+              - generic [ref=e4216]: Frio
+            - generic [ref=e4217]: Alerta que promoção vai acabar
+            - img [ref=e4219]
+          - generic [ref=e4220] [cursor=pointer]:
+            - generic [ref=e4221]:
+              - generic [ref=e4223]: DA
+              - generic [ref=e4225]: Frio
+            - generic [ref=e4226]: Saldo de Estoque
+            - img [ref=e4228]
+          - generic [ref=e4229] [cursor=pointer]:
+            - generic [ref=e4230]:
+              - generic [ref=e4232]: DA
+              - generic [ref=e4234]: Frio
+            - generic [ref=e4235]: Single Sign-On
+            - img [ref=e4237]
+          - generic [ref=e4238] [cursor=pointer]:
+            - generic [ref=e4239]:
+              - generic [ref=e4241]: DA
+              - generic [ref=e4243]: Frio
+            - generic [ref=e4244]: Conciliação Tributária
+            - img [ref=e4246]
+          - generic [ref=e4247] [cursor=pointer]:
+            - generic [ref=e4248]:
+              - generic [ref=e4250]: DA
+              - generic [ref=e4252]: Frio
+            - generic [ref=e4253]: Análise de Mercado
+            - img [ref=e4255]
+          - generic [ref=e4256] [cursor=pointer]:
+            - generic [ref=e4257]:
+              - generic [ref=e4259]: DA
+              - generic [ref=e4261]: Frio
+            - generic [ref=e4262]: Controlar Devoluções
+            - img [ref=e4264]
+          - generic [ref=e4265] [cursor=pointer]:
+            - generic [ref=e4266]:
+              - generic [ref=e4268]: DA
+              - generic [ref=e4270]: Frio
+            - generic [ref=e4271]: Nicho
+            - img [ref=e4273]
+          - generic [ref=e4274] [cursor=pointer]:
+            - generic [ref=e4275]:
+              - generic [ref=e4277]: DA
+              - generic [ref=e4279]: Frio
+            - generic [ref=e4280]: Mais Vendidos em Menos Tempo
+            - img [ref=e4282]
+          - generic [ref=e4283] [cursor=pointer]:
+            - generic [ref=e4284]:
+              - generic [ref=e4286]: DA
+              - generic [ref=e4288]: Frio
+            - generic [ref=e4289]: Tempo de Cadastro de Produto VS Número de Vendas
+            - img [ref=e4291]
+          - generic [ref=e4292] [cursor=pointer]:
+            - generic [ref=e4293]:
+              - generic [ref=e4295]: DA
+              - generic [ref=e4297]: Frio
+            - generic [ref=e4298]: Agente para capturar lead
+            - img [ref=e4300]
+          - generic [ref=e4301] [cursor=pointer]:
+            - generic [ref=e4302]:
+              - generic [ref=e4304]: DA
+              - generic [ref=e4306]: Frio
+            - generic [ref=e4307]: Análise de Categoria
+            - img [ref=e4309]
+          - generic [ref=e4310] [cursor=pointer]:
+            - generic [ref=e4311]:
+              - generic [ref=e4313]: DA
+              - generic [ref=e4315]: Frio
+            - generic [ref=e4316]: Agente para capturar lead
+            - img [ref=e4318]
+          - generic [ref=e4319] [cursor=pointer]:
+            - generic [ref=e4320]:
+              - generic [ref=e4322]: DA
+              - generic [ref=e4324]: Frio
+            - generic [ref=e4325]: Métricas Avantpro
+            - img [ref=e4327]
+          - generic [ref=e4328] [cursor=pointer]:
+            - generic [ref=e4329]:
+              - generic [ref=e4331]: DA
+              - generic [ref=e4333]: Frio
+            - generic [ref=e4334]: Métricas Seller
+            - img [ref=e4336]
+          - generic [ref=e4337] [cursor=pointer]:
+            - generic [ref=e4338]:
+              - generic [ref=e4340]: DA
+              - generic [ref=e4342]: Frio
+            - generic [ref=e4343]: Gestão de catálogo
+            - img [ref=e4345]
+          - generic [ref=e4346] [cursor=pointer]:
+            - generic [ref=e4347]:
+              - generic [ref=e4349]: DA
+              - generic [ref=e4351]: Frio
+            - generic [ref=e4352]: Gestão de ADS
+            - img [ref=e4354]
+          - generic [ref=e4355] [cursor=pointer]:
+            - generic [ref=e4356]:
+              - generic [ref=e4358]: DA
+              - generic [ref=e4360]: Frio
+            - generic [ref=e4361]: Curva ABC
+            - img [ref=e4363]
+          - generic [ref=e4364] [cursor=pointer]:
+            - generic [ref=e4365]:
+              - generic [ref=e4367]: DA
+              - generic [ref=e4369]: Frio
+            - generic [ref=e4370]: Gestão de frete
+            - img [ref=e4372]
+          - generic [ref=e4373] [cursor=pointer]:
+            - generic [ref=e4374]:
+              - generic [ref=e4376]: DA
+              - generic [ref=e4378]: Frio
+            - generic [ref=e4379]: Gestão de anúncios
+            - img [ref=e4381]
+          - generic [ref=e4382] [cursor=pointer]:
+            - generic [ref=e4383]:
+              - generic [ref=e4385]: DA
+              - generic [ref=e4387]: Frio
+            - generic [ref=e4388]: Renovação Eduzz
+            - img [ref=e4390]
+          - generic [ref=e4391] [cursor=pointer]:
+            - generic [ref=e4392]:
+              - generic [ref=e4394]: DA
+              - generic [ref=e4396]: Frio
+            - generic [ref=e4397]: Bloqueio Eduzz
+            - img [ref=e4399]
+          - generic [ref=e4400] [cursor=pointer]:
+            - generic [ref=e4401]:
+              - generic [ref=e4403]: DA
+              - generic [ref=e4405]: Frio
+            - generic [ref=e4406]: Multi-Marketplace
+            - img [ref=e4408]
+          - generic [ref=e4409] [cursor=pointer]:
+            - generic [ref=e4410]:
+              - generic [ref=e4412]: DA
+              - generic [ref=e4414]: Frio
+            - generic [ref=e4415]: Cálculo automático de CMV
+            - img [ref=e4417]
+          - generic [ref=e4418] [cursor=pointer]:
+            - generic [ref=e4419]:
+              - generic [ref=e4421]: DA
+              - generic [ref=e4423]: Frio
+            - generic [ref=e4424]: Composição de KIT
+            - img [ref=e4426]
+          - generic [ref=e4427] [cursor=pointer]:
+            - generic [ref=e4428]:
+              - generic [ref=e4430]: DA
+              - generic [ref=e4432]: Frio
+            - generic [ref=e4433]: Integração TikTok
+            - img [ref=e4435]
+          - generic [ref=e4436] [cursor=pointer]:
+            - generic [ref=e4437]:
+              - generic [ref=e4439]: DA
+              - generic [ref=e4441]: Frio
+            - generic [ref=e4442]: Integração SHEIN
+            - img [ref=e4444]
+          - generic [ref=e4445] [cursor=pointer]:
+            - generic [ref=e4446]:
+              - generic [ref=e4448]: DA
+              - generic [ref=e4450]: Frio
+            - generic [ref=e4451]: Integração Magalu
+            - img [ref=e4453]
+          - generic [ref=e4454] [cursor=pointer]:
+            - generic [ref=e4455]:
+              - generic [ref=e4457]: DA
+              - generic [ref=e4459]: Frio
+            - generic [ref=e4460]: Calculadora multi-marketplace
+            - img [ref=e4462]
+          - generic [ref=e4463] [cursor=pointer]:
+            - generic [ref=e4464]:
+              - generic [ref=e4466]: DA
+              - generic [ref=e4468]: Frio
+            - generic [ref=e4469]: Dashboard financeiro
+            - img [ref=e4471]
+          - generic [ref=e4472] [cursor=pointer]:
+            - generic [ref=e4473]:
+              - generic [ref=e4475]: DA
+              - generic [ref=e4477]: Frio
+            - generic [ref=e4478]: Resumo da Operação
+            - img [ref=e4480]
+          - generic [ref=e4481] [cursor=pointer]:
+            - generic [ref=e4482]:
+              - generic [ref=e4484]: Admin
+              - generic [ref=e4486]: Frio
+            - generic [ref=e4487]: Gestão de Influenciador
+            - img [ref=e4489]
+          - generic [ref=e4490] [cursor=pointer]:
+            - generic [ref=e4491]:
+              - generic [ref=e4493]: Admin
+              - generic [ref=e4495]: Frio
+            - generic [ref=e4496]: Controle de Planos
+            - img [ref=e4498]
+          - generic [ref=e4499] [cursor=pointer]:
+            - generic [ref=e4500]:
+              - generic [ref=e4502]: Admin
+              - generic [ref=e4504]: Frio
+            - generic [ref=e4505]: Telemetria - Workspace ML
+            - img [ref=e4507]
+          - generic [ref=e4508] [cursor=pointer]:
+            - generic [ref=e4509]:
+              - generic [ref=e4511]: Admin
+              - generic [ref=e4513]: Frio
+            - generic [ref=e4514]: Telemetria - Workspace shopee
+            - img [ref=e4516]
+          - generic [ref=e4517] [cursor=pointer]:
+            - generic [ref=e4518]:
+              - generic [ref=e4520]: DA
+              - generic [ref=e4522]: Frio
+            - generic [ref=e4523]: Telemetria
+            - img [ref=e4525]
+          - generic [ref=e4526] [cursor=pointer]:
+            - generic [ref=e4527]:
+              - generic [ref=e4529]: DA
+              - generic [ref=e4531]: Frio
+            - generic [ref=e4532]: Avantpro Trend
+            - img [ref=e4534]
+          - generic [ref=e4535] [cursor=pointer]:
+            - generic [ref=e4536]:
+              - generic [ref=e4538]: DA
+              - generic [ref=e4540]: Frio
+            - generic [ref=e4541]: Notificação
+            - img [ref=e4543]
+          - generic [ref=e4544] [cursor=pointer]:
+            - generic [ref=e4545]:
+              - generic [ref=e4547]: DA
+              - generic [ref=e4549]: Frio
+            - generic [ref=e4550]: Analise de Concorrentes
+            - img [ref=e4552]
+          - generic [ref=e4553] [cursor=pointer]:
+            - generic [ref=e4554]:
+              - generic [ref=e4556]: DA
+              - generic [ref=e4558]: Frio
+            - generic [ref=e4559]: Curva ABC
+            - img [ref=e4561]
+          - generic [ref=e4562] [cursor=pointer]:
+            - generic [ref=e4563]:
+              - generic [ref=e4565]: DA
+              - generic [ref=e4567]: Frio
+            - generic [ref=e4568]: Avantpro Workspace
+            - img [ref=e4570]
+          - generic [ref=e4571] [cursor=pointer]:
+            - generic [ref=e4572]:
+              - generic [ref=e4574]: DA
+              - generic [ref=e4576]: Frio
+            - generic [ref=e4577]: Equalizar com Mercado Livre
+            - img [ref=e4579]
+          - generic [ref=e4580] [cursor=pointer]:
+            - generic [ref=e4581]:
+              - generic [ref=e4583]: DA
+              - generic [ref=e4585]: Frio
+            - generic [ref=e4586]: Mais Vendidos em Menos Tempo
+            - img [ref=e4588]
+          - generic [ref=e4589] [cursor=pointer]:
+            - generic [ref=e4590]:
+              - generic [ref=e4592]: DA
+              - generic [ref=e4594]: Frio
+            - generic [ref=e4595]: Marcas mais vendidas por keyword
+            - img [ref=e4597]
+          - generic [ref=e4598] [cursor=pointer]:
+            - generic [ref=e4599]:
+              - generic [ref=e4601]: DA
+              - generic [ref=e4603]: Frio
+            - generic [ref=e4604]: Top seller por keywork
+            - img [ref=e4606]
+          - generic [ref=e4607] [cursor=pointer]:
+            - generic [ref=e4608]:
+              - generic [ref=e4610]: DA
+              - generic [ref=e4612]: Frio
+            - generic [ref=e4613]: Avantpro Hype
+            - img [ref=e4615]
+          - generic [ref=e4616] [cursor=pointer]:
+            - generic [ref=e4617]:
+              - generic [ref=e4619]: DA
+              - generic [ref=e4621]: Frio
+            - generic [ref=e4622]: Feedback por feature no produto
+            - img [ref=e4624]
+          - generic [ref=e4625] [cursor=pointer]:
+            - generic [ref=e4626]:
+              - generic [ref=e4628]: DA
+              - generic [ref=e4630]: Frio
+            - generic [ref=e4631]: Analise de Concorrentes
+            - img [ref=e4633]
+          - generic [ref=e4634] [cursor=pointer]:
+            - generic [ref=e4635]:
+              - generic [ref=e4637]: DA
+              - generic [ref=e4639]: Frio
+            - generic [ref=e4640]: Buscador de Anúncio
+            - img [ref=e4642]
+          - generic [ref=e4643] [cursor=pointer]:
+            - generic [ref=e4644]:
+              - generic [ref=e4646]: DA
+              - generic [ref=e4648]: Frio
+            - generic [ref=e4649]: CH
+            - img [ref=e4651]
+          - generic [ref=e4652] [cursor=pointer]:
+            - generic [ref=e4653]:
+              - generic [ref=e4655]: DA
+              - generic [ref=e4657]: Frio
+            - generic [ref=e4658]: Dados Loja Oficial
+            - img [ref=e4660]
+          - generic [ref=e4661] [cursor=pointer]:
+            - generic [ref=e4662]:
+              - generic [ref=e4664]: DA
+              - generic [ref=e4666]: Frio
+            - generic [ref=e4667]: Avantpro Workspace
+            - img [ref=e4669]
+          - generic [ref=e4670] [cursor=pointer]:
+            - generic [ref=e4671]:
+              - generic [ref=e4673]: DA
+              - generic [ref=e4675]: Frio
+            - generic [ref=e4676]: Alerta que promoção vai acabar
+            - img [ref=e4678]
+          - generic [ref=e4679] [cursor=pointer]:
+            - generic [ref=e4680]:
+              - generic [ref=e4682]: DA
+              - generic [ref=e4684]: Frio
+            - generic [ref=e4685]: Mais Vendidos em Menos Tempo
+            - img [ref=e4687]
+          - generic [ref=e4688] [cursor=pointer]:
+            - generic [ref=e4689]:
+              - generic [ref=e4691]: DA
+              - generic [ref=e4693]: Frio
+            - generic [ref=e4694]: Análise de Mercado
+            - img [ref=e4696]
+          - generic [ref=e4697] [cursor=pointer]:
+            - generic [ref=e4698]:
+              - generic [ref=e4700]: DA
+              - generic [ref=e4702]: Frio
+            - generic [ref=e4703]: Telemetria
+            - img [ref=e4705]
+          - generic [ref=e4706] [cursor=pointer]:
+            - generic [ref=e4707]:
+              - generic [ref=e4709]: DA
+              - generic [ref=e4711]: Frio
+            - generic [ref=e4712]: Análise de IA -> Meus anúncios
+            - img [ref=e4714]
+      - generic [ref=e4715]:
+        - generic [ref=e4716]:
+          - generic [ref=e4718]: Refinando
+          - generic [ref=e4719]: "6"
+        - generic [ref=e4720]:
+          - generic [ref=e4721] [cursor=pointer]:
+            - generic [ref=e4722]:
+              - generic [ref=e4724]: DA
+              - generic [ref=e4726]: Morno
+            - generic [ref=e4727]: Análise de IA nos meus anúncios
+            - img [ref=e4729]
+          - generic [ref=e4730] [cursor=pointer]:
+            - generic [ref=e4731]:
+              - generic [ref=e4733]: DA
+              - generic [ref=e4735]: Frio
+            - generic [ref=e4736]: Incluir filtro de exibição na tela de produto
+            - img [ref=e4738]
+          - generic [ref=e4739] [cursor=pointer]:
+            - generic [ref=e4740]:
+              - generic [ref=e4742]: IO
+              - generic [ref=e4744]: Quente
+            - generic [ref=e4745]: Magic link
+            - img [ref=e4747]
+          - generic [ref=e4748] [cursor=pointer]:
+            - generic [ref=e4749]:
+              - generic [ref=e4751]: OM
+              - generic [ref=e4753]: Frio
+            - generic [ref=e4754]: A possibilidade de alterar o frete manualmente na calculadora
+            - img [ref=e4756]
+          - generic [ref=e4757] [cursor=pointer]:
+            - generic [ref=e4758]:
+              - generic [ref=e4760]: DA
+              - generic [ref=e4762]: Morno
+            - generic [ref=e4763]: Redesign completo da interface do Avantpro Hive
+            - img [ref=e4765]
+          - generic [ref=e4766] [cursor=pointer]:
+            - generic [ref=e4767]:
+              - generic [ref=e4769]: Admin
+              - generic [ref=e4771]: Frio
+            - generic [ref=e4772]: Régua de Cobrança
+            - img [ref=e4774]
+      - generic [ref=e4775]:
+        - generic [ref=e4776]:
+          - generic [ref=e4778]: Ready-to-dev
+          - generic [ref=e4779]: "4"
+        - generic [ref=e4780]:
+          - generic [ref=e4781] [cursor=pointer]:
+            - generic [ref=e4782]:
+              - generic [ref=e4784]: DA
+              - generic [ref=e4786]: Quente
+            - generic [ref=e4787]: Minha conta Avantpro
+            - img [ref=e4789]
+          - generic [ref=e4790] [cursor=pointer]:
+            - generic [ref=e4791]:
+              - generic [ref=e4793]: OM
+              - generic [ref=e4795]: Frio
+            - generic [ref=e4796]: Painel financeiro
+            - img [ref=e4798]
+          - generic [ref=e4799] [cursor=pointer]:
+            - generic [ref=e4800]:
+              - generic [ref=e4802]: DA
+              - generic [ref=e4804]: Frio
+            - generic [ref=e4805]: Incluir mais filtros de ordenação para os outros markteplaces além do ML
+            - img [ref=e4807]
+          - generic [ref=e4808] [cursor=pointer]:
+            - generic [ref=e4809]:
+              - generic [ref=e4811]: DA
+              - generic [ref=e4813]: Frio
+            - generic [ref=e4814]: Redirecionamento da lista das categorias na amazon
+            - img [ref=e4816]
+      - generic [ref=e4817]:
+        - generic [ref=e4818]:
+          - generic [ref=e4820]: Entregue
+          - generic [ref=e4821]: "3"
+        - generic [ref=e4822]:
+          - generic [ref=e4823] [cursor=pointer]:
+            - generic [ref=e4824]:
+              - generic [ref=e4826]: Admin
+              - generic [ref=e4828]: Frio
+            - generic [ref=e4829]: Evolução da Emissão de Nota Fiscal
+            - img [ref=e4831]
+          - generic [ref=e4832] [cursor=pointer]:
+            - generic [ref=e4833]:
+              - generic [ref=e4835]: DA
+              - generic [ref=e4837]: Frio
+            - generic [ref=e4838]: AvantproPost - Evolução
+            - img [ref=e4840]
+          - generic [ref=e4841] [cursor=pointer]:
+            - generic [ref=e4842]:
+              - generic [ref=e4844]: Admin
+              - generic [ref=e4846]: Frio
+            - generic [ref=e4847]: Avantpro Partner
+            - img [ref=e4849]
+      - generic [ref=e4850]:
+        - generic [ref=e4851]:
+          - generic [ref=e4853]: Pausado
+          - generic [ref=e4854]: "2"
+        - generic [ref=e4855]:
+          - generic [ref=e4856] [cursor=pointer]:
+            - generic [ref=e4857]:
+              - generic [ref=e4859]: DA
+              - generic [ref=e4861]: Frio
+            - generic [ref=e4862]: Encontrar fornecedor nacional
+            - img [ref=e4864]
+          - generic [ref=e4865] [cursor=pointer]:
+            - generic [ref=e4866]:
+              - generic [ref=e4868]: OM
+              - generic [ref=e4870]: Morno
+            - generic [ref=e4871]: Gestão de catálogo
+            - img [ref=e4873]
+  - generic [ref=e4876]:
+    - generic [ref=e4877]:
+      - generic [ref=e4878]:
+        - generic [ref=e4879]:
+          - generic [ref=e4880]: DA
+          - text: ·
+          - generic [ref=e4881]: Data analysis
+        - generic [ref=e4883]: Frio
+      - button "Fechar" [ref=e4884] [cursor=pointer]:
+        - img "Fechar" [ref=e4885]
+    - heading "Central de notificação" [level=2] [ref=e4886]
+    - paragraph [ref=e4887]: Central de notificações dentro das extensões, que envia push direto na UI do mktplace, avisando sobre ações do sistema, da conta dele e notificações mkt
+    - generic [ref=e4888]:
+      - generic [ref=e4889]:
+        - generic [ref=e4890]: Status
+        - generic [ref=e4892]: Discovery
+      - generic [ref=e4893]:
+        - generic [ref=e4894]: Origem
+        - generic [ref=e4895]: Interna
+      - generic [ref=e4897]: Responsável
+    - generic [ref=e4898]:
+      - generic [ref=e4901]: Por que está frio
+      - paragraph [ref=e4902]: O usuário não gosta de ser notificado. é muito estratégico para a empresa, mas incomodativo pro usuários.
+    - generic [ref=e4904]: Próximos passos
+    - generic [ref=e4905]:
+      - generic [ref=e4906]:
+        - text: Ticket
+        - strong
+      - link "Abrir no Jira" [ref=e4907] [cursor=pointer]:
+        - /url: https://avantpro.atlassian.net/browse/
+        - img [ref=e4908]
+        - text: Abrir no Jira

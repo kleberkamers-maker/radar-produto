@@ -51,6 +51,16 @@
       </div>
     </div>
 
+    <!-- View tabs -->
+    <div style="display:flex;gap:6px;margin-bottom:14px;">
+      <button type="button" onClick="{{ onSetRadar }}" style="{{ radarTabStyle }}">
+        <img src="https://unpkg.com/lucide-static@latest/icons/radar.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ radarTabIconStyle }}">Radar
+      </button>
+      <button type="button" onClick="{{ onSetKanban }}" style="{{ kanbanTabStyle }}">
+        <img src="https://unpkg.com/lucide-static@latest/icons/columns.svg" width="15" height="15" alt="" aria-hidden="true" style="{{ kanbanTabIconStyle }}">Kanban
+      </button>
+    </div>
+
     <!-- Filter toolbar -->
     <div style="background:#fff;border:1px solid #D3D4D6;border-radius:12px;padding:14px 16px;margin-bottom:20px;display:flex;flex-wrap:wrap;align-items:center;gap:18px;box-shadow:0 1px 2px rgba(28,31,38,0.04);">
       <div style="display:flex;align-items:center;gap:8px;">
@@ -96,6 +106,7 @@
       </div>
     </sc-if>
 
+    <sc-if value="{{ isRadar }}" hint-placeholder-val="{{ true }}">
     <!-- Main grid -->
     <div style="display:grid;grid-template-columns:560px 1fr;gap:22px;align-items:start;">
 
@@ -207,6 +218,41 @@
         </div>
       </div>
     </div>
+    </sc-if>
+
+    <sc-if value="{{ isKanban }}" hint-placeholder-val="{{ false }}">
+      <div style="overflow-x:auto;padding-bottom:8px;">
+        <div style="display:flex;gap:14px;min-width:min-content;align-items:flex-start;">
+          <sc-for list="{{ kanbanCols }}" as="col" hint-placeholder-count="5">
+            <div style="{{ col.colStyle }}">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+                <span style="{{ col.headerBadge }}">{{ col.label }}</span>
+                <span style="font-size:12px;color:#9CA3AF;font-weight:500;">{{ col.count }}</span>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:8px;">
+                <sc-for list="{{ col.cards }}" as="card" hint-placeholder-count="0">
+                  <div class="demand-card" onClick="{{ card.select }}" style="{{ card.cardStyle }}">
+                    <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap;">
+                      <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:11px;font-weight:500;">{{ card.buLabel }}</span>
+                      <span style="{{ card.tempBadge }}">{{ card.tempLabel }}</span>
+                    </div>
+                    <div style="font-size:14px;font-weight:500;color:#1C1F26;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ card.title }}</div>
+                    <div style="display:flex;align-items:center;gap:5px;margin-top:8px;padding-top:8px;border-top:1px solid #F1F2F4;font-size:12px;color:#626262;">
+                      <img src="https://unpkg.com/lucide-static@latest/icons/user.svg" width="12" height="12" alt="" aria-hidden="true" style="opacity:.55;">{{ card.responsavel }}
+                    </div>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ col.isEmpty }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:24px 12px;text-align:center;border:1px dashed #E5E7EB;border-radius:10px;">
+                    <div style="font-size:13px;color:#C4C6C9;">Sem demandas</div>
+                  </div>
+                </sc-if>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
   </div>
 
   <!-- Detail drawer -->
@@ -282,6 +328,7 @@ class Component extends DCLogic {
   state = {
     filters: { bu: 'all', temp: 'all', q: '' },
     readyOnly: false,
+    view: 'radar',
     selectedId: null,
     hoverId: null,
     demands: [],
@@ -346,6 +393,7 @@ class Component extends DCLogic {
   setFilter(k, v) { this.setState(s => ({ filters: { ...s.filters, [k]: v } })); }
   clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', q: '' }, readyOnly: false }); }
   toggleReadyOnly() { this.setState(s => ({ readyOnly: !s.readyOnly })); }
+  setView(v) { this.setState({ view: v }); }
   select(id) { this.setState({ selectedId: id }); }
   close() { this.setState({ selectedId: null }); }
 
@@ -506,6 +554,42 @@ class Component extends DCLogic {
       };
     }
 
+    const STATUS_ORDER = ['Discovery', 'Refinando', 'Ready-to-dev', 'Entregue', 'Pausado'];
+    const kanbanCols = STATUS_ORDER.map(sk => {
+      const sc = this.STATUSES[sk];
+      const cards = filtered.filter(d => d.status === sk).map(d => {
+        const t = this.TEMPS[d.temp];
+        if (!t) return null;
+        return {
+          buLabel: this.BUS[d.bu] ? this.BUS[d.bu].label : d.bu,
+          tempLabel: t.label,
+          tempBadge: this.tempBadgeStyle(t),
+          title: d.title,
+          responsavel: d.responsavel,
+          jira: d.jira,
+          select: () => this.select(d.id),
+          cardStyle: { background:'#fff', border:'1px solid #D3D4D6', borderRadius:'10px', padding:'12px 14px', cursor:'pointer', boxShadow:'0 1px 2px rgba(28,31,38,0.04)' },
+        };
+      }).filter(Boolean);
+      return {
+        key: sk, label: sk, count: cards.length, isEmpty: cards.length === 0, cards,
+        colStyle: { flex:'0 0 260px', minWidth:'260px', background:'#F8F9FA', border:'1px solid #E5E7EB', borderRadius:'12px', padding:'14px 12px' },
+        headerBadge: sc
+          ? 'display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:9999px;background:' + sc.bg + ';color:' + sc.fg + ';font-size:13px;font-weight:600;'
+          : 'display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:9999px;background:#F3F4F6;color:#6B7280;font-size:13px;font-weight:600;',
+      };
+    });
+
+    const view = this.state.view;
+    const tabStyle = (active) => ({
+      display: 'flex', alignItems: 'center', gap: '6px',
+      height: '34px', padding: '0 14px', borderRadius: '8px', cursor: 'pointer',
+      fontFamily: 'inherit', fontSize: '13px', fontWeight: 500,
+      border: active ? '1px solid #271BEF' : '1px solid transparent',
+      background: active ? '#271BEF' : 'transparent',
+      color: active ? '#fff' : '#626262',
+    });
+
     const readyOnlyActive = this.state.readyOnly;
     return {
       buChips, tempChips, dots, list, hovered,
@@ -530,6 +614,15 @@ class Component extends DCLogic {
       total: demands.length,
       hotCount: demands.filter(d => d.temp === 'quente').length,
       hasNone: filtered.length === 0 && !this.state.loading,
+      isRadar: view === 'radar',
+      isKanban: view === 'kanban',
+      onSetRadar: () => this.setView('radar'),
+      onSetKanban: () => this.setView('kanban'),
+      radarTabStyle: tabStyle(view === 'radar'),
+      kanbanTabStyle: tabStyle(view === 'kanban'),
+      radarTabIconStyle: view === 'radar' ? 'filter:brightness(0) invert(1);' : 'opacity:0.5;',
+      kanbanTabIconStyle: view === 'kanban' ? 'filter:brightness(0) invert(1);' : 'opacity:0.5;',
+      kanbanCols,
     };
   }
 }
