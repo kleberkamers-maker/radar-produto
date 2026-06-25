@@ -1,0 +1,1872 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - img [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "Radar de produto" [level=1] [ref=e11]
+        - generic [ref=e12]: Avantpro
+      - paragraph [ref=e13]: Quanto mais ao centro, mais quente a demanda. As direções do radar são as business units.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: "130"
+        - generic [ref=e17]: demandas
+      - generic [ref=e19]:
+        - generic [ref=e20]: "10"
+        - generic [ref=e21]: quentes
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]: Business unit
+      - generic [ref=e25]:
+        - button "Todas" [ref=e26] [cursor=pointer]
+        - button "OM" [ref=e27] [cursor=pointer]
+        - button "Partner" [ref=e28] [cursor=pointer]
+        - button "DA" [ref=e29] [cursor=pointer]
+        - button "Admin" [ref=e30] [cursor=pointer]
+        - button "IO" [ref=e31] [cursor=pointer]
+    - generic [ref=e33]:
+      - generic [ref=e34]: Temperatura
+      - generic [ref=e35]:
+        - button "Todas" [ref=e36] [cursor=pointer]
+        - button "Quente" [ref=e37] [cursor=pointer]
+        - button "Morno" [ref=e38] [cursor=pointer]
+        - button "Frio" [ref=e39] [cursor=pointer]
+    - button "Ready to dev" [active] [ref=e41] [cursor=pointer]:
+      - img [ref=e42]
+      - text: Ready to dev
+    - generic [ref=e43]:
+      - img [ref=e44]
+      - textbox "Buscar por título, responsável..." [ref=e45]
+    - button "Limpar" [ref=e46] [cursor=pointer]:
+      - img [ref=e47]
+      - text: Limpar
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]: Temperatura
+        - generic [ref=e54]: Quente
+        - generic [ref=e56]: Morno
+        - generic [ref=e58]: Frio
+      - generic [ref=e60]:
+        - img [ref=e61]
+        - generic [ref=e72]:
+          - generic [ref=e73]: OM
+          - generic [ref=e74]: Operations management
+        - generic [ref=e76]: Partner
+        - generic [ref=e77]:
+          - generic [ref=e78]: DA
+          - generic [ref=e79]: Data analysis
+        - generic [ref=e80]:
+          - generic [ref=e81]: Admin
+          - generic [ref=e82]: "Avantpro admin: dados"
+        - generic [ref=e83]:
+          - generic [ref=e84]: IO
+          - generic [ref=e85]: Internal operations
+        - button [ref=e90] [cursor=pointer]
+        - button [ref=e91] [cursor=pointer]
+        - button [ref=e92] [cursor=pointer]
+        - button [ref=e93] [cursor=pointer]
+        - button [ref=e2417] [cursor=pointer]
+        - button [ref=e2418] [cursor=pointer]
+        - button [ref=e2419] [cursor=pointer]
+        - button [ref=e2420] [cursor=pointer]
+        - button [ref=e2421] [cursor=pointer]
+        - button [ref=e2422] [cursor=pointer]
+        - button [ref=e2423] [cursor=pointer]
+        - button [ref=e2424] [cursor=pointer]
+        - button [ref=e2425] [cursor=pointer]
+        - button [ref=e2426] [cursor=pointer]
+        - button [ref=e2427] [cursor=pointer]
+        - button [ref=e2428] [cursor=pointer]
+        - button [ref=e2429] [cursor=pointer]
+        - button [ref=e2430] [cursor=pointer]
+        - button [ref=e2431] [cursor=pointer]
+        - button [ref=e2432] [cursor=pointer]
+        - button [ref=e2433] [cursor=pointer]
+        - button [ref=e2434] [cursor=pointer]
+        - button [ref=e2435] [cursor=pointer]
+        - button [ref=e2436] [cursor=pointer]
+        - button [ref=e2437] [cursor=pointer]
+        - button [ref=e2438] [cursor=pointer]
+        - button [ref=e2439] [cursor=pointer]
+        - button [ref=e2440] [cursor=pointer]
+        - button [ref=e2441] [cursor=pointer]
+        - button [ref=e2442] [cursor=pointer]
+        - button [ref=e2443] [cursor=pointer]
+        - button [ref=e2444] [cursor=pointer]
+        - button [ref=e2445] [cursor=pointer]
+        - button [ref=e2446] [cursor=pointer]
+        - button [ref=e2447] [cursor=pointer]
+        - button [ref=e2448] [cursor=pointer]
+        - button [ref=e2449] [cursor=pointer]
+        - button [ref=e2450] [cursor=pointer]
+        - button [ref=e2451] [cursor=pointer]
+        - button [ref=e2452] [cursor=pointer]
+        - button [ref=e2453] [cursor=pointer]
+        - button [ref=e2454] [cursor=pointer]
+        - button [ref=e2455] [cursor=pointer]
+        - button [ref=e2456] [cursor=pointer]
+        - button [ref=e2457] [cursor=pointer]
+        - button [ref=e2458] [cursor=pointer]
+        - button [ref=e2459] [cursor=pointer]
+        - button [ref=e2460] [cursor=pointer]
+        - button [ref=e2461] [cursor=pointer]
+        - button [ref=e2462] [cursor=pointer]
+        - button [ref=e2463] [cursor=pointer]
+        - button [ref=e2464] [cursor=pointer]
+        - button [ref=e2465] [cursor=pointer]
+        - button [ref=e2466] [cursor=pointer]
+        - button [ref=e2467] [cursor=pointer]
+        - button [ref=e2468] [cursor=pointer]
+        - button [ref=e2469] [cursor=pointer]
+        - button [ref=e2470] [cursor=pointer]
+        - button [ref=e2471] [cursor=pointer]
+        - button [ref=e2472] [cursor=pointer]
+        - button [ref=e2473] [cursor=pointer]
+        - button [ref=e2474] [cursor=pointer]
+        - button [ref=e2475] [cursor=pointer]
+        - button [ref=e2476] [cursor=pointer]
+        - button [ref=e2477] [cursor=pointer]
+        - button [ref=e2478] [cursor=pointer]
+        - button [ref=e2479] [cursor=pointer]
+        - button [ref=e2480] [cursor=pointer]
+        - button [ref=e2481] [cursor=pointer]
+        - button [ref=e2482] [cursor=pointer]
+        - button [ref=e2483] [cursor=pointer]
+        - button [ref=e2484] [cursor=pointer]
+        - button [ref=e2485] [cursor=pointer]
+        - button [ref=e2486] [cursor=pointer]
+        - button [ref=e2487] [cursor=pointer]
+        - button [ref=e2488] [cursor=pointer]
+        - button [ref=e2489] [cursor=pointer]
+        - button [ref=e2490] [cursor=pointer]
+        - button [ref=e2491] [cursor=pointer]
+        - button [ref=e2492] [cursor=pointer]
+        - button [ref=e2493] [cursor=pointer]
+        - button [ref=e2494] [cursor=pointer]
+        - button [ref=e2495] [cursor=pointer]
+        - button [ref=e2496] [cursor=pointer]
+        - button [ref=e2497] [cursor=pointer]
+        - button [ref=e2498] [cursor=pointer]
+        - button [ref=e2499] [cursor=pointer]
+        - button [ref=e2500] [cursor=pointer]
+        - button [ref=e2501] [cursor=pointer]
+        - button [ref=e2502] [cursor=pointer]
+        - button [ref=e2503] [cursor=pointer]
+        - button [ref=e2504] [cursor=pointer]
+        - button [ref=e2505] [cursor=pointer]
+        - button [ref=e2506] [cursor=pointer]
+        - button [ref=e2507] [cursor=pointer]
+        - button [ref=e2508] [cursor=pointer]
+        - button [ref=e2509] [cursor=pointer]
+        - button [ref=e2510] [cursor=pointer]
+        - button [ref=e2511] [cursor=pointer]
+        - button [ref=e2512] [cursor=pointer]
+        - button [ref=e2513] [cursor=pointer]
+        - button [ref=e2514] [cursor=pointer]
+        - button [ref=e2515] [cursor=pointer]
+        - button [ref=e2516] [cursor=pointer]
+        - button [ref=e2517] [cursor=pointer]
+        - button [ref=e2518] [cursor=pointer]
+        - button [ref=e2519] [cursor=pointer]
+        - button [ref=e2520] [cursor=pointer]
+        - button [ref=e2521] [cursor=pointer]
+        - button [ref=e2522] [cursor=pointer]
+        - button [ref=e2523] [cursor=pointer]
+        - button [ref=e2524] [cursor=pointer]
+        - button [ref=e2525] [cursor=pointer]
+        - button [ref=e2526] [cursor=pointer]
+        - button [ref=e2527] [cursor=pointer]
+        - button [ref=e2528] [cursor=pointer]
+        - button [ref=e2529] [cursor=pointer]
+        - button [ref=e2530] [cursor=pointer]
+        - button [ref=e2531] [cursor=pointer]
+        - button [ref=e2532] [cursor=pointer]
+        - button [ref=e2533] [cursor=pointer]
+        - button [ref=e2534] [cursor=pointer]
+        - button [ref=e2535] [cursor=pointer]
+        - button [ref=e2536] [cursor=pointer]
+        - button [ref=e2537] [cursor=pointer]
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - heading "Demandas" [level=2] [ref=e88]
+        - generic [ref=e89]: 130 de 130
+      - generic [ref=e215]:
+        - generic [ref=e216] [cursor=pointer]:
+          - generic [ref=e217]:
+            - generic [ref=e219]: DA
+            - generic [ref=e221]: Frio
+            - generic [ref=e223]: Discovery
+          - generic [ref=e224]: Central de notificação
+          - generic [ref=e225]: Central de notificações dentro das extensões, que envia push direto na UI do mktplace, avisando sobre ações do sistema, da conta dele e notificações mkt
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - img [ref=e228]
+              - generic [ref=e229]: Interna
+            - img [ref=e231]
+        - generic [ref=e232] [cursor=pointer]:
+          - generic [ref=e233]:
+            - generic [ref=e235]: DA
+            - generic [ref=e237]: Morno
+            - generic [ref=e239]: Discovery
+          - generic [ref=e240]: Evolução análise de catálogo
+          - generic [ref=e241]: O recurso de análise de catálogo poderia exibir o price-to-win, histórico de preços do catálogo, apontando disputa de preço. Determinar a logística para ganhar. Além de contar com uma análise com IA
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - img [ref=e244]
+              - generic [ref=e245]: Customer Box
+            - img [ref=e247]
+        - generic [ref=e248] [cursor=pointer]:
+          - generic [ref=e249]:
+            - generic [ref=e251]: DA
+            - generic [ref=e253]: Morno
+            - generic [ref=e255]: Refinando
+          - generic [ref=e256]: Análise de IA nos meus anúncios
+          - generic [ref=e257]: Analisar os anúncios do seller com o objetivo de indicar quais precisam de atenção ou não! Direcionando ele para usar o analytics
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - img [ref=e260]
+              - generic [ref=e261]: Customer Box
+            - img [ref=e263]
+        - generic [ref=e264] [cursor=pointer]:
+          - generic [ref=e265]:
+            - generic [ref=e267]: DA
+            - generic [ref=e269]: Quente
+            - generic [ref=e271]: Ready-to-dev
+          - generic [ref=e272]: Minha conta Avantpro
+          - generic [ref=e273]: Sessão no menu avantpro que permite o usuário ler os dados da sua conta avantpro, plano, nota fiscal, etc.
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - img [ref=e276]
+              - generic [ref=e277]: Customer Box
+            - img [ref=e279]
+        - generic [ref=e2538] [cursor=pointer]:
+          - generic [ref=e2539]:
+            - generic [ref=e2541]: DA
+            - generic [ref=e2543]: Quente
+            - generic [ref=e2545]: Discovery
+          - generic [ref=e2546]: App mobile
+          - generic [ref=e2547]: Aplicativo mobile para que o seller possa fazer análises, pesquisas e ver suas métricas.
+          - generic [ref=e2548]:
+            - generic [ref=e2549]:
+              - img [ref=e2550]
+              - generic [ref=e2551]: Interna
+            - img [ref=e2553]
+        - generic [ref=e2554] [cursor=pointer]:
+          - generic [ref=e2555]:
+            - generic [ref=e2557]: OM
+            - generic [ref=e2559]: Frio
+            - generic [ref=e2561]: Ready-to-dev
+          - generic [ref=e2562]: Painel financeiro
+          - generic [ref=e2563]: Mostrando a casacata financeira do seller, bem como glosa, valores não pagos pelo mktplace, produtops não devolvidos e etc,
+          - generic [ref=e2564]:
+            - generic [ref=e2565]:
+              - img [ref=e2566]
+              - generic [ref=e2567]: Interna
+            - img [ref=e2569]
+        - generic [ref=e2570] [cursor=pointer]:
+          - generic [ref=e2571]:
+            - generic [ref=e2573]: OM
+            - generic [ref=e2575]: Frio
+            - generic [ref=e2577]: Discovery
+          - generic [ref=e2578]: Central de notificação
+          - generic [ref=e2579]: Central de notificações dentro do control, que envia push direto na UI do mktplace, avisando sobre ações do sistema, da conta dele e notificações mkt
+          - generic [ref=e2580]:
+            - generic [ref=e2581]:
+              - img [ref=e2582]
+              - generic [ref=e2583]: Interna
+            - img [ref=e2585]
+        - generic [ref=e2586] [cursor=pointer]:
+          - generic [ref=e2587]:
+            - generic [ref=e2589]: OM
+            - generic [ref=e2591]: Morno
+            - generic [ref=e2593]: Discovery
+          - generic [ref=e2594]: Gestão de ADS
+          - generic [ref=e2595]: Gestão inteligente de ads para o seller. Painel de métricas e painel de ação. Painel de métricas mostra campanhas que estrão indo bem, as que estão indo mal. Analisa os resultados da campanha e sugere ações. Também analisa a conta do seller e sugere produtos para incluir/remover de campanhas.
+          - generic [ref=e2596]:
+            - generic [ref=e2597]:
+              - img [ref=e2598]
+              - generic [ref=e2599]: Customer Box
+            - img [ref=e2601]
+        - generic [ref=e2602] [cursor=pointer]:
+          - generic [ref=e2603]:
+            - generic [ref=e2605]: OM
+            - generic [ref=e2607]: Morno
+            - generic [ref=e2609]: Discovery
+            - generic [ref=e2610]: https://grupo-ram.atlassian.net/browse/IDEIA-2
+          - generic [ref=e2611]: Métricas no whatsapp
+          - generic [ref=e2612]: Chatbot de IA no whatsapp que permite que o seller converse com ele para ver como estão as métricas da sua conta. Quantas vendas foram feitas, pedidos que precisam ser despachados, vendas canceladas, produtos que caíram a venda ou ticket, custos que aumentaram, etc.
+          - generic [ref=e2613]:
+            - generic [ref=e2614]:
+              - img [ref=e2615]
+              - generic [ref=e2616]: Interna
+            - img [ref=e2618]
+        - generic [ref=e2619] [cursor=pointer]:
+          - generic [ref=e2620]:
+            - generic [ref=e2622]: Admin
+            - generic [ref=e2624]: Morno
+            - generic [ref=e2626]: Discovery
+            - generic [ref=e2627]: https://grupo-ram.atlassian.net/browse/ADM-312
+          - generic [ref=e2628]: Gestão de fornecedor
+          - generic [ref=e2629]: Permitir que fornecedores se cadastrem no portal do fornecedor do avantpro
+          - generic [ref=e2630]:
+            - generic [ref=e2631]:
+              - img [ref=e2632]
+              - generic [ref=e2633]: Customer Box
+            - img [ref=e2635]
+        - generic [ref=e2636] [cursor=pointer]:
+          - generic [ref=e2637]:
+            - generic [ref=e2639]: DA
+            - generic [ref=e2641]: Quente
+            - generic [ref=e2643]: Discovery
+            - generic [ref=e2644]: https://grupo-ram.atlassian.net/browse/CTRL-633
+          - generic [ref=e2645]: Busca avançada
+          - generic [ref=e2646]: Permitir que o seller consiga realizar uma busca avançada através de filtros especificos e conseguir detalhes diretamente do que procura
+          - generic [ref=e2647]:
+            - generic [ref=e2648]:
+              - img [ref=e2649]
+              - generic [ref=e2650]: Benchmarking
+            - img [ref=e2652]
+        - generic [ref=e2653] [cursor=pointer]:
+          - generic [ref=e2654]:
+            - generic [ref=e2656]: DA
+            - generic [ref=e2658]: Morno
+            - generic [ref=e2660]: Discovery
+            - generic [ref=e2661]: https://grupo-ram.atlassian.net/browse/IDEIA-1
+          - generic [ref=e2662]: Chatbot no whatsapp que faz pesquisa de produtos
+          - generic [ref=e2663]: Semelhante ao que é entregue no app, mas direto no whatsapp do seller.
+          - generic [ref=e2664]:
+            - generic [ref=e2665]:
+              - img [ref=e2666]
+              - generic [ref=e2667]: Interna
+            - img [ref=e2669]
+        - generic [ref=e2670] [cursor=pointer]:
+          - generic [ref=e2671]:
+            - generic [ref=e2673]: Partner
+            - generic [ref=e2675]: Quente
+            - generic [ref=e2677]: Discovery
+            - generic [ref=e2678]: https://grupo-ram.atlassian.net/browse/CAM-594
+          - generic [ref=e2679]: Dados do seller
+          - generic [ref=e2680]: Permitir que o partner veja os dados da conta do seu seller dentro do portal do parceiro. Qual seller que mais vende? qual está parado? qual está com problema, etc.
+          - generic [ref=e2681]:
+            - generic [ref=e2682]:
+              - img [ref=e2683]
+              - generic [ref=e2684]: Interna
+            - img [ref=e2686]
+        - generic [ref=e2687] [cursor=pointer]:
+          - generic [ref=e2688]:
+            - generic [ref=e2690]: Partner
+            - generic [ref=e2692]: Frio
+            - generic [ref=e2694]: Discovery
+            - generic [ref=e2695]: https://grupo-ram.atlassian.net/browse/ML-4640
+          - generic [ref=e2696]: Central de notificação
+          - generic [ref=e2697]: Central de notificações dentro da UI do partner, que envia push direto na UI do portal, avisando sobre ações do sistema, da conta dele e notificações mkt
+          - generic [ref=e2698]:
+            - generic [ref=e2699]:
+              - img [ref=e2700]
+              - generic [ref=e2701]: Interna
+            - img [ref=e2703]
+        - generic [ref=e2704] [cursor=pointer]:
+          - generic [ref=e2705]:
+            - generic [ref=e2707]: DA
+            - generic [ref=e2709]: Morno
+            - generic [ref=e2711]: Discovery
+            - generic [ref=e2712]: https://grupo-ram.atlassian.net/browse/IDEIA-5
+          - generic [ref=e2713]: Tendências Avantpro
+          - generic [ref=e2714]: A ideia de tendências avantpro unificada em relação aos 3 principais marketplaces
+          - generic [ref=e2715]:
+            - generic [ref=e2716]:
+              - img [ref=e2717]
+              - generic [ref=e2718]: Interna
+            - img [ref=e2720]
+        - generic [ref=e2721] [cursor=pointer]:
+          - generic [ref=e2722]:
+            - generic [ref=e2724]: OM
+            - generic [ref=e2726]: Morno
+            - generic [ref=e2728]: Discovery
+            - generic [ref=e2729]: https://grupo-ram.atlassian.net/browse/IDEIA-15
+          - generic [ref=e2730]: calculadora de DIFAL
+          - generic [ref=e2731]: "A ideia surgiu de um costumer box, com o cliente Felipe S. através de uma ferramenta que o próprio desenvolveu, e permitiu desenvolver: https://libraecom.com.br/"
+          - generic [ref=e2732]:
+            - generic [ref=e2733]:
+              - img [ref=e2734]
+              - generic [ref=e2735]: Customer Box
+            - img [ref=e2737]
+        - generic [ref=e2738] [cursor=pointer]:
+          - generic [ref=e2739]:
+            - generic [ref=e2741]: DA
+            - generic [ref=e2743]: Quente
+            - generic [ref=e2745]: Discovery
+            - generic [ref=e2746]: https://grupo-ram.atlassian.net/browse/IDEIA-3
+          - generic [ref=e2747]: Métricas na tela de search
+          - generic [ref=e2748]: A ideia surgiu do grupo interno, onde antigamente soliciitados pelos usuários seria trazer as métricas referentes aos anúncios direto na tela de search, trabalhando como melhoria, podendo ser individual ou da página
+          - generic [ref=e2749]:
+            - generic [ref=e2750]:
+              - img [ref=e2751]
+              - generic [ref=e2752]: Interna
+            - img [ref=e2754]
+        - generic [ref=e2755] [cursor=pointer]:
+          - generic [ref=e2756]:
+            - generic [ref=e2758]: DA
+            - generic [ref=e2760]: Quente
+            - generic [ref=e2762]: Discovery
+            - generic [ref=e2763]: https://grupo-ram.atlassian.net/browse/IDEIA-19
+          - generic [ref=e2764]: Monitoramento de vendedores
+          - generic [ref=e2765]: Hoje nós temos a possibilidade de utilizar a funcionalidade de monitoramento de anúncios, que seria o comparador, para comparar os produtos, porém seria uma ideia realizar a mesma coisa agora para monitorar concorrentes, e ter métricas para eles. a ideia surgiu de um banchmarking
+          - generic [ref=e2766]:
+            - generic [ref=e2767]:
+              - img [ref=e2768]
+              - generic [ref=e2769]: Benchmarking
+            - img [ref=e2771]
+        - generic [ref=e2772] [cursor=pointer]:
+          - generic [ref=e2773]:
+            - generic [ref=e2775]: DA
+            - generic [ref=e2777]: Quente
+            - generic [ref=e2779]: Discovery
+            - generic [ref=e2780]: https://grupo-ram.atlassian.net/browse/IDEIA-18
+          - generic [ref=e2781]: aplicação para DA, over marketplace
+          - generic [ref=e2782]: Hoje nossos concorrentes todos tem como principal diferencial uma aplicação que faz DA over marketplace, nossa extensão é a melhor sem dúvidas, porém, se conseguirmos alavancar nossas vendas de forma over marketplace, conseguiremos ainda mais sair na frente em relação a eles
+          - generic [ref=e2783]:
+            - generic [ref=e2784]:
+              - img [ref=e2785]
+              - generic [ref=e2786]: Benchmarking
+            - img [ref=e2788]
+        - generic [ref=e2789] [cursor=pointer]:
+          - generic [ref=e2790]:
+            - generic [ref=e2792]: OM
+            - generic [ref=e2794]: Morno
+            - generic [ref=e2796]: Discovery
+            - generic [ref=e2797]: https://grupo-ram.atlassian.net/browse/IDEIA-17
+          - generic [ref=e2798]: Calculadora de importação
+          - generic [ref=e2799]: A funcionalidade surgiu de um costumer box com um cliente Felipe S. na ideia de trazer para nossos usuários a possibilidade de uma calculadora do estilo difal.
+          - generic [ref=e2800]:
+            - generic [ref=e2801]:
+              - img [ref=e2802]
+              - generic [ref=e2803]: Customer Box
+            - img [ref=e2805]
+        - generic [ref=e2806] [cursor=pointer]:
+          - generic [ref=e2807]:
+            - generic [ref=e2809]: OM
+            - generic [ref=e2811]: Morno
+            - generic [ref=e2813]: Discovery
+            - generic [ref=e2814]: https://grupo-ram.atlassian.net/browse/IDEIA-16
+          - generic [ref=e2815]: Inventário de estoque
+          - generic [ref=e2816]: "A funcionalidade surgiu de um costumer box, com o cliente Felipe S. na ideia de ser uma feature para o avantpro Control, a ideia seria fazer um levantamento de inventário de estoques, baseado na ferramenta desenvolvida pelo mesmo e disponível em: Libra | E-com & Marketplaces"
+          - generic [ref=e2817]:
+            - generic [ref=e2818]:
+              - img [ref=e2819]
+              - generic [ref=e2820]: Customer Box
+            - img [ref=e2822]
+        - generic [ref=e2823] [cursor=pointer]:
+          - generic [ref=e2824]:
+            - generic [ref=e2826]: DA
+            - generic [ref=e2828]: Morno
+            - generic [ref=e2830]: Discovery
+            - generic [ref=e2831]: https://grupo-ram.atlassian.net/browse/IDEIA-14
+          - generic [ref=e2832]: Mapear os critérios "invisíveis" do ranking do ML
+          - generic [ref=e2833]: Mapear os critérios "invisíveis" do ranking do ML (taxa de conversão, velocidade de envio, comportamento do consumidor no anúncio) e extrair os diferenciais dos líderes
+          - generic [ref=e2834]:
+            - generic [ref=e2835]:
+              - img [ref=e2836]
+              - generic [ref=e2837]: Suporte
+            - img [ref=e2839]
+        - generic [ref=e2840] [cursor=pointer]:
+          - generic [ref=e2841]:
+            - generic [ref=e2843]: DA
+            - generic [ref=e2845]: Morno
+            - generic [ref=e2847]: Discovery
+            - generic [ref=e2848]: https://grupo-ram.atlassian.net/browse/IDEIA-12
+          - generic [ref=e2849]: Melhorias na tela de Dados do Catálogo (ML)
+          - generic [ref=e2850]: A tela de Dados de Catálogo foi recentemente refatorada com melhorias de layout e adição do preço por vendedor. Durante essa refatoração, mapeamos que vários campos já disponíveis no payload da API não estão sendo exibidos, representando oportunidades de alto valor com baixo custo de implementação.
+          - generic [ref=e2851]:
+            - generic [ref=e2852]:
+              - img [ref=e2853]
+              - generic [ref=e2854]: Suporte
+            - img [ref=e2856]
+        - generic [ref=e2857] [cursor=pointer]:
+          - generic [ref=e2858]:
+            - generic [ref=e2860]: DA
+            - generic [ref=e2862]: Frio
+            - generic [ref=e2864]: Refinando
+            - generic [ref=e2865]: https://grupo-ram.atlassian.net/browse/IDEIA-11
+          - generic [ref=e2866]: Incluir filtro de exibição na tela de produto
+          - generic [ref=e2867]: uma melhoria para Incluir filtro de exibição na tela de produto
+          - generic [ref=e2868]:
+            - generic [ref=e2869]:
+              - img [ref=e2870]
+              - generic [ref=e2871]: Interna
+            - img [ref=e2873]
+        - generic [ref=e2874] [cursor=pointer]:
+          - generic [ref=e2875]:
+            - generic [ref=e2877]: IO
+            - generic [ref=e2879]: Quente
+            - generic [ref=e2881]: Discovery
+            - generic [ref=e2882]: https://grupo-ram.atlassian.net/browse/IDEIA-9
+          - generic [ref=e2883]: Newsletter do Avantpro
+          - generic [ref=e2884]: Comunicação periódica com o seller para que o nome “Avantpro" esteja na cabeça do seller o tempo todo. Quando ele pensar em vender algo online, ele primeiro pense em “Avantpro" Comunicação não do tipo vitrine [olha só esse recurso que o avantpro tem]. Isso não vende, isso não posiciona marca. Avantpro tem que ser O ARAUTO do conhecimento em marketplace. Novidades, tendências, novas regras, tudo sobre o ecossistema deve estar nesse newsletter/blog.
+          - generic [ref=e2885]:
+            - generic [ref=e2886]:
+              - img [ref=e2887]
+              - generic [ref=e2888]: Interna
+            - img [ref=e2890]
+        - generic [ref=e2891] [cursor=pointer]:
+          - generic [ref=e2892]:
+            - generic [ref=e2894]: OM
+            - generic [ref=e2896]: Frio
+            - generic [ref=e2898]: Discovery
+            - generic [ref=e2899]: https://grupo-ram.atlassian.net/browse/IDEIA-8
+          - generic [ref=e2900]: Verifica a API do INPI pra avisar sobre marca registrada
+          - generic [ref=e2901]: Título autoexplicativo -> https://meu.inpi.gov.br/pag/swagger/index.html#/Autenticação/post_pag_api_v1_auth_token
+          - generic [ref=e2902]:
+            - generic [ref=e2903]:
+              - img [ref=e2904]
+              - generic [ref=e2905]: Interna
+            - img [ref=e2907]
+        - generic [ref=e2908] [cursor=pointer]:
+          - generic [ref=e2909]:
+            - generic [ref=e2911]: IO
+            - generic [ref=e2913]: Quente
+            - generic [ref=e2915]: Refinando
+            - generic [ref=e2916]: https://grupo-ram.atlassian.net/browse/IDEIA-4
+          - generic [ref=e2917]: Magic link
+          - generic [ref=e2918]: O sistema deve usar Magic Link para facilitar o login. Pessoas têm enfrentado mais dificuldade com o uso de usuário e senha ao longo do tempo. Atualmente, os produtos têm apenas um e-mail para login. A proposta é modernizar a autenticação com Magic Link.
+          - generic [ref=e2919]:
+            - generic [ref=e2920]:
+              - img [ref=e2921]
+              - generic [ref=e2922]: Interna
+            - img [ref=e2924]
+        - generic [ref=e2925] [cursor=pointer]:
+          - generic [ref=e2926]:
+            - generic [ref=e2928]: OM
+            - generic [ref=e2930]: Morno
+            - generic [ref=e2932]: Discovery
+            - generic [ref=e2933]: https://grupo-ram.atlassian.net/browse/IDEIA-6
+          - generic [ref=e2934]: Pilares de objetivos dentro do POST do ML
+          - generic [ref=e2935]: Na criação de um anúncio no Avantpro Post, integrar os pilares como objetivos a se alcançar Isso permite a criação de anúncios mais objetivos e de maior qualidade
+          - generic [ref=e2936]:
+            - generic [ref=e2937]:
+              - img [ref=e2938]
+              - generic [ref=e2939]: Interna
+            - img [ref=e2941]
+        - generic [ref=e2942] [cursor=pointer]:
+          - generic [ref=e2943]:
+            - generic [ref=e2945]: DA
+            - generic [ref=e2947]: Frio
+            - generic [ref=e2949]: Ready-to-dev
+            - generic [ref=e2950]: https://grupo-ram.atlassian.net/browse/IDEIA-10
+          - generic [ref=e2951]: Incluir mais filtros de ordenação para os outros markteplaces além do ML
+          - generic [ref=e2952]: Incluir mais filtros de ordenação para os outros markteplaces além do ML
+          - generic [ref=e2953]:
+            - generic [ref=e2954]:
+              - img [ref=e2955]
+              - generic [ref=e2956]: Interna
+            - img [ref=e2958]
+        - generic [ref=e2959] [cursor=pointer]:
+          - generic [ref=e2960]:
+            - generic [ref=e2962]: DA
+            - generic [ref=e2964]: Frio
+            - generic [ref=e2966]: Ready-to-dev
+            - generic [ref=e2967]: https://grupo-ram.atlassian.net/browse/IDEIA-7
+          - generic [ref=e2968]: Redirecionamento da lista das categorias na amazon
+          - generic [ref=e2969]: Redirecionamento do ranking para os mais vendidos da categoria
+          - generic [ref=e2970]:
+            - generic [ref=e2971]:
+              - img [ref=e2972]
+              - generic [ref=e2973]: Suporte
+            - img [ref=e2975]
+        - generic [ref=e2976] [cursor=pointer]:
+          - generic [ref=e2977]:
+            - generic [ref=e2979]: OM
+            - generic [ref=e2981]: Frio
+            - generic [ref=e2983]: Refinando
+            - generic [ref=e2984]: https://grupo-ram.atlassian.net/browse/IDEIA-13
+          - generic [ref=e2985]: A possibilidade de alterar o frete manualmente na calculadora
+          - generic [ref=e2986]: Descrição autoexplicativa
+          - generic [ref=e2987]:
+            - generic [ref=e2988]:
+              - img [ref=e2989]
+              - generic [ref=e2990]: Suporte
+            - img [ref=e2992]
+        - generic [ref=e2993] [cursor=pointer]:
+          - generic [ref=e2994]:
+            - generic [ref=e2996]: DA
+            - generic [ref=e2998]: Frio
+            - generic [ref=e3000]: Discovery
+          - generic [ref=e3001]: Gerador de EAN com registro no GS1
+          - generic [ref=e3002]: Utlizar integração com o GS1 para que os EANs gerados pela avantpro sejam registrados e oficiais
+          - generic [ref=e3003]:
+            - generic [ref=e3004]:
+              - img [ref=e3005]
+              - generic [ref=e3006]: Suporte
+            - img [ref=e3008]
+        - generic [ref=e3009] [cursor=pointer]:
+          - generic [ref=e3010]:
+            - generic [ref=e3012]: IO
+            - generic [ref=e3014]: Frio
+            - generic [ref=e3016]: Discovery
+            - generic [ref=e3017]: https://grupo-ram.atlassian.net/browse/CAM-719
+          - generic [ref=e3018]: Politica de Privacidade das Extensões
+          - generic [ref=e3019]: "Contexto Atualmente, o link da Política de Privacidade utilizado pelas extensões está apontando para: http://www.ramsolution.com.br/PrivacyPolicy.pdf Esse domínio não pertence mais à empresa e, além disso, utiliza o protocolo HTTP em vez de HTTPS, o que gera alertas de segurança"
+          - generic [ref=e3020]:
+            - generic [ref=e3021]:
+              - img [ref=e3022]
+              - generic [ref=e3023]: Interna
+            - img [ref=e3025]
+        - generic [ref=e3026] [cursor=pointer]:
+          - generic [ref=e3027]:
+            - generic [ref=e3029]: DA
+            - generic [ref=e3031]: Frio
+            - generic [ref=e3033]: Discovery
+            - generic [ref=e3034]: https://grupo-ram.atlassian.net/browse/AMZ-690
+          - generic [ref=e3035]: Análise de Buy Box (AOD - All Offers Display)
+          - generic [ref=e3036]: Análise de buybox na amazon, parecido com o do ML
+          - generic [ref=e3037]:
+            - generic [ref=e3038]:
+              - img [ref=e3039]
+              - generic [ref=e3040]: Interna
+            - img [ref=e3042]
+        - generic [ref=e3043] [cursor=pointer]:
+          - generic [ref=e3044]:
+            - generic [ref=e3046]: DA
+            - generic [ref=e3048]: Frio
+            - generic [ref=e3050]: Discovery
+            - generic [ref=e3051]: https://grupo-ram.atlassian.net/browse/AMZ-688
+          - generic [ref=e3052]: Validação de dados de vendas do anúncio
+          - generic [ref=e3053]: Funcionalidade já existente no ML para vendas estimadas, prosseguir para outros marketplaces
+          - generic [ref=e3054]:
+            - generic [ref=e3055]:
+              - img [ref=e3056]
+              - generic [ref=e3057]: Interna
+            - img [ref=e3059]
+        - generic [ref=e3060] [cursor=pointer]:
+          - generic [ref=e3061]:
+            - generic [ref=e3063]: DA
+            - generic [ref=e3065]: Frio
+            - generic [ref=e3067]: Discovery
+            - generic [ref=e3068]: https://grupo-ram.atlassian.net/browse/AMZ-273
+          - generic [ref=e3069]: Categorias da amazon, sem análise Avantpro
+          - generic [ref=e3070]: Páginas em que poderia ter algum DA na amz
+          - generic [ref=e3071]:
+            - generic [ref=e3072]:
+              - img [ref=e3073]
+              - generic [ref=e3074]: Interna
+            - img [ref=e3076]
+        - generic [ref=e3077] [cursor=pointer]:
+          - generic [ref=e3078]:
+            - generic [ref=e3080]: OM
+            - generic [ref=e3082]: Quente
+            - generic [ref=e3084]: Discovery
+            - generic [ref=e3085]: https://grupo-ram.atlassian.net/browse/AMZ-963
+          - generic [ref=e3086]: Calculadora Avantpro V2
+          - generic [ref=e3087]: calculadora multimarketplace para ajudar o seller com uma visão maior
+          - generic [ref=e3088]:
+            - generic [ref=e3089]:
+              - img [ref=e3090]
+              - generic [ref=e3091]: Interna
+            - img [ref=e3093]
+        - generic [ref=e3094] [cursor=pointer]:
+          - generic [ref=e3095]:
+            - generic [ref=e3097]: DA
+            - generic [ref=e3099]: Morno
+            - generic [ref=e3101]: Discovery
+            - generic [ref=e3102]: https://grupo-ram.atlassian.net/browse/CTRL-635
+          - generic [ref=e3103]: Pesquisa por IA
+          - generic [ref=e3104]: Seria uma pesquisa por IA, a partir de uma imagem, e com insights devolvidos para o seller sobre o produto solicitado
+          - generic [ref=e3105]:
+            - generic [ref=e3106]:
+              - img [ref=e3107]
+              - generic [ref=e3108]: Benchmarking
+            - img [ref=e3110]
+        - generic [ref=e3111] [cursor=pointer]:
+          - generic [ref=e3112]:
+            - generic [ref=e3114]: DA
+            - generic [ref=e3116]: Frio
+            - generic [ref=e3118]: Discovery
+            - generic [ref=e3119]: https://grupo-ram.atlassian.net/browse/AMZ-954
+          - generic [ref=e3120]: Número de vendas
+          - generic [ref=e3121]: Persistir funcionalidade existente no ML pra vendas estimadas
+          - generic [ref=e3122]:
+            - generic [ref=e3123]:
+              - img [ref=e3124]
+              - generic [ref=e3125]: Interna
+            - img [ref=e3127]
+        - generic [ref=e3128] [cursor=pointer]:
+          - generic [ref=e3129]:
+            - generic [ref=e3131]: DA
+            - generic [ref=e3133]: Frio
+            - generic [ref=e3135]: Discovery
+            - generic [ref=e3136]: https://grupo-ram.atlassian.net/browse/DATA-80
+          - generic [ref=e3137]: Persistência de dados Avantdata ML
+          - generic [ref=e3138]: Título autoexplicativo
+          - generic [ref=e3139]:
+            - generic [ref=e3140]:
+              - img [ref=e3141]
+              - generic [ref=e3142]: Interna
+            - img [ref=e3144]
+        - generic [ref=e3145] [cursor=pointer]:
+          - generic [ref=e3146]:
+            - generic [ref=e3148]: DA
+            - generic [ref=e3150]: Frio
+            - generic [ref=e3152]: Discovery
+            - generic [ref=e3153]: https://grupo-ram.atlassian.net/browse/CTRL-195
+          - generic [ref=e3154]: Avantpro finance
+          - generic [ref=e3155]: Avantpro finance para o avantpro control
+          - generic [ref=e3156]:
+            - generic [ref=e3157]:
+              - img [ref=e3158]
+              - generic [ref=e3159]: Interna
+            - img [ref=e3161]
+        - generic [ref=e3162] [cursor=pointer]:
+          - generic [ref=e3163]:
+            - generic [ref=e3165]: DA
+            - generic [ref=e3167]: Frio
+            - generic [ref=e3169]: Discovery
+            - generic [ref=e3170]: https://grupo-ram.atlassian.net/browse/TTK-126
+          - generic [ref=e3171]: NPS
+          - generic [ref=e3172]: Este épico tem como objetivo organizar as iniciativas relacionadas ao NPS no Avantpro TikTok, acompanhando as ações necessárias para medir, analisar e melhorar o score
+          - generic [ref=e3173]:
+            - generic [ref=e3174]:
+              - img [ref=e3175]
+              - generic [ref=e3176]: Interna
+            - img [ref=e3178]
+        - generic [ref=e3179] [cursor=pointer]:
+          - generic [ref=e3180]:
+            - generic [ref=e3182]: Admin
+            - generic [ref=e3184]: Frio
+            - generic [ref=e3186]: Discovery
+            - generic [ref=e3187]: https://grupo-ram.atlassian.net/browse/ADM-374
+          - generic [ref=e3188]: Disparo em massa no Avant Chat
+          - generic [ref=e3189]: Permitir que o time de Customer Success dispare mensagens de WhatsApp em lote pelo Avantpro Admin a partir de uma planilha de contatos
+          - generic [ref=e3190]:
+            - generic [ref=e3191]:
+              - img [ref=e3192]
+              - generic [ref=e3193]: Interna
+            - img [ref=e3195]
+        - generic [ref=e3196] [cursor=pointer]:
+          - generic [ref=e3197]:
+            - generic [ref=e3199]: Admin
+            - generic [ref=e3201]: Frio
+            - generic [ref=e3203]: Discovery
+            - generic [ref=e3204]: https://grupo-ram.atlassian.net/browse/ADM-347
+          - generic [ref=e3205]: Dashboard de Churn
+          - generic [ref=e3206]: Criação do Dashboard de Churn no Avantpro Admin, permitindo que o time de CS monitore cancelamentos, retenção e perfil dos clientes que saem
+          - generic [ref=e3207]:
+            - generic [ref=e3208]:
+              - img [ref=e3209]
+              - generic [ref=e3210]: Interna
+            - img [ref=e3212]
+        - generic [ref=e3213] [cursor=pointer]:
+          - generic [ref=e3214]:
+            - generic [ref=e3216]: Admin
+            - generic [ref=e3218]: Frio
+            - generic [ref=e3220]: Discovery
+            - generic [ref=e3221]: https://grupo-ram.atlassian.net/browse/ADM-341
+          - generic [ref=e3222]: Dados Financeiros do Cliente — Tabela de Clientes no Admin
+          - generic [ref=e3223]: "Enriquecimento da tabela de clientes no Avantpro Admin com dados financeiros e operacionais por cliente: MRR, receita, ticket médio"
+          - generic [ref=e3224]:
+            - generic [ref=e3225]:
+              - img [ref=e3226]
+              - generic [ref=e3227]: Interna
+            - img [ref=e3229]
+        - generic [ref=e3230] [cursor=pointer]:
+          - generic [ref=e3231]:
+            - generic [ref=e3233]: Admin
+            - generic [ref=e3235]: Frio
+            - generic [ref=e3237]: Discovery
+            - generic [ref=e3238]: https://grupo-ram.atlassian.net/browse/ADM-320
+          - generic [ref=e3239]: Dados do seller
+          - generic [ref=e3240]: Expor no painel administrativo o conjunto de dados financeiros, comportamentais e de performance nos marketplaces de cada seller
+          - generic [ref=e3241]:
+            - generic [ref=e3242]:
+              - img [ref=e3243]
+              - generic [ref=e3244]: Interna
+            - img [ref=e3246]
+        - generic [ref=e3247] [cursor=pointer]:
+          - generic [ref=e3248]:
+            - generic [ref=e3250]: Admin
+            - generic [ref=e3252]: Frio
+            - generic [ref=e3254]: Discovery
+            - generic [ref=e3255]: https://grupo-ram.atlassian.net/browse/ADM-312
+          - generic [ref=e3256]: Moderação de Fornecedores
+          - generic [ref=e3257]: Sistema para moderação e aprovação de fornecedores parceiros na plataforma Avantpro
+          - generic [ref=e3258]:
+            - generic [ref=e3259]:
+              - img [ref=e3260]
+              - generic [ref=e3261]: Interna
+            - img [ref=e3263]
+        - generic [ref=e3264] [cursor=pointer]:
+          - generic [ref=e3265]:
+            - generic [ref=e3267]: DA
+            - generic [ref=e3269]: Frio
+            - generic [ref=e3271]: Discovery
+            - generic [ref=e3272]: https://grupo-ram.atlassian.net/browse/ML-5287
+          - generic [ref=e3273]: Encontrar fornecedor com Avantpro Supplier
+          - generic [ref=e3274]: Funcionalidade para localização de fornecedores através do Avantpro Supplier no Mercado Livre
+          - generic [ref=e3275]:
+            - generic [ref=e3276]:
+              - img [ref=e3277]
+              - generic [ref=e3278]: Interna
+            - img [ref=e3280]
+        - generic [ref=e3281] [cursor=pointer]:
+          - generic [ref=e3282]:
+            - generic [ref=e3284]: DA
+            - generic [ref=e3286]: Frio
+            - generic [ref=e3288]: Discovery
+            - generic [ref=e3289]: https://grupo-ram.atlassian.net/browse/CAM-546
+          - generic [ref=e3290]: Portal do fornecedor
+          - generic [ref=e3291]: "Implementação do MVP de fornecedores: portal do fornecedor e exibição dos produtos dentro das extensões ML, SHP e CAM"
+          - generic [ref=e3292]:
+            - generic [ref=e3293]:
+              - img [ref=e3294]
+              - generic [ref=e3295]: Interna
+            - img [ref=e3297]
+        - generic [ref=e3298] [cursor=pointer]:
+          - generic [ref=e3299]:
+            - generic [ref=e3301]: DA
+            - generic [ref=e3303]: Frio
+            - generic [ref=e3305]: Discovery
+            - generic [ref=e3306]: https://grupo-ram.atlassian.net/browse/CAM-475
+          - generic [ref=e3307]: Avantpro para TikTok Shop
+          - generic [ref=e3308]: Expansão da plataforma Avantpro para suporte ao marketplace TikTok Shop via Camicado
+          - generic [ref=e3309]:
+            - generic [ref=e3310]:
+              - img [ref=e3311]
+              - generic [ref=e3312]: Interna
+            - img [ref=e3314]
+        - generic [ref=e3315] [cursor=pointer]:
+          - generic [ref=e3316]:
+            - generic [ref=e3318]: DA
+            - generic [ref=e3320]: Frio
+            - generic [ref=e3322]: Discovery
+            - generic [ref=e3323]: https://grupo-ram.atlassian.net/browse/SHP-923
+          - generic [ref=e3324]: Avantpro intelligence
+          - generic [ref=e3325]: Funcionalidades de inteligência para análise de dados e insights na plataforma Avantpro Shopee
+          - generic [ref=e3326]:
+            - generic [ref=e3327]:
+              - img [ref=e3328]
+              - generic [ref=e3329]: Interna
+            - img [ref=e3331]
+        - generic [ref=e3332] [cursor=pointer]:
+          - generic [ref=e3333]:
+            - generic [ref=e3335]: DA
+            - generic [ref=e3337]: Morno
+            - generic [ref=e3339]: Refinando
+            - generic [ref=e3340]: https://grupo-ram.atlassian.net/browse/AP-41
+          - generic [ref=e3341]: Redesign completo da interface do Avantpro Hive
+          - generic [ref=e3342]: O Avantpro Hive possui interface com visual inconsistente. O objetivo é elevar o padrão visual e de usabilidade da plataforma
+          - generic [ref=e3343]:
+            - generic [ref=e3344]:
+              - img [ref=e3345]
+              - generic [ref=e3346]: Interna
+            - img [ref=e3348]
+        - generic [ref=e3349] [cursor=pointer]:
+          - generic [ref=e3350]:
+            - generic [ref=e3352]: DA
+            - generic [ref=e3354]: Frio
+            - generic [ref=e3356]: Discovery
+            - generic [ref=e3357]: https://grupo-ram.atlassian.net/browse/ML-5014
+          - generic [ref=e3358]: Visualização de informações de faturamento da conta nas extensões Avantpro
+          - generic [ref=e3359]: Este épico consolida o trabalho necessário para que o seller consiga visualizar as informações de faturamento da sua conta diretamente nas extensões Avantpro
+          - generic [ref=e3360]:
+            - generic [ref=e3361]:
+              - img [ref=e3362]
+              - generic [ref=e3363]: Interna
+            - img [ref=e3365]
+        - generic [ref=e3366] [cursor=pointer]:
+          - generic [ref=e3367]:
+            - generic [ref=e3369]: DA
+            - generic [ref=e3371]: Frio
+            - generic [ref=e3373]: Discovery
+            - generic [ref=e3374]: https://grupo-ram.atlassian.net/browse/ML-4972
+          - generic [ref=e3375]: Avantpro Ads — otimização de Mercado Ads com IA
+          - generic [ref=e3376]: "Ideia em estágio de validação: o seller de marketplace opera anúncios sem dados consolidados de ROI — otimização via IA"
+          - generic [ref=e3377]:
+            - generic [ref=e3378]:
+              - img [ref=e3379]
+              - generic [ref=e3380]: Interna
+            - img [ref=e3382]
+        - generic [ref=e3383] [cursor=pointer]:
+          - generic [ref=e3384]:
+            - generic [ref=e3386]: Admin
+            - generic [ref=e3388]: Frio
+            - generic [ref=e3390]: Discovery
+            - generic [ref=e3391]: https://grupo-ram.atlassian.net/browse/ADM-296
+          - generic [ref=e3392]: Régua de cobrança - Ajustes
+          - generic [ref=e3393]: Ajustes e melhorias na régua de cobrança e gestão de inadimplência no sistema administrativo
+          - generic [ref=e3394]:
+            - generic [ref=e3395]:
+              - img [ref=e3396]
+              - generic [ref=e3397]: Interna
+            - img [ref=e3399]
+        - generic [ref=e3400] [cursor=pointer]:
+          - generic [ref=e3401]:
+            - generic [ref=e3403]: DA
+            - generic [ref=e3405]: Frio
+            - generic [ref=e3407]: Discovery
+            - generic [ref=e3408]: https://grupo-ram.atlassian.net/browse/CTRL-522
+          - generic [ref=e3409]: Mytrend
+          - generic [ref=e3410]: Funcionalidade de acompanhamento de tendências de mercado para identificação de oportunidades
+          - generic [ref=e3411]:
+            - generic [ref=e3412]:
+              - img [ref=e3413]
+              - generic [ref=e3414]: Interna
+            - img [ref=e3416]
+        - generic [ref=e3417] [cursor=pointer]:
+          - generic [ref=e3418]:
+            - generic [ref=e3420]: DA
+            - generic [ref=e3422]: Frio
+            - generic [ref=e3424]: Discovery
+            - generic [ref=e3425]: https://grupo-ram.atlassian.net/browse/ML-4851
+          - generic [ref=e3426]: Top seller por keywork
+          - generic [ref=e3427]: Identificação e exibição dos top sellers por palavra-chave no Mercado Livre
+          - generic [ref=e3428]:
+            - generic [ref=e3429]:
+              - img [ref=e3430]
+              - generic [ref=e3431]: Interna
+            - img [ref=e3433]
+        - generic [ref=e3434] [cursor=pointer]:
+          - generic [ref=e3435]:
+            - generic [ref=e3437]: DA
+            - generic [ref=e3439]: Frio
+            - generic [ref=e3441]: Discovery
+            - generic [ref=e3442]: https://grupo-ram.atlassian.net/browse/ML-4850
+          - generic [ref=e3443]: Marcas mais vendidas por keyword
+          - generic [ref=e3444]: Visualização das marcas mais vendidas por palavra-chave no Mercado Livre
+          - generic [ref=e3445]:
+            - generic [ref=e3446]:
+              - img [ref=e3447]
+              - generic [ref=e3448]: Interna
+            - img [ref=e3450]
+        - generic [ref=e3451] [cursor=pointer]:
+          - generic [ref=e3452]:
+            - generic [ref=e3454]: DA
+            - generic [ref=e3456]: Frio
+            - generic [ref=e3458]: Discovery
+            - generic [ref=e3459]: https://grupo-ram.atlassian.net/browse/ML-4849
+          - generic [ref=e3460]: Filtros por avaliação
+          - generic [ref=e3461]: Sistema de filtros baseados em avaliações de produtos no Mercado Livre
+          - generic [ref=e3462]:
+            - generic [ref=e3463]:
+              - img [ref=e3464]
+              - generic [ref=e3465]: Interna
+            - img [ref=e3467]
+        - generic [ref=e3468] [cursor=pointer]:
+          - generic [ref=e3469]:
+            - generic [ref=e3471]: DA
+            - generic [ref=e3473]: Frio
+            - generic [ref=e3475]: Discovery
+            - generic [ref=e3476]: https://grupo-ram.atlassian.net/browse/AMZ-763
+          - generic [ref=e3477]: Marcas mais vendidas por keyword
+          - generic [ref=e3478]: Visualização das marcas mais vendidas por palavra-chave na Amazon
+          - generic [ref=e3479]:
+            - generic [ref=e3480]:
+              - img [ref=e3481]
+              - generic [ref=e3482]: Interna
+            - img [ref=e3484]
+        - generic [ref=e3485] [cursor=pointer]:
+          - generic [ref=e3486]:
+            - generic [ref=e3488]: DA
+            - generic [ref=e3490]: Frio
+            - generic [ref=e3492]: Discovery
+            - generic [ref=e3493]: https://grupo-ram.atlassian.net/browse/CTRL-479
+          - generic [ref=e3494]: Sistema de Devolução
+          - generic [ref=e3495]: Sistema de gestão e controle de devoluções de produtos pelos sellers
+          - generic [ref=e3496]:
+            - generic [ref=e3497]:
+              - img [ref=e3498]
+              - generic [ref=e3499]: Interna
+            - img [ref=e3501]
+        - generic [ref=e3502] [cursor=pointer]:
+          - generic [ref=e3503]:
+            - generic [ref=e3505]: DA
+            - generic [ref=e3507]: Frio
+            - generic [ref=e3509]: Discovery
+            - generic [ref=e3510]: https://grupo-ram.atlassian.net/browse/CTRL-478
+          - generic [ref=e3511]: Controle de Estoque = Flex X Full
+          - generic [ref=e3512]: Controle comparativo de estoque entre modalidades Flex e Full na plataforma
+          - generic [ref=e3513]:
+            - generic [ref=e3514]:
+              - img [ref=e3515]
+              - generic [ref=e3516]: Interna
+            - img [ref=e3518]
+        - generic [ref=e3519] [cursor=pointer]:
+          - generic [ref=e3520]:
+            - generic [ref=e3522]: DA
+            - generic [ref=e3524]: Frio
+            - generic [ref=e3526]: Discovery
+            - generic [ref=e3527]: https://grupo-ram.atlassian.net/browse/CTRL-477
+          - generic [ref=e3528]: Conciliação Bancaria
+          - generic [ref=e3529]: Funcionalidade de conciliação bancária automática para controle financeiro dos sellers
+          - generic [ref=e3530]:
+            - generic [ref=e3531]:
+              - img [ref=e3532]
+              - generic [ref=e3533]: Interna
+            - img [ref=e3535]
+        - generic [ref=e3536] [cursor=pointer]:
+          - generic [ref=e3537]:
+            - generic [ref=e3539]: DA
+            - generic [ref=e3541]: Frio
+            - generic [ref=e3543]: Discovery
+            - generic [ref=e3544]: https://grupo-ram.atlassian.net/browse/CTRL-475
+          - generic [ref=e3545]: Informações sobre catalogo no WhatsApp
+          - generic [ref=e3546]: Exibição de informações do catálogo de produtos diretamente via WhatsApp
+          - generic [ref=e3547]:
+            - generic [ref=e3548]:
+              - img [ref=e3549]
+              - generic [ref=e3550]: Interna
+            - img [ref=e3552]
+        - generic [ref=e3553] [cursor=pointer]:
+          - generic [ref=e3554]:
+            - generic [ref=e3556]: DA
+            - generic [ref=e3558]: Frio
+            - generic [ref=e3560]: Discovery
+            - generic [ref=e3561]: https://grupo-ram.atlassian.net/browse/ML-4640
+          - generic [ref=e3562]: Régua de comunicação
+          - generic [ref=e3563]: Sistema de régua de comunicação automatizada para engajamento de sellers no Mercado Livre
+          - generic [ref=e3564]:
+            - generic [ref=e3565]:
+              - img [ref=e3566]
+              - generic [ref=e3567]: Interna
+            - img [ref=e3569]
+        - generic [ref=e3570] [cursor=pointer]:
+          - generic [ref=e3571]:
+            - generic [ref=e3573]: DA
+            - generic [ref=e3575]: Frio
+            - generic [ref=e3577]: Discovery
+            - generic [ref=e3578]: https://grupo-ram.atlassian.net/browse/CAM-306
+          - generic [ref=e3579]: Estratégia de tags
+          - generic [ref=e3580]: Funcionalidade para gestão e estratégia de tags de produtos no marketplace
+          - generic [ref=e3581]:
+            - generic [ref=e3582]:
+              - img [ref=e3583]
+              - generic [ref=e3584]: Interna
+            - img [ref=e3586]
+        - generic [ref=e3587] [cursor=pointer]:
+          - generic [ref=e3588]:
+            - generic [ref=e3590]: DA
+            - generic [ref=e3592]: Frio
+            - generic [ref=e3594]: Discovery
+            - generic [ref=e3595]: https://grupo-ram.atlassian.net/browse/CAM-301
+          - generic [ref=e3596]: Scraper via Open Crawl
+          - generic [ref=e3597]: Extração de dados via Open Crawl para análise competitiva de concorrência
+          - generic [ref=e3598]:
+            - generic [ref=e3599]:
+              - img [ref=e3600]
+              - generic [ref=e3601]: Interna
+            - img [ref=e3603]
+        - generic [ref=e3604] [cursor=pointer]:
+          - generic [ref=e3605]:
+            - generic [ref=e3607]: DA
+            - generic [ref=e3609]: Frio
+            - generic [ref=e3611]: Discovery
+            - generic [ref=e3612]: https://grupo-ram.atlassian.net/browse/CTRL-236
+          - generic [ref=e3613]: Conciliação Bancária
+          - generic [ref=e3614]: Conciliação bancária avançada para controle e auditoria financeira
+          - generic [ref=e3615]:
+            - generic [ref=e3616]:
+              - img [ref=e3617]
+              - generic [ref=e3618]: Interna
+            - img [ref=e3620]
+        - generic [ref=e3621] [cursor=pointer]:
+          - generic [ref=e3622]:
+            - generic [ref=e3624]: DA
+            - generic [ref=e3626]: Frio
+            - generic [ref=e3628]: Discovery
+            - generic [ref=e3629]: https://grupo-ram.atlassian.net/browse/CTRL-234
+          - generic [ref=e3630]: Alerta que promoção vai acabar
+          - generic [ref=e3631]: Sistema de alertas automáticos notificando quando uma promoção está próxima do fim
+          - generic [ref=e3632]:
+            - generic [ref=e3633]:
+              - img [ref=e3634]
+              - generic [ref=e3635]: Interna
+            - img [ref=e3637]
+        - generic [ref=e3638] [cursor=pointer]:
+          - generic [ref=e3639]:
+            - generic [ref=e3641]: DA
+            - generic [ref=e3643]: Frio
+            - generic [ref=e3645]: Discovery
+            - generic [ref=e3646]: https://grupo-ram.atlassian.net/browse/CTRL-235
+          - generic [ref=e3647]: Saldo de Estoque
+          - generic [ref=e3648]: Visualização e gestão do saldo de estoque em tempo real por marketplace
+          - generic [ref=e3649]:
+            - generic [ref=e3650]:
+              - img [ref=e3651]
+              - generic [ref=e3652]: Interna
+            - img [ref=e3654]
+        - generic [ref=e3655] [cursor=pointer]:
+          - generic [ref=e3656]:
+            - generic [ref=e3658]: DA
+            - generic [ref=e3660]: Frio
+            - generic [ref=e3662]: Discovery
+            - generic [ref=e3663]: https://grupo-ram.atlassian.net/browse/CTRL-230
+          - generic [ref=e3664]: Single Sign-On
+          - generic [ref=e3665]: Implementação de autenticação unificada (Single Sign-On) na plataforma Avantpro
+          - generic [ref=e3666]:
+            - generic [ref=e3667]:
+              - img [ref=e3668]
+              - generic [ref=e3669]: Interna
+            - img [ref=e3671]
+        - generic [ref=e3672] [cursor=pointer]:
+          - generic [ref=e3673]:
+            - generic [ref=e3675]: DA
+            - generic [ref=e3677]: Frio
+            - generic [ref=e3679]: Discovery
+            - generic [ref=e3680]: https://grupo-ram.atlassian.net/browse/CTRL-231
+          - generic [ref=e3681]: Conciliação Tributária
+          - generic [ref=e3682]: Conciliação tributária para garantir compliance fiscal dos sellers
+          - generic [ref=e3683]:
+            - generic [ref=e3684]:
+              - img [ref=e3685]
+              - generic [ref=e3686]: Interna
+            - img [ref=e3688]
+        - generic [ref=e3689] [cursor=pointer]:
+          - generic [ref=e3690]:
+            - generic [ref=e3692]: DA
+            - generic [ref=e3694]: Frio
+            - generic [ref=e3696]: Discovery
+            - generic [ref=e3697]: https://grupo-ram.atlassian.net/browse/CTRL-229
+          - generic [ref=e3698]: Análise de Mercado
+          - generic [ref=e3699]: Análise competitiva de mercado para identificação de tendências e oportunidades estratégicas
+          - generic [ref=e3700]:
+            - generic [ref=e3701]:
+              - img [ref=e3702]
+              - generic [ref=e3703]: Benchmarking
+            - img [ref=e3705]
+        - generic [ref=e3706] [cursor=pointer]:
+          - generic [ref=e3707]:
+            - generic [ref=e3709]: DA
+            - generic [ref=e3711]: Frio
+            - generic [ref=e3713]: Discovery
+            - generic [ref=e3714]: https://grupo-ram.atlassian.net/browse/CTRL-228
+          - generic [ref=e3715]: Controlar Devoluções
+          - generic [ref=e3716]: Sistema de controle e gestão completa de devoluções de pedidos
+          - generic [ref=e3717]:
+            - generic [ref=e3718]:
+              - img [ref=e3719]
+              - generic [ref=e3720]: Interna
+            - img [ref=e3722]
+        - generic [ref=e3723] [cursor=pointer]:
+          - generic [ref=e3724]:
+            - generic [ref=e3726]: DA
+            - generic [ref=e3728]: Frio
+            - generic [ref=e3730]: Discovery
+            - generic [ref=e3731]: https://grupo-ram.atlassian.net/browse/SHN-91
+          - generic [ref=e3732]: Nicho
+          - generic [ref=e3733]: Análise e identificação de nichos de mercado com oportunidades de crescimento
+          - generic [ref=e3734]:
+            - generic [ref=e3735]:
+              - img [ref=e3736]
+              - generic [ref=e3737]: Benchmarking
+            - img [ref=e3739]
+        - generic [ref=e3740] [cursor=pointer]:
+          - generic [ref=e3741]:
+            - generic [ref=e3743]: DA
+            - generic [ref=e3745]: Frio
+            - generic [ref=e3747]: Discovery
+            - generic [ref=e3748]: https://grupo-ram.atlassian.net/browse/SHN-90
+          - generic [ref=e3749]: Mais Vendidos em Menos Tempo
+          - generic [ref=e3750]: Identificação de produtos com maior velocidade de vendas e tendências emergentes
+          - generic [ref=e3751]:
+            - generic [ref=e3752]:
+              - img [ref=e3753]
+              - generic [ref=e3754]: Interna
+            - img [ref=e3756]
+        - generic [ref=e3757] [cursor=pointer]:
+          - generic [ref=e3758]:
+            - generic [ref=e3760]: DA
+            - generic [ref=e3762]: Frio
+            - generic [ref=e3764]: Discovery
+            - generic [ref=e3765]: https://grupo-ram.atlassian.net/browse/MAGA-33
+          - generic [ref=e3766]: Tempo de Cadastro de Produto VS Número de Vendas
+          - generic [ref=e3767]: Análise da correlação entre tempo de cadastro do produto e número de vendas no Magalu
+          - generic [ref=e3768]:
+            - generic [ref=e3769]:
+              - img [ref=e3770]
+              - generic [ref=e3771]: Benchmarking
+            - img [ref=e3773]
+        - generic [ref=e3774] [cursor=pointer]:
+          - generic [ref=e3775]:
+            - generic [ref=e3777]: DA
+            - generic [ref=e3779]: Frio
+            - generic [ref=e3781]: Discovery
+            - generic [ref=e3782]: https://grupo-ram.atlassian.net/browse/AMZ-687
+          - generic [ref=e3783]: Agente para capturar lead
+          - generic [ref=e3784]: Agente inteligente para captura e qualificação de leads na Amazon
+          - generic [ref=e3785]:
+            - generic [ref=e3786]:
+              - img [ref=e3787]
+              - generic [ref=e3788]: Interna
+            - img [ref=e3790]
+        - generic [ref=e3791] [cursor=pointer]:
+          - generic [ref=e3792]:
+            - generic [ref=e3794]: DA
+            - generic [ref=e3796]: Frio
+            - generic [ref=e3798]: Discovery
+            - generic [ref=e3799]: https://grupo-ram.atlassian.net/browse/AMZ-683
+          - generic [ref=e3800]: Análise de Categoria
+          - generic [ref=e3801]: Análise detalhada de categorias de produtos na Amazon para identificação de oportunidades
+          - generic [ref=e3802]:
+            - generic [ref=e3803]:
+              - img [ref=e3804]
+              - generic [ref=e3805]: Benchmarking
+            - img [ref=e3807]
+        - generic [ref=e3808] [cursor=pointer]:
+          - generic [ref=e3809]:
+            - generic [ref=e3811]: DA
+            - generic [ref=e3813]: Frio
+            - generic [ref=e3815]: Discovery
+            - generic [ref=e3816]: https://grupo-ram.atlassian.net/browse/SHP-578
+          - generic [ref=e3817]: Agente para capturar lead
+          - generic [ref=e3818]: Agente inteligente para captura e qualificação de leads na Shopee
+          - generic [ref=e3819]:
+            - generic [ref=e3820]:
+              - img [ref=e3821]
+              - generic [ref=e3822]: Interna
+            - img [ref=e3824]
+        - generic [ref=e3825] [cursor=pointer]:
+          - generic [ref=e3826]:
+            - generic [ref=e3828]: DA
+            - generic [ref=e3830]: Frio
+            - generic [ref=e3832]: Discovery
+            - generic [ref=e3833]: https://grupo-ram.atlassian.net/browse/ML-4486
+          - generic [ref=e3834]: Métricas Avantpro
+          - generic [ref=e3835]: Dashboard de métricas de uso e performance da plataforma Avantpro no Mercado Livre
+          - generic [ref=e3836]:
+            - generic [ref=e3837]:
+              - img [ref=e3838]
+              - generic [ref=e3839]: Interna
+            - img [ref=e3841]
+        - generic [ref=e3842] [cursor=pointer]:
+          - generic [ref=e3843]:
+            - generic [ref=e3845]: DA
+            - generic [ref=e3847]: Frio
+            - generic [ref=e3849]: Discovery
+            - generic [ref=e3850]: https://grupo-ram.atlassian.net/browse/ML-4484
+          - generic [ref=e3851]: Métricas Seller
+          - generic [ref=e3852]: Dashboard de métricas de performance dos sellers na plataforma
+          - generic [ref=e3853]:
+            - generic [ref=e3854]:
+              - img [ref=e3855]
+              - generic [ref=e3856]: Interna
+            - img [ref=e3858]
+        - generic [ref=e3859] [cursor=pointer]:
+          - generic [ref=e3860]:
+            - generic [ref=e3862]: DA
+            - generic [ref=e3864]: Frio
+            - generic [ref=e3866]: Discovery
+            - generic [ref=e3867]: https://grupo-ram.atlassian.net/browse/CTRL-196
+          - generic [ref=e3868]: Gestão de catálogo
+          - generic [ref=e3869]: O épico Gestão de Catálogo tem como objetivo transformar a gestão de produtos centralizando cadastro, edição e organização de catálogos multi-marketplace.
+          - generic [ref=e3870]:
+            - generic [ref=e3871]:
+              - img [ref=e3872]
+              - generic [ref=e3873]: Interna
+            - img [ref=e3875]
+        - generic [ref=e3876] [cursor=pointer]:
+          - generic [ref=e3877]:
+            - generic [ref=e3879]: DA
+            - generic [ref=e3881]: Frio
+            - generic [ref=e3883]: Discovery
+            - generic [ref=e3884]: https://grupo-ram.atlassian.net/browse/CTRL-199
+          - generic [ref=e3885]: Gestão de ADS
+          - generic [ref=e3886]: Gestão centralizada de campanhas de ADS nos marketplaces, permitindo criação, monitoramento e otimização de anúncios patrocinados.
+          - generic [ref=e3887]:
+            - generic [ref=e3888]:
+              - img [ref=e3889]
+              - generic [ref=e3890]: Interna
+            - img [ref=e3892]
+        - generic [ref=e3893] [cursor=pointer]:
+          - generic [ref=e3894]:
+            - generic [ref=e3896]: DA
+            - generic [ref=e3898]: Frio
+            - generic [ref=e3900]: Discovery
+            - generic [ref=e3901]: https://grupo-ram.atlassian.net/browse/CTRL-198
+          - generic [ref=e3902]: Curva ABC
+          - generic [ref=e3903]: Classificação de produtos por curva ABC para priorização de estoque e esforços de venda com base em receita e volume.
+          - generic [ref=e3904]:
+            - generic [ref=e3905]:
+              - img [ref=e3906]
+              - generic [ref=e3907]: Interna
+            - img [ref=e3909]
+        - generic [ref=e3910] [cursor=pointer]:
+          - generic [ref=e3911]:
+            - generic [ref=e3913]: DA
+            - generic [ref=e3915]: Frio
+            - generic [ref=e3917]: Discovery
+            - generic [ref=e3918]: https://grupo-ram.atlassian.net/browse/CTRL-200
+          - generic [ref=e3919]: Gestão de frete
+          - generic [ref=e3920]: Gestão e otimização de regras de frete por marketplace, permitindo configuração de tabelas, simulações e integração com transportadoras.
+          - generic [ref=e3921]:
+            - generic [ref=e3922]:
+              - img [ref=e3923]
+              - generic [ref=e3924]: Interna
+            - img [ref=e3926]
+        - generic [ref=e3927] [cursor=pointer]:
+          - generic [ref=e3928]:
+            - generic [ref=e3930]: DA
+            - generic [ref=e3932]: Frio
+            - generic [ref=e3934]: Discovery
+            - generic [ref=e3935]: https://grupo-ram.atlassian.net/browse/CTRL-201
+          - generic [ref=e3936]: Gestão de anúncios
+          - generic [ref=e3937]: Gestão centralizada de anúncios nos marketplaces, possibilitando criação, edição e monitoramento de listings em múltiplos canais.
+          - generic [ref=e3938]:
+            - generic [ref=e3939]:
+              - img [ref=e3940]
+              - generic [ref=e3941]: Interna
+            - img [ref=e3943]
+        - generic [ref=e3944] [cursor=pointer]:
+          - generic [ref=e3945]:
+            - generic [ref=e3947]: DA
+            - generic [ref=e3949]: Frio
+            - generic [ref=e3951]: Discovery
+            - generic [ref=e3952]: https://grupo-ram.atlassian.net/browse/CTRL-202
+          - generic [ref=e3953]: Renovação Eduzz
+          - generic [ref=e3954]: Épico de renovação de contratos com a Eduzz, automatizando o fluxo de renovação e notificações de vencimento para os sellers.
+          - generic [ref=e3955]:
+            - generic [ref=e3956]:
+              - img [ref=e3957]
+              - generic [ref=e3958]: Interna
+            - img [ref=e3960]
+        - generic [ref=e3961] [cursor=pointer]:
+          - generic [ref=e3962]:
+            - generic [ref=e3964]: DA
+            - generic [ref=e3966]: Frio
+            - generic [ref=e3968]: Discovery
+            - generic [ref=e3969]: https://grupo-ram.atlassian.net/browse/CTRL-203
+          - generic [ref=e3970]: Bloqueio Eduzz
+          - generic [ref=e3971]: Épico de bloqueio de acesso para usuários inadimplentes ou contratos expirados na integração com a Eduzz.
+          - generic [ref=e3972]:
+            - generic [ref=e3973]:
+              - img [ref=e3974]
+              - generic [ref=e3975]: Interna
+            - img [ref=e3977]
+        - generic [ref=e3978] [cursor=pointer]:
+          - generic [ref=e3979]:
+            - generic [ref=e3981]: DA
+            - generic [ref=e3983]: Frio
+            - generic [ref=e3985]: Discovery
+            - generic [ref=e3986]: https://grupo-ram.atlassian.net/browse/CTRL-204
+          - generic [ref=e3987]: Multi-Marketplace
+          - generic [ref=e3988]: Centralização da operação em múltiplos marketplaces a partir de um único painel no Avantpro Controle.
+          - generic [ref=e3989]:
+            - generic [ref=e3990]:
+              - img [ref=e3991]
+              - generic [ref=e3992]: Interna
+            - img [ref=e3994]
+        - generic [ref=e3995] [cursor=pointer]:
+          - generic [ref=e3996]:
+            - generic [ref=e3998]: DA
+            - generic [ref=e4000]: Frio
+            - generic [ref=e4002]: Discovery
+            - generic [ref=e4003]: https://grupo-ram.atlassian.net/browse/CTRL-205
+          - generic [ref=e4004]: Cálculo automático de CMV
+          - generic [ref=e4005]: Cálculo automático do Custo da Mercadoria Vendida (CMV) integrando dados de estoque, compras e vendas para precificação correta.
+          - generic [ref=e4006]:
+            - generic [ref=e4007]:
+              - img [ref=e4008]
+              - generic [ref=e4009]: Interna
+            - img [ref=e4011]
+        - generic [ref=e4012] [cursor=pointer]:
+          - generic [ref=e4013]:
+            - generic [ref=e4015]: DA
+            - generic [ref=e4017]: Frio
+            - generic [ref=e4019]: Discovery
+            - generic [ref=e4020]: https://grupo-ram.atlassian.net/browse/CTRL-206
+          - generic [ref=e4021]: Composição de KIT
+          - generic [ref=e4022]: Composição e gestão de KITs de produtos, permitindo venda de pacotes e controle de estoque dos componentes.
+          - generic [ref=e4023]:
+            - generic [ref=e4024]:
+              - img [ref=e4025]
+              - generic [ref=e4026]: Interna
+            - img [ref=e4028]
+        - generic [ref=e4029] [cursor=pointer]:
+          - generic [ref=e4030]:
+            - generic [ref=e4032]: DA
+            - generic [ref=e4034]: Frio
+            - generic [ref=e4036]: Discovery
+            - generic [ref=e4037]: https://grupo-ram.atlassian.net/browse/CTRL-208
+          - generic [ref=e4038]: Integração TikTok
+          - generic [ref=e4039]: Integração do Avantpro Controle com a plataforma TikTok Shop para sincronização de catálogo, pedidos e estoque.
+          - generic [ref=e4040]:
+            - generic [ref=e4041]:
+              - img [ref=e4042]
+              - generic [ref=e4043]: Interna
+            - img [ref=e4045]
+        - generic [ref=e4046] [cursor=pointer]:
+          - generic [ref=e4047]:
+            - generic [ref=e4049]: DA
+            - generic [ref=e4051]: Frio
+            - generic [ref=e4053]: Discovery
+            - generic [ref=e4054]: https://grupo-ram.atlassian.net/browse/CTRL-209
+          - generic [ref=e4055]: Integração SHEIN
+          - generic [ref=e4056]: Integração do Avantpro Controle com a plataforma SHEIN para sincronização de catálogo, pedidos e estoque.
+          - generic [ref=e4057]:
+            - generic [ref=e4058]:
+              - img [ref=e4059]
+              - generic [ref=e4060]: Interna
+            - img [ref=e4062]
+        - generic [ref=e4063] [cursor=pointer]:
+          - generic [ref=e4064]:
+            - generic [ref=e4066]: DA
+            - generic [ref=e4068]: Frio
+            - generic [ref=e4070]: Discovery
+            - generic [ref=e4071]: https://grupo-ram.atlassian.net/browse/CTRL-210
+          - generic [ref=e4072]: Integração Magalu
+          - generic [ref=e4073]: Integração do Avantpro Controle com o Magalu (Magazine Luiza) para sincronização de catálogo, pedidos e estoque.
+          - generic [ref=e4074]:
+            - generic [ref=e4075]:
+              - img [ref=e4076]
+              - generic [ref=e4077]: Interna
+            - img [ref=e4079]
+        - generic [ref=e4080] [cursor=pointer]:
+          - generic [ref=e4081]:
+            - generic [ref=e4083]: DA
+            - generic [ref=e4085]: Frio
+            - generic [ref=e4087]: Discovery
+            - generic [ref=e4088]: https://grupo-ram.atlassian.net/browse/CTRL-211
+          - generic [ref=e4089]: Calculadora multi-marketplace
+          - generic [ref=e4090]: Calculadora multi-marketplace para simulação de margens, taxas e rentabilidade em diferentes plataformas de venda.
+          - generic [ref=e4091]:
+            - generic [ref=e4092]:
+              - img [ref=e4093]
+              - generic [ref=e4094]: Interna
+            - img [ref=e4096]
+        - generic [ref=e4097] [cursor=pointer]:
+          - generic [ref=e4098]:
+            - generic [ref=e4100]: DA
+            - generic [ref=e4102]: Frio
+            - generic [ref=e4104]: Discovery
+            - generic [ref=e4105]: https://grupo-ram.atlassian.net/browse/CTRL-218
+          - generic [ref=e4106]: Dashboard financeiro
+          - generic [ref=e4107]: Dashboard financeiro centralizado para visualização de receitas, despesas, margens e fluxo de caixa da operação.
+          - generic [ref=e4108]:
+            - generic [ref=e4109]:
+              - img [ref=e4110]
+              - generic [ref=e4111]: Interna
+            - img [ref=e4113]
+        - generic [ref=e4114] [cursor=pointer]:
+          - generic [ref=e4115]:
+            - generic [ref=e4117]: DA
+            - generic [ref=e4119]: Frio
+            - generic [ref=e4121]: Discovery
+            - generic [ref=e4122]: https://grupo-ram.atlassian.net/browse/CTRL-232
+          - generic [ref=e4123]: Resumo da Operação
+          - generic [ref=e4124]: Resumo executivo da operação consolidando os principais indicadores de desempenho para visão rápida do negócio.
+          - generic [ref=e4125]:
+            - generic [ref=e4126]:
+              - img [ref=e4127]
+              - generic [ref=e4128]: Interna
+            - img [ref=e4130]
+        - generic [ref=e4131] [cursor=pointer]:
+          - generic [ref=e4132]:
+            - generic [ref=e4134]: Admin
+            - generic [ref=e4136]: Frio
+            - generic [ref=e4138]: Discovery
+            - generic [ref=e4139]: https://grupo-ram.atlassian.net/browse/ADM-91
+          - generic [ref=e4140]: Gestão de Influenciador
+          - generic [ref=e4141]: Épico de gestão de influenciadores no Avantpro Admin, permitindo cadastro, acompanhamento e análise de campanhas com influenciadores parceiros.
+          - generic [ref=e4142]:
+            - generic [ref=e4143]:
+              - img [ref=e4144]
+              - generic [ref=e4145]: Interna
+            - img [ref=e4147]
+        - generic [ref=e4148] [cursor=pointer]:
+          - generic [ref=e4149]:
+            - generic [ref=e4151]: Admin
+            - generic [ref=e4153]: Frio
+            - generic [ref=e4155]: Refinando
+            - generic [ref=e4156]: https://grupo-ram.atlassian.net/browse/ADM-90
+          - generic [ref=e4157]: Régua de Cobrança
+          - generic [ref=e4158]: Este épico implementa a régua de cobrança centralizada do Avantpro, tornando o Avantpro Admin a fonte oficial para controle de inadimplência e suspensão de contas.
+          - generic [ref=e4159]:
+            - generic [ref=e4160]:
+              - img [ref=e4161]
+              - generic [ref=e4162]: Interna
+            - img [ref=e4164]
+        - generic [ref=e4165] [cursor=pointer]:
+          - generic [ref=e4166]:
+            - generic [ref=e4168]: Admin
+            - generic [ref=e4170]: Frio
+            - generic [ref=e4172]: Discovery
+            - generic [ref=e4173]: https://grupo-ram.atlassian.net/browse/ADM-89
+          - generic [ref=e4174]: Controle de Planos
+          - generic [ref=e4175]: Épico de controle e gestão de planos de assinatura do Avantpro, incluindo criação, edição e migração de planos para os clientes.
+          - generic [ref=e4176]:
+            - generic [ref=e4177]:
+              - img [ref=e4178]
+              - generic [ref=e4179]: Interna
+            - img [ref=e4181]
+        - generic [ref=e4182] [cursor=pointer]:
+          - generic [ref=e4183]:
+            - generic [ref=e4185]: Admin
+            - generic [ref=e4187]: Frio
+            - generic [ref=e4189]: Discovery
+            - generic [ref=e4190]: https://grupo-ram.atlassian.net/browse/ADM-269
+          - generic [ref=e4191]: Telemetria - Workspace ML
+          - generic [ref=e4192]: Stories de painéis de dados no Avantpro Admin para visualização das métricas coletadas via PostHog. A persona nestas stories é o analista de produto.
+          - generic [ref=e4193]:
+            - generic [ref=e4194]:
+              - img [ref=e4195]
+              - generic [ref=e4196]: Interna
+            - img [ref=e4198]
+        - generic [ref=e4199] [cursor=pointer]:
+          - generic [ref=e4200]:
+            - generic [ref=e4202]: Admin
+            - generic [ref=e4204]: Frio
+            - generic [ref=e4206]: Discovery
+            - generic [ref=e4207]: https://grupo-ram.atlassian.net/browse/ADM-276
+          - generic [ref=e4208]: Telemetria - Workspace shopee
+          - generic [ref=e4209]: Telemetria e monitoramento de uso do workspace Shopee no Avantpro Admin, capturando eventos e métricas de engajamento dos sellers.
+          - generic [ref=e4210]:
+            - generic [ref=e4211]:
+              - img [ref=e4212]
+              - generic [ref=e4213]: Interna
+            - img [ref=e4215]
+        - generic [ref=e4216] [cursor=pointer]:
+          - generic [ref=e4217]:
+            - generic [ref=e4219]: DA
+            - generic [ref=e4221]: Frio
+            - generic [ref=e4223]: Discovery
+            - generic [ref=e4224]: https://grupo-ram.atlassian.net/browse/SHP-819
+          - generic [ref=e4225]: Telemetria
+          - generic [ref=e4226]: Telemetria da extensão Avantpro Shopee, capturando eventos de uso para análise de engajamento e comportamento dos sellers.
+          - generic [ref=e4227]:
+            - generic [ref=e4228]:
+              - img [ref=e4229]
+              - generic [ref=e4230]: Interna
+            - img [ref=e4232]
+        - generic [ref=e4233] [cursor=pointer]:
+          - generic [ref=e4234]:
+            - generic [ref=e4236]: DA
+            - generic [ref=e4238]: Frio
+            - generic [ref=e4240]: Discovery
+            - generic [ref=e4241]: https://grupo-ram.atlassian.net/browse/SHP-556
+          - generic [ref=e4242]: Avantpro Trend
+          - generic [ref=e4243]: "Avantpro Trend para Shopee: identificação e análise de tendências de mercado com base em dados de vendas e busca na plataforma."
+          - generic [ref=e4244]:
+            - generic [ref=e4245]:
+              - img [ref=e4246]
+              - generic [ref=e4247]: Interna
+            - img [ref=e4249]
+        - generic [ref=e4250] [cursor=pointer]:
+          - generic [ref=e4251]:
+            - generic [ref=e4253]: DA
+            - generic [ref=e4255]: Frio
+            - generic [ref=e4257]: Discovery
+            - generic [ref=e4258]: https://grupo-ram.atlassian.net/browse/SHP-549
+          - generic [ref=e4259]: Notificação
+          - generic [ref=e4260]: Sistema de notificações no Avantpro Shopee para alertar sellers sobre variações de preço, estoque e oportunidades de mercado.
+          - generic [ref=e4261]:
+            - generic [ref=e4262]:
+              - img [ref=e4263]
+              - generic [ref=e4264]: Interna
+            - img [ref=e4266]
+        - generic [ref=e4267] [cursor=pointer]:
+          - generic [ref=e4268]:
+            - generic [ref=e4270]: DA
+            - generic [ref=e4272]: Frio
+            - generic [ref=e4274]: Discovery
+            - generic [ref=e4275]: https://grupo-ram.atlassian.net/browse/SHP-554
+          - generic [ref=e4276]: Analise de Concorrentes
+          - generic [ref=e4277]: Análise de concorrentes no Avantpro Shopee, permitindo monitoramento de preços, posicionamento e estratégias dos competidores.
+          - generic [ref=e4278]:
+            - generic [ref=e4279]:
+              - img [ref=e4280]
+              - generic [ref=e4281]: Interna
+            - img [ref=e4283]
+        - generic [ref=e4284] [cursor=pointer]:
+          - generic [ref=e4285]:
+            - generic [ref=e4287]: DA
+            - generic [ref=e4289]: Frio
+            - generic [ref=e4291]: Discovery
+            - generic [ref=e4292]: https://grupo-ram.atlassian.net/browse/SHP-548
+          - generic [ref=e4293]: Curva ABC
+          - generic [ref=e4294]: Classificação de produtos por curva ABC no Avantpro Shopee para priorização de portfólio e estratégias de estoque.
+          - generic [ref=e4295]:
+            - generic [ref=e4296]:
+              - img [ref=e4297]
+              - generic [ref=e4298]: Interna
+            - img [ref=e4300]
+        - generic [ref=e4301] [cursor=pointer]:
+          - generic [ref=e4302]:
+            - generic [ref=e4304]: DA
+            - generic [ref=e4306]: Frio
+            - generic [ref=e4308]: Discovery
+            - generic [ref=e4309]: https://grupo-ram.atlassian.net/browse/SHP-550
+          - generic [ref=e4310]: Avantpro Workspace
+          - generic [ref=e4311]: "Avantpro Workspace para Shopee: painel centralizado de gestão da operação do seller na plataforma."
+          - generic [ref=e4312]:
+            - generic [ref=e4313]:
+              - img [ref=e4314]
+              - generic [ref=e4315]: Interna
+            - img [ref=e4317]
+        - generic [ref=e4318] [cursor=pointer]:
+          - generic [ref=e4319]:
+            - generic [ref=e4321]: DA
+            - generic [ref=e4323]: Frio
+            - generic [ref=e4325]: Discovery
+            - generic [ref=e4326]: https://grupo-ram.atlassian.net/browse/SHP-559
+          - generic [ref=e4327]: Equalizar com Mercado Livre
+          - generic [ref=e4328]: Equalização de funcionalidades e experiência do Avantpro com as capacidades do Mercado Livre, trazendo paridade de features.
+          - generic [ref=e4329]:
+            - generic [ref=e4330]:
+              - img [ref=e4331]
+              - generic [ref=e4332]: Interna
+            - img [ref=e4334]
+        - generic [ref=e4335] [cursor=pointer]:
+          - generic [ref=e4336]:
+            - generic [ref=e4338]: DA
+            - generic [ref=e4340]: Frio
+            - generic [ref=e4342]: Discovery
+            - generic [ref=e4343]: https://grupo-ram.atlassian.net/browse/SHP-577
+          - generic [ref=e4344]: Mais Vendidos em Menos Tempo
+          - generic [ref=e4345]: Identificação dos produtos mais vendidos em menor tempo no Avantpro Shopee, destacando oportunidades de crescimento rápido.
+          - generic [ref=e4346]:
+            - generic [ref=e4347]:
+              - img [ref=e4348]
+              - generic [ref=e4349]: Interna
+            - img [ref=e4351]
+        - generic [ref=e4352] [cursor=pointer]:
+          - generic [ref=e4353]:
+            - generic [ref=e4355]: DA
+            - generic [ref=e4357]: Frio
+            - generic [ref=e4359]: Discovery
+            - generic [ref=e4360]: https://grupo-ram.atlassian.net/browse/SHP-713
+          - generic [ref=e4361]: Marcas mais vendidas por keyword
+          - generic [ref=e4362]: Visualização das marcas mais vendidas por keyword no Avantpro Shopee, auxiliando na estratégia de posicionamento e seleção de produtos.
+          - generic [ref=e4363]:
+            - generic [ref=e4364]:
+              - img [ref=e4365]
+              - generic [ref=e4366]: Interna
+            - img [ref=e4368]
+        - generic [ref=e4369] [cursor=pointer]:
+          - generic [ref=e4370]:
+            - generic [ref=e4372]: DA
+            - generic [ref=e4374]: Frio
+            - generic [ref=e4376]: Discovery
+            - generic [ref=e4377]: https://grupo-ram.atlassian.net/browse/SHP-714
+          - generic [ref=e4378]: Top seller por keywork
+          - generic [ref=e4379]: Identificação dos top sellers por keyword no Avantpro Shopee, revelando os principais concorrentes em cada categoria de busca.
+          - generic [ref=e4380]:
+            - generic [ref=e4381]:
+              - img [ref=e4382]
+              - generic [ref=e4383]: Interna
+            - img [ref=e4385]
+        - generic [ref=e4386] [cursor=pointer]:
+          - generic [ref=e4387]:
+            - generic [ref=e4389]: DA
+            - generic [ref=e4391]: Frio
+            - generic [ref=e4393]: Discovery
+            - generic [ref=e4394]: https://grupo-ram.atlassian.net/browse/SHP-817
+          - generic [ref=e4395]: Avantpro Hype
+          - generic [ref=e4396]: O Avantpro Hype é um workspace de monitoramento de produtos dentro das extensões do AvantPro. O seller flagga anúncios de interesse enquanto navega e o AvantPro mantém o acompanhamento diário dos dados desses produtos.
+          - generic [ref=e4397]:
+            - generic [ref=e4398]:
+              - img [ref=e4399]
+              - generic [ref=e4400]: Interna
+            - img [ref=e4402]
+        - generic [ref=e4403] [cursor=pointer]:
+          - generic [ref=e4404]:
+            - generic [ref=e4406]: DA
+            - generic [ref=e4408]: Frio
+            - generic [ref=e4410]: Discovery
+            - generic [ref=e4411]: https://grupo-ram.atlassian.net/browse/ML-4127
+          - generic [ref=e4412]: Feedback por feature no produto
+          - generic [ref=e4413]: A feature de Tendências precisa de um canal direto para coletar feedback contextual dos usuários enquanto utilizam a funcionalidade no Avantpro ML.
+          - generic [ref=e4414]:
+            - generic [ref=e4415]:
+              - img [ref=e4416]
+              - generic [ref=e4417]: Interna
+            - img [ref=e4419]
+        - generic [ref=e4420] [cursor=pointer]:
+          - generic [ref=e4421]:
+            - generic [ref=e4423]: DA
+            - generic [ref=e4425]: Frio
+            - generic [ref=e4427]: Discovery
+            - generic [ref=e4428]: https://grupo-ram.atlassian.net/browse/ML-4458
+          - generic [ref=e4429]: Analise de Concorrentes
+          - generic [ref=e4430]: Análise de concorrentes no Avantpro ML, permitindo monitoramento de preços, posicionamento e estratégias dos competidores no Mercado Livre.
+          - generic [ref=e4431]:
+            - generic [ref=e4432]:
+              - img [ref=e4433]
+              - generic [ref=e4434]: Interna
+            - img [ref=e4436]
+        - generic [ref=e4437] [cursor=pointer]:
+          - generic [ref=e4438]:
+            - generic [ref=e4440]: DA
+            - generic [ref=e4442]: Frio
+            - generic [ref=e4444]: Discovery
+            - generic [ref=e4445]: https://grupo-ram.atlassian.net/browse/ML-4440
+          - generic [ref=e4446]: Buscador de Anúncio
+          - generic [ref=e4447]: Buscador de anúncio no Avantpro ML para localização rápida de produtos por termos de busca, categoria ou vendedor.
+          - generic [ref=e4448]:
+            - generic [ref=e4449]:
+              - img [ref=e4450]
+              - generic [ref=e4451]: Interna
+            - img [ref=e4453]
+        - generic [ref=e4454] [cursor=pointer]:
+          - generic [ref=e4455]:
+            - generic [ref=e4457]: DA
+            - generic [ref=e4459]: Frio
+            - generic [ref=e4461]: Discovery
+            - generic [ref=e4462]: https://grupo-ram.atlassian.net/browse/ML-4442
+          - generic [ref=e4463]: CH
+          - generic [ref=e4464]: Épico CH para Avantpro ML, relacionado a funcionalidades de categorização e hierarquia de produtos na plataforma.
+          - generic [ref=e4465]:
+            - generic [ref=e4466]:
+              - img [ref=e4467]
+              - generic [ref=e4468]: Interna
+            - img [ref=e4470]
+        - generic [ref=e4471] [cursor=pointer]:
+          - generic [ref=e4472]:
+            - generic [ref=e4474]: DA
+            - generic [ref=e4476]: Frio
+            - generic [ref=e4478]: Discovery
+            - generic [ref=e4479]: https://grupo-ram.atlassian.net/browse/ML-4444
+          - generic [ref=e4480]: Dados Loja Oficial
+          - generic [ref=e4481]: Dados de Loja Oficial no Avantpro ML, trazendo métricas e informações específicas de lojas oficiais para análise competitiva.
+          - generic [ref=e4482]:
+            - generic [ref=e4483]:
+              - img [ref=e4484]
+              - generic [ref=e4485]: Interna
+            - img [ref=e4487]
+        - generic [ref=e4488] [cursor=pointer]:
+          - generic [ref=e4489]:
+            - generic [ref=e4491]: DA
+            - generic [ref=e4493]: Frio
+            - generic [ref=e4495]: Discovery
+            - generic [ref=e4496]: https://grupo-ram.atlassian.net/browse/ML-4445
+          - generic [ref=e4497]: Avantpro Workspace
+          - generic [ref=e4498]: "Avantpro Workspace para Mercado Livre: painel centralizado de gestão da operação do seller na plataforma."
+          - generic [ref=e4499]:
+            - generic [ref=e4500]:
+              - img [ref=e4501]
+              - generic [ref=e4502]: Interna
+            - img [ref=e4504]
+        - generic [ref=e4505] [cursor=pointer]:
+          - generic [ref=e4506]:
+            - generic [ref=e4508]: DA
+            - generic [ref=e4510]: Frio
+            - generic [ref=e4512]: Discovery
+            - generic [ref=e4513]: https://grupo-ram.atlassian.net/browse/ML-4483
+          - generic [ref=e4514]: Alerta que promoção vai acabar
+          - generic [ref=e4515]: Alerta para sellers sobre promoções prestes a encerrar, otimizando a gestão de campanhas e estratégias de precificação no ML.
+          - generic [ref=e4516]:
+            - generic [ref=e4517]:
+              - img [ref=e4518]
+              - generic [ref=e4519]: Interna
+            - img [ref=e4521]
+        - generic [ref=e4522] [cursor=pointer]:
+          - generic [ref=e4523]:
+            - generic [ref=e4525]: DA
+            - generic [ref=e4527]: Frio
+            - generic [ref=e4529]: Discovery
+            - generic [ref=e4530]: https://grupo-ram.atlassian.net/browse/ML-4489
+          - generic [ref=e4531]: Mais Vendidos em Menos Tempo
+          - generic [ref=e4532]: Identificação dos produtos mais vendidos em menos tempo no Avantpro ML, destacando oportunidades de crescimento acelerado.
+          - generic [ref=e4533]:
+            - generic [ref=e4534]:
+              - img [ref=e4535]
+              - generic [ref=e4536]: Interna
+            - img [ref=e4538]
+        - generic [ref=e4539] [cursor=pointer]:
+          - generic [ref=e4540]:
+            - generic [ref=e4542]: DA
+            - generic [ref=e4544]: Frio
+            - generic [ref=e4546]: Discovery
+            - generic [ref=e4547]: https://grupo-ram.atlassian.net/browse/ML-4482
+          - generic [ref=e4548]: Análise de Mercado
+          - generic [ref=e4549]: Análise de mercado abrangente no Avantpro ML, fornecendo visão do tamanho do mercado, participação e tendências por categoria.
+          - generic [ref=e4550]:
+            - generic [ref=e4551]:
+              - img [ref=e4552]
+              - generic [ref=e4553]: Interna
+            - img [ref=e4555]
+        - generic [ref=e4556] [cursor=pointer]:
+          - generic [ref=e4557]:
+            - generic [ref=e4559]: DA
+            - generic [ref=e4561]: Frio
+            - generic [ref=e4563]: Discovery
+            - generic [ref=e4564]: https://grupo-ram.atlassian.net/browse/ML-4869
+          - generic [ref=e4565]: Telemetria
+          - generic [ref=e4566]: Captura de eventos da extensão Avantpro ML. Cada story cobre uma funcionalidade da extensão com implementação de telemetria via PostHog.
+          - generic [ref=e4567]:
+            - generic [ref=e4568]:
+              - img [ref=e4569]
+              - generic [ref=e4570]: Interna
+            - img [ref=e4572]
+        - generic [ref=e4573] [cursor=pointer]:
+          - generic [ref=e4574]:
+            - generic [ref=e4576]: DA
+            - generic [ref=e4578]: Frio
+            - generic [ref=e4580]: Discovery
+            - generic [ref=e4581]: https://grupo-ram.atlassian.net/browse/ML-5617
+          - generic [ref=e4582]: Análise de IA -> Meus anúncios
+          - generic [ref=e4583]: Épico responsável por agrupar todas as histórias relacionadas à funcionalidade de Análise de IA na tela de Meus Anúncios do Avantpro ML.
+          - generic [ref=e4584]:
+            - generic [ref=e4585]:
+              - img [ref=e4586]
+              - generic [ref=e4587]: Interna
+            - img [ref=e4589]
+        - generic [ref=e4590] [cursor=pointer]:
+          - generic [ref=e4591]:
+            - generic [ref=e4593]: DA
+            - generic [ref=e4595]: Frio
+            - generic [ref=e4597]: Pausado
+          - generic [ref=e4598]: Encontrar fornecedor nacional
+          - generic [ref=e4599]: O recurso de encontrar fornecedor do avantpro deveria permitir que os sellers pudessem encontrar fornecedores nacionais, não somente internacionais
+          - generic [ref=e4600]:
+            - generic [ref=e4601]:
+              - img [ref=e4602]
+              - generic [ref=e4603]: Customer Box
+            - img [ref=e4605]
+        - generic [ref=e4606] [cursor=pointer]:
+          - generic [ref=e4607]:
+            - generic [ref=e4609]: OM
+            - generic [ref=e4611]: Morno
+            - generic [ref=e4613]: Pausado
+          - generic [ref=e4614]: Gestão de catálogo
+          - generic [ref=e4615]: Automação semelhante à gestão de promo, porém que constantemente faz o seu anúnicio vencer o catálogo!
+          - generic [ref=e4616]:
+            - generic [ref=e4617]:
+              - img [ref=e4618]
+              - generic [ref=e4619]: Customer Box
+            - img [ref=e4621]
+        - generic [ref=e4622] [cursor=pointer]:
+          - generic [ref=e4623]:
+            - generic [ref=e4625]: Admin
+            - generic [ref=e4627]: Frio
+            - generic [ref=e4629]: Entregue
+            - generic [ref=e4630]: https://grupo-ram.atlassian.net/browse/FIS-18
+          - generic [ref=e4631]: Evolução da Emissão de Nota Fiscal
+          - generic [ref=e4632]: O processo atual de emissão de NF é executado em lotes no final do mês e utiliza uma regra D-7 para respeitar o prazo de arrependimento do Art. 49 do CDC
+          - generic [ref=e4633]:
+            - generic [ref=e4634]:
+              - img [ref=e4635]
+              - generic [ref=e4636]: Interna
+            - img [ref=e4638]
+        - generic [ref=e4639] [cursor=pointer]:
+          - generic [ref=e4640]:
+            - generic [ref=e4642]: DA
+            - generic [ref=e4644]: Frio
+            - generic [ref=e4646]: Entregue
+            - generic [ref=e4647]: https://grupo-ram.atlassian.net/browse/ML-5127
+          - generic [ref=e4648]: AvantproPost - Evolução
+          - generic [ref=e4649]: Melhorar o uso da ferramenta Avantpro Post para publicação e gestão de anúncios no Mercado Livre
+          - generic [ref=e4650]:
+            - generic [ref=e4651]:
+              - img [ref=e4652]
+              - generic [ref=e4653]: Interna
+            - img [ref=e4655]
+        - generic [ref=e4656] [cursor=pointer]:
+          - generic [ref=e4657]:
+            - generic [ref=e4659]: Admin
+            - generic [ref=e4661]: Frio
+            - generic [ref=e4663]: Entregue
+            - generic [ref=e4664]: https://grupo-ram.atlassian.net/browse/ADM-153
+          - generic [ref=e4665]: Avantpro Partner
+          - generic [ref=e4666]: "Programa de parceiros Avantpro Partner: gestão, benefícios e onboarding de parceiros da plataforma"
+          - generic [ref=e4667]:
+            - generic [ref=e4668]:
+              - img [ref=e4669]
+              - generic [ref=e4670]: Interna
+            - img [ref=e4672]

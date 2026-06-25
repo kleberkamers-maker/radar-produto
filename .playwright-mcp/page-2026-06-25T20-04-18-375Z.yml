@@ -1,0 +1,122 @@
+- generic [ref=e5]:
+  - generic [ref=e6]:
+    - img [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e10]:
+        - heading "Radar de produto" [level=1] [ref=e11]
+        - generic [ref=e12]: Avantpro
+      - paragraph [ref=e13]: Quanto mais ao centro, mais quente a demanda. As direções do radar são as business units.
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]: "130"
+        - generic [ref=e17]: demandas
+      - generic [ref=e19]:
+        - generic [ref=e20]: "10"
+        - generic [ref=e21]: quentes
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]: Business unit
+      - generic [ref=e25]:
+        - button "Todas" [ref=e26] [cursor=pointer]
+        - button "OM" [ref=e27] [cursor=pointer]
+        - button "Partner" [ref=e28] [cursor=pointer]
+        - button "DA" [ref=e29] [cursor=pointer]
+        - button "Admin" [ref=e30] [cursor=pointer]
+        - button "IO" [ref=e31] [cursor=pointer]
+    - generic [ref=e33]:
+      - generic [ref=e34]: Temperatura
+      - generic [ref=e35]:
+        - button "Todas" [ref=e36] [cursor=pointer]
+        - button "Quente" [ref=e37] [cursor=pointer]
+        - button "Morno" [ref=e38] [cursor=pointer]
+        - button "Frio" [ref=e39] [cursor=pointer]
+    - button "Ready to dev" [active] [ref=e41] [cursor=pointer]:
+      - img [ref=e42]
+      - text: Ready to dev
+    - generic [ref=e43]:
+      - img [ref=e44]
+      - textbox "Buscar por título, responsável..." [ref=e45]
+    - button "Limpar" [ref=e46] [cursor=pointer]:
+      - img [ref=e47]
+      - text: Limpar
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - generic [ref=e53]: Temperatura
+        - generic [ref=e54]: Quente
+        - generic [ref=e56]: Morno
+        - generic [ref=e58]: Frio
+      - generic [ref=e60]:
+        - img [ref=e61]
+        - generic [ref=e72]:
+          - generic [ref=e73]: OM
+          - generic [ref=e74]: Operations management
+        - generic [ref=e76]: Partner
+        - generic [ref=e77]:
+          - generic [ref=e78]: DA
+          - generic [ref=e79]: Data analysis
+        - generic [ref=e80]:
+          - generic [ref=e81]: Admin
+          - generic [ref=e82]: "Avantpro admin: dados"
+        - generic [ref=e83]:
+          - generic [ref=e84]: IO
+          - generic [ref=e85]: Internal operations
+        - button [ref=e90] [cursor=pointer]
+        - button [ref=e91] [cursor=pointer]
+        - button [ref=e92] [cursor=pointer]
+        - button [ref=e93] [cursor=pointer]
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - heading "Demandas" [level=2] [ref=e88]
+        - generic [ref=e89]: 4 de 130
+      - generic [ref=e215]:
+        - generic [ref=e216] [cursor=pointer]:
+          - generic [ref=e217]:
+            - generic [ref=e219]: DA
+            - generic [ref=e221]: Quente
+            - generic [ref=e223]: Ready-to-dev
+          - generic [ref=e224]: Minha conta Avantpro
+          - generic [ref=e225]: Sessão no menu avantpro que permite o usuário ler os dados da sua conta avantpro, plano, nota fiscal, etc.
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - img [ref=e228]
+              - generic [ref=e229]: Customer Box
+            - img [ref=e231]
+        - generic [ref=e232] [cursor=pointer]:
+          - generic [ref=e233]:
+            - generic [ref=e235]: OM
+            - generic [ref=e237]: Frio
+            - generic [ref=e239]: Ready-to-dev
+          - generic [ref=e240]: Painel financeiro
+          - generic [ref=e241]: Mostrando a casacata financeira do seller, bem como glosa, valores não pagos pelo mktplace, produtops não devolvidos e etc,
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - img [ref=e244]
+              - generic [ref=e245]: Interna
+            - img [ref=e247]
+        - generic [ref=e248] [cursor=pointer]:
+          - generic [ref=e249]:
+            - generic [ref=e251]: DA
+            - generic [ref=e253]: Frio
+            - generic [ref=e255]: Ready-to-dev
+            - generic [ref=e2415]: https://grupo-ram.atlassian.net/browse/IDEIA-10
+          - generic [ref=e256]: Incluir mais filtros de ordenação para os outros markteplaces além do ML
+          - generic [ref=e257]: Incluir mais filtros de ordenação para os outros markteplaces além do ML
+          - generic [ref=e258]:
+            - generic [ref=e259]:
+              - img [ref=e260]
+              - generic [ref=e261]: Interna
+            - img [ref=e263]
+        - generic [ref=e264] [cursor=pointer]:
+          - generic [ref=e265]:
+            - generic [ref=e267]: DA
+            - generic [ref=e269]: Frio
+            - generic [ref=e271]: Ready-to-dev
+            - generic [ref=e2416]: https://grupo-ram.atlassian.net/browse/IDEIA-7
+          - generic [ref=e272]: Redirecionamento da lista das categorias na amazon
+          - generic [ref=e273]: Redirecionamento do ranking para os mais vendidos da categoria
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - img [ref=e276]
+              - generic [ref=e277]: Suporte
+            - img [ref=e279]

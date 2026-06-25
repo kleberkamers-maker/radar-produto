@@ -506,12 +506,23 @@ class Component extends DCLogic {
       };
     }
 
+    const readyOnlyActive = this.state.readyOnly;
     return {
       buChips, tempChips, dots, list, hovered,
       q: F.q,
       onSearch: (e) => this.setFilter('q', e.target.value),
       onClear: () => this.clearFilters(),
       onClose: () => this.close(),
+      onToggleReadyOnly: () => this.toggleReadyOnly(),
+      readyOnlyStyle: {
+        display: 'flex', alignItems: 'center', gap: '6px',
+        height: '30px', padding: '0 12px', borderRadius: '9999px', cursor: 'pointer',
+        fontFamily: 'inherit', fontSize: '13px', fontWeight: 500,
+        border: readyOnlyActive ? '1px solid #065F46' : '1px solid #D3D4D6',
+        background: readyOnlyActive ? '#D1FAE5' : '#fff',
+        color: readyOnlyActive ? '#065F46' : '#626262',
+      },
+      readyOnlyIconStyle: 'opacity:' + (readyOnlyActive ? '1' : '0.45') + ';' + (readyOnlyActive ? 'filter:invert(23%) sepia(80%) saturate(600%) hue-rotate(120deg);' : ''),
       selected,
       loading: this.state.loading,
       error: this.state.error,
