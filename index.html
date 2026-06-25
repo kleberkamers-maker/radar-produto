@@ -70,6 +70,10 @@
           </sc-for>
         </div>
       </div>
+      <div style="width:1px;height:24px;background:#E5E7EB;"></div>
+      <button type="button" onClick="{{ onToggleReadyOnly }}" style="{{ readyOnlyStyle }}">
+        <img src="https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg" width="14" height="14" alt="" aria-hidden="true" style="{{ readyOnlyIconStyle }}">Ready to dev
+      </button>
       <div style="flex:1;"></div>
       <div style="display:flex;align-items:center;gap:8px;height:36px;padding:0 12px;background:#fff;border:1px solid #D3D4D6;border-radius:8px;min-width:220px;">
         <img src="https://unpkg.com/lucide-static@latest/icons/search.svg" width="16" height="16" alt="" aria-hidden="true" style="opacity:.5;">
@@ -277,6 +281,7 @@ class Component extends DCLogic {
 
   state = {
     filters: { bu: 'all', temp: 'all', q: '' },
+    readyOnly: false,
     selectedId: null,
     hoverId: null,
     demands: [],
@@ -339,7 +344,8 @@ class Component extends DCLogic {
   }
 
   setFilter(k, v) { this.setState(s => ({ filters: { ...s.filters, [k]: v } })); }
-  clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', q: '' } }); }
+  clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', q: '' }, readyOnly: false }); }
+  toggleReadyOnly() { this.setState(s => ({ readyOnly: !s.readyOnly })); }
   select(id) { this.setState({ selectedId: id }); }
   close() { this.setState({ selectedId: null }); }
 
@@ -366,10 +372,12 @@ class Component extends DCLogic {
   renderVals() {
     const demands = this.state.demands;
     const F = this.state.filters;
+    const ro = this.state.readyOnly;
     const q = F.q.trim().toLowerCase();
     const matches = (d) =>
       (F.bu === 'all' || d.bu === F.bu) &&
       (F.temp === 'all' || d.temp === F.temp) &&
+      (!ro || d.status === 'Ready-to-dev') &&
       (q === '' || (d.title + ' ' + d.desc + ' ' + d.responsavel + ' ' + d.origem + ' ' + d.jira).toLowerCase().includes(q));
 
     const filtered = demands.filter(matches);
