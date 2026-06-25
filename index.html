@@ -265,10 +265,16 @@
             <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ selected.buLabel }} · {{ selected.buName }}</span>
             <span style="{{ selected.tempBadge }}">{{ selected.tempLabel }}</span>
           </div>
+          <sc-if value="{{ !isEditing }}" hint-placeholder-val="{{ true }}">
+            <button type="button" onClick="{{ onStartEdit }}" class="chip" style="display:flex;align-items:center;gap:6px;height:32px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;background:#fff;font-family:inherit;font-size:13px;font-weight:500;color:#626262;cursor:pointer;flex-shrink:0;">
+              <img src="https://unpkg.com/lucide-static@latest/icons/pencil.svg" width="13" height="13" alt="" aria-hidden="true" style="opacity:.6;">Editar
+            </button>
+          </sc-if>
           <button type="button" onClick="{{ onClose }}" class="chip" style="width:32px;height:32px;display:flex;align-items:center;justify-content:center;border:1px solid #D3D4D6;border-radius:8px;background:#fff;cursor:pointer;flex-shrink:0;">
             <img src="https://unpkg.com/lucide-static@latest/icons/x.svg" width="16" height="16" alt="Fechar" style="opacity:.6;">
           </button>
         </div>
+        <sc-if value="{{ !isEditing }}" hint-placeholder-val="{{ true }}">
 
         <h2 style="margin:0 0 6px;font-size:22px;font-weight:500;line-height:1.25;color:#1C1F26;">{{ selected.title }}</h2>
         <p style="margin:0 0 20px;font-size:15px;line-height:1.5;color:#3F4147;">{{ selected.desc }}</p>
@@ -314,6 +320,79 @@
             <img src="https://unpkg.com/lucide-static@latest/icons/external-link.svg" width="16" height="16" alt="" aria-hidden="true" style="filter:brightness(0) invert(1);">Abrir no Jira
           </a>
         </div>
+        </sc-if>
+
+        <sc-if value="{{ isEditing }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Título</label>
+            <input value="{{ editDraft.title }}" onInput="{{ onPatchTitle }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Descrição</label>
+            <textarea value="{{ editDraft.desc }}" onInput="{{ onPatchDesc }}" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;resize:vertical;min-height:80px;"></textarea>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:14px;">
+            <div>
+              <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">BU</label>
+              <select value="{{ editDraft.bu }}" onChange="{{ onPatchBu }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 10px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;cursor:pointer;">
+                <option value="OM">OM</option>
+                <option value="Partner">Partner</option>
+                <option value="DA">DA</option>
+                <option value="Admin">Admin</option>
+                <option value="IO">IO</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Temperatura</label>
+              <select value="{{ editDraft.temp }}" onChange="{{ onPatchTemp }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 10px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;cursor:pointer;">
+                <option value="quente">Quente</option>
+                <option value="morno">Morno</option>
+                <option value="frio">Frio</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Status</label>
+              <select value="{{ editDraft.status }}" onChange="{{ onPatchStatus }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 10px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;cursor:pointer;">
+                <option value="Discovery">Discovery</option>
+                <option value="Refinamento de negócio">Refinamento de negócio</option>
+                <option value="Refinamento técnico">Refinamento técnico</option>
+                <option value="Ready-to-dev">Ready-to-dev</option>
+                <option value="Entregue">Entregue</option>
+                <option value="Pausado">Pausado</option>
+              </select>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+            <div>
+              <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Origem</label>
+              <input value="{{ editDraft.origem }}" onInput="{{ onPatchOrigem }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;">
+            </div>
+            <div>
+              <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Responsável</label>
+              <input value="{{ editDraft.responsavel }}" onInput="{{ onPatchResponsavel }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;">
+            </div>
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Ticket Jira</label>
+            <input value="{{ editDraft.jira }}" onInput="{{ onPatchJira }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;">
+          </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Por que está nessa temperatura</label>
+            <textarea value="{{ editDraft.porqueTemp }}" onInput="{{ onPatchPorqueTemp }}" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;resize:vertical;min-height:80px;"></textarea>
+          </div>
+          <div style="margin-bottom:20px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Próximos passos</label>
+            <textarea value="{{ editDraft.proximosPassos }}" onInput="{{ onPatchProximosPassos }}" style="width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;resize:vertical;min-height:72px;"></textarea>
+            <div style="margin-top:4px;font-size:12px;color:#9CA3AF;">Separe os passos com | (barra vertical)</div>
+          </div>
+          <sc-if value="{{ saveError }}" hint-placeholder-val="{{ false }}">
+            <div style="background:#FEE2E2;border:1px solid #FECACA;border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:#DB0000;">{{ saveError }}</div>
+          </sc-if>
+          <div style="display:flex;gap:10px;padding-top:16px;border-top:1px solid #E5E7EB;">
+            <button type="button" onClick="{{ onSaveEdit }}" disabled="{{ saving }}" style="flex:1;height:40px;background:#271BEF;color:#fff;border:none;border-radius:8px;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;">{{ saveLabel }}</button>
+            <button type="button" onClick="{{ onCancelEdit }}" style="height:40px;padding:0 16px;background:#fff;color:#626262;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;font-weight:500;cursor:pointer;">Cancelar</button>
+          </div>
+        </sc-if>
       </div>
     </div>
   </sc-if>
@@ -322,7 +401,7 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   // ─── CONFIG: URL do Apps Script ──────────────────────────────────────────
-  SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyedW0aBf9YKp4D7zI_2arpppptAcmf3V-nn6N-pIjHClbF6z_Bb-Gjdcb0fTXl3dTFTA/exec';
+  SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxsFEwxj82flNy9J4wW4aBKY1q9EnnO7SMzPSh29sTKS7PsuWWnWLiOezhPfuqa1HbJ1A/exec';
   // ─────────────────────────────────────────────────────────────────────────
 
   state = {
@@ -334,6 +413,10 @@ class Component extends DCLogic {
     demands: [],
     loading: true,
     error: null,
+    editingId: null,
+    editDraft: null,
+    saving: false,
+    saveError: null,
   };
 
   BUS = {
@@ -396,7 +479,54 @@ class Component extends DCLogic {
   toggleReadyOnly() { this.setState(s => ({ readyOnly: !s.readyOnly })); }
   setView(v) { this.setState({ view: v }); }
   select(id) { this.setState({ selectedId: id }); }
-  close() { this.setState({ selectedId: null }); }
+  close() { this.setState({ selectedId: null, editingId: null, editDraft: null, saveError: null }); }
+
+  startEdit(id) {
+    const d = this.state.demands.find(d => d.id === id);
+    if (!d) return;
+    this.setState({
+      editingId: id,
+      editDraft: {
+        title: d.title, desc: d.desc, bu: d.bu, temp: d.temp, status: d.status,
+        origem: d.origem, responsavel: d.responsavel, jira: d.jira,
+        porqueTemp: d.porqueTemp,
+        proximosPassos: d.proximosPassos.join(' | '),
+      },
+      saveError: null,
+    });
+  }
+
+  patchDraft(field, val) {
+    this.setState(s => ({ editDraft: { ...s.editDraft, [field]: val } }));
+  }
+
+  cancelEdit() {
+    this.setState({ editingId: null, editDraft: null, saveError: null });
+  }
+
+  saveEdit() {
+    const draft = this.state.editDraft;
+    const id = this.state.editingId;
+    if (!draft || !id) return;
+    this.setState({ saving: true, saveError: null });
+    fetch(this.SCRIPT_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify({ id, ...draft }),
+    })
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(res => {
+        if (!res.ok) throw new Error(res.erro || 'Erro ao salvar');
+        const proximosPassos = draft.proximosPassos
+          ? draft.proximosPassos.split('|').map(s => s.trim()).filter(Boolean)
+          : [];
+        this.setState(s => ({
+          demands: s.demands.map(d => d.id === id ? { ...d, ...draft, proximosPassos } : d),
+          editingId: null, editDraft: null, saving: false,
+        }));
+      })
+      .catch(err => this.setState({ saving: false, saveError: String(err.message || err) }));
+  }
 
   chipStyle(active) {
     return {
@@ -591,6 +721,9 @@ class Component extends DCLogic {
       color: active ? '#fff' : '#626262',
     });
 
+    const isEditing = !!this.state.editingId;
+    const editDraft = this.state.editDraft || {};
+
     const readyOnlyActive = this.state.readyOnly;
     return {
       buChips, tempChips, dots, list, hovered,
@@ -624,6 +757,24 @@ class Component extends DCLogic {
       radarTabIconStyle: view === 'radar' ? 'filter:brightness(0) invert(1);' : 'opacity:0.5;',
       kanbanTabIconStyle: view === 'kanban' ? 'filter:brightness(0) invert(1);' : 'opacity:0.5;',
       kanbanCols,
+      isEditing,
+      editDraft,
+      saving: this.state.saving,
+      saveError: this.state.saveError,
+      saveLabel: this.state.saving ? 'Salvando...' : 'Salvar',
+      onStartEdit: () => this.state.selectedId && this.startEdit(this.state.selectedId),
+      onCancelEdit: () => this.cancelEdit(),
+      onSaveEdit: () => this.saveEdit(),
+      onPatchTitle:          (e) => this.patchDraft('title', e.target.value),
+      onPatchDesc:           (e) => this.patchDraft('desc', e.target.value),
+      onPatchBu:             (e) => this.patchDraft('bu', e.target.value),
+      onPatchTemp:           (e) => this.patchDraft('temp', e.target.value),
+      onPatchStatus:         (e) => this.patchDraft('status', e.target.value),
+      onPatchOrigem:         (e) => this.patchDraft('origem', e.target.value),
+      onPatchResponsavel:    (e) => this.patchDraft('responsavel', e.target.value),
+      onPatchJira:           (e) => this.patchDraft('jira', e.target.value),
+      onPatchPorqueTemp:     (e) => this.patchDraft('porqueTemp', e.target.value),
+      onPatchProximosPassos: (e) => this.patchDraft('proximosPassos', e.target.value),
     };
   }
 }
