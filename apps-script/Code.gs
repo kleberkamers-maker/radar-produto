@@ -3,7 +3,8 @@
  * ------------------------------------------------------------------
  * A planilha do Google Sheets é o "banco de dados". Cada linha é uma
  * demanda; a primeira linha são os cabeçalhos (id, bu, temp, status,
- * title, desc, origem, responsavel, jira, porqueTemp, proximosPassos).
+ * categoria, title, desc, origem, responsavel, jira, porqueTemp,
+ * proximosPassos).
  *
  * - doGet  : devolve todas as demandas como JSON (já existente).
  * - doPost : ATUALIZA uma demanda existente, casando pela coluna `id`.
@@ -23,7 +24,7 @@
 
 // Campos que o painel de edição pode gravar. `id` nunca é alterado (é a chave).
 var CAMPOS_EDITAVEIS = [
-  'bu', 'temp', 'status', 'title', 'desc',
+  'bu', 'temp', 'status', 'categoria', 'title', 'desc',
   'origem', 'responsavel', 'jira', 'porqueTemp', 'proximosPassos'
 ];
 

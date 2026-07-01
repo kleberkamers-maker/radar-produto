@@ -40,10 +40,10 @@ All product logic lives in the single `<script type="text/x-dc" data-dc-script>`
 Demand data comes from a Google Apps Script web app (URL in `SCRIPT_URL` at the top of the component class). The script returns a JSON array; each row maps to the CSV schema in `demandas-radar.csv`:
 
 ```
-id, bu, temp, title, desc, origem, responsavel, jira, porqueTemp, proximosPassos
+id, bu, temp, status, categoria, title, desc, origem, responsavel, jira, porqueTemp, proximosPassos
 ```
 
-`proximosPassos` is a `|`-separated list of strings, split in `parseRows()`.
+`proximosPassos` is a `|`-separated list of strings, split in `parseRows()`. `categoria` is the Lean category (`Evolução`, `Observabilidade`, `Inovação`, `Aprendizado`) held in the `CATEGORIAS` map in the logic class.
 
 ### Design system (`_ds/`)
 

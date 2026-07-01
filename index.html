@@ -86,6 +86,15 @@
         </div>
       </div>
       <div style="width:1px;height:24px;background:#E5E7EB;"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <span style="font-size:12px;font-weight:500;color:#626262;">Categoria</span>
+        <div style="display:flex;gap:6px;">
+          <sc-for list="{{ catChips }}" as="chip" hint-placeholder-count="5">
+            <button type="button" class="chip" onClick="{{ chip.onClick }}" style="{{ chip.styleObj }}">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+      <div style="width:1px;height:24px;background:#E5E7EB;"></div>
       <button type="button" onClick="{{ onToggleReadyOnly }}" style="{{ readyOnlyStyle }}">
         <img src="https://unpkg.com/lucide-static@latest/icons/check-circle-2.svg" width="14" height="14" alt="" aria-hidden="true" style="{{ readyOnlyIconStyle }}">Ready to dev
       </button>
@@ -201,10 +210,11 @@
         <div style="display:flex;flex-direction:column;gap:12px;">
           <sc-for list="{{ list }}" as="item" hint-placeholder-count="6">
             <div class="demand-card" onClick="{{ item.select }}" style="{{ item.cardStyle }}">
-              <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+              <div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
                 <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ item.buLabel }}</span>
                 <span style="{{ item.tempBadge }}">{{ item.tempLabel }}</span>
                 <span style="{{ item.statusBadge }}">{{ item.statusLabel }}</span>
+                <span style="{{ item.catBadge }}">{{ item.catLabel }}</span>
                 <span style="flex:1;"></span>
                 <span style="font-size:12px;color:#9CA3AF;font-weight:500;">{{ item.jira }}</span>
               </div>
@@ -240,6 +250,7 @@
                     <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap;">
                       <span style="display:inline-flex;align-items:center;height:20px;padding:0 8px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:11px;font-weight:500;">{{ card.buLabel }}</span>
                       <span style="{{ card.tempBadge }}">{{ card.tempLabel }}</span>
+                      <span style="{{ card.catBadge }}">{{ card.catLabel }}</span>
                     </div>
                     <div style="font-size:14px;font-weight:500;color:#1C1F26;line-height:1.35;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;">{{ card.title }}</div>
                     <div style="display:flex;align-items:center;gap:5px;margin-top:8px;padding-top:8px;border-top:1px solid #F1F2F4;font-size:12px;color:#626262;">
@@ -270,6 +281,7 @@
             <sc-if value="{{ selected }}" hint-placeholder-val="{{ false }}">
               <span style="display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:#E7F5FC;color:#271BEF;font-size:12px;font-weight:500;">{{ selected.buLabel }} · {{ selected.buName }}</span>
               <span style="{{ selected.tempBadge }}">{{ selected.tempLabel }}</span>
+              <span style="{{ selected.catBadge }}">{{ selected.catLabel }}</span>
             </sc-if>
             <sc-if value="{{ creating }}" hint-placeholder-val="{{ false }}">
               <span style="font-size:18px;font-weight:500;color:#1C1F26;">Nova demanda</span>
@@ -303,6 +315,16 @@
             <div style="font-size:14px;color:#1C1F26;">{{ selected.responsavel }}</div>
           </div>
         </div>
+
+        <sc-if value="{{ selected.hasCat }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-bottom:20px;">
+            <div style="font-size:12px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px;">Categoria Lean</div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <span style="{{ selected.catBadge }}">{{ selected.catLabel }}</span>
+              <span style="font-size:13px;color:#626262;">{{ selected.catDesc }}</span>
+            </div>
+          </div>
+        </sc-if>
 
         <div style="{{ selected.whyBox }}">
           <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
@@ -372,6 +394,16 @@
               </select>
             </div>
           </div>
+          <div style="margin-bottom:14px;">
+            <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Categoria Lean</label>
+            <select value="{{ editDraft.categoria }}" onChange="{{ onPatchCategoria }}" style="width:100%;box-sizing:border-box;height:40px;padding:0 10px;border:1px solid #D3D4D6;border-radius:8px;font-family:inherit;font-size:14px;color:#1C1F26;background:#fff;outline:none;cursor:pointer;">
+              <option value="">Selecione...</option>
+              <option value="Evolução">Evolução — aprimora o que já existe</option>
+              <option value="Observabilidade">Observabilidade — gera dados e contexto</option>
+              <option value="Inovação">Inovação — cria algo que ainda não existe</option>
+              <option value="Aprendizado">Aprendizado — experimento ou piloto</option>
+            </select>
+          </div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
             <div>
               <label style="display:block;font-size:11px;font-weight:500;color:#9CA3AF;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px;">Origem</label>
@@ -415,7 +447,7 @@ class Component extends DCLogic {
   // ─────────────────────────────────────────────────────────────────────────
 
   state = {
-    filters: { bu: 'all', temp: 'all', q: '' },
+    filters: { bu: 'all', temp: 'all', categoria: 'all', q: '' },
     readyOnly: false,
     view: 'radar',
     selectedId: null,
@@ -453,6 +485,14 @@ class Component extends DCLogic {
     'Entregue':               { bg: '#DCFCE7', fg: '#166534' },
   };
 
+  // Categorias Lean — como cada demanda contribui para o produto.
+  CATEGORIAS = {
+    'Evolução':        { label: 'Evolução',        bg: '#EEF2FF', fg: '#3730A3', desc: 'Aprimora algo que já existe no produto hoje.' },
+    'Observabilidade': { label: 'Observabilidade', bg: '#ECFEFF', fg: '#155E75', desc: 'Gera dados, contexto e visibilidade.' },
+    'Inovação':        { label: 'Inovação',        bg: '#FDF2F8', fg: '#9D174D', desc: 'Cria algo que ainda não existe hoje.' },
+    'Aprendizado':     { label: 'Aprendizado',     bg: '#FFF7ED', fg: '#9A3412', desc: 'Experimento ou piloto para aprender algo.' },
+  };
+
   INACTIVE_STATUSES = ['Pausado', 'Entregue'];
 
   componentDidMount() {
@@ -472,6 +512,7 @@ class Component extends DCLogic {
         bu:             row.bu,
         temp:           row.temp,
         status:         row.status || '',
+        categoria:      row.categoria || '',
         title:          row.title,
         desc:           row.desc,
         origem:         row.origem,
@@ -486,7 +527,7 @@ class Component extends DCLogic {
   }
 
   setFilter(k, v) { this.setState(s => ({ filters: { ...s.filters, [k]: v } })); }
-  clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', q: '' }, readyOnly: false }); }
+  clearFilters() { this.setState({ filters: { bu: 'all', temp: 'all', categoria: 'all', q: '' }, readyOnly: false }); }
   toggleReadyOnly() { this.setState(s => ({ readyOnly: !s.readyOnly })); }
   setView(v) { this.setState({ view: v }); }
   select(id) { this.setState({ selectedId: id }); }
@@ -498,7 +539,7 @@ class Component extends DCLogic {
       editingId: null,
       creating: true,
       editDraft: {
-        title: '', desc: '', bu: 'OM', temp: 'morno', status: 'Discovery',
+        title: '', desc: '', bu: 'OM', temp: 'morno', status: 'Discovery', categoria: 'Evolução',
         origem: '', responsavel: '', jira: '', porqueTemp: '', proximosPassos: '',
       },
       saveError: null,
@@ -511,7 +552,7 @@ class Component extends DCLogic {
     this.setState({
       editingId: id,
       editDraft: {
-        title: d.title, desc: d.desc, bu: d.bu, temp: d.temp, status: d.status,
+        title: d.title, desc: d.desc, bu: d.bu, temp: d.temp, status: d.status, categoria: d.categoria || '',
         origem: d.origem, responsavel: d.responsavel, jira: d.jira,
         porqueTemp: d.porqueTemp,
         proximosPassos: d.proximosPassos.join(' | '),
@@ -589,6 +630,12 @@ class Component extends DCLogic {
     return 'display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:' + s.bg + ';color:' + s.fg + ';font-size:12px;font-weight:500;';
   }
 
+  catBadgeStyle(categoria) {
+    const c = this.CATEGORIAS[categoria];
+    if (!c) return 'display:none;';
+    return 'display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:9999px;background:' + c.bg + ';color:' + c.fg + ';font-size:12px;font-weight:500;';
+  }
+
   renderVals() {
     const demands = this.state.demands;
     const F = this.state.filters;
@@ -597,8 +644,9 @@ class Component extends DCLogic {
     const matches = (d) =>
       (F.bu === 'all' || d.bu === F.bu) &&
       (F.temp === 'all' || d.temp === F.temp) &&
+      (F.categoria === 'all' || d.categoria === F.categoria) &&
       (!ro || d.status === 'Ready-to-dev') &&
-      (q === '' || (d.title + ' ' + d.desc + ' ' + d.responsavel + ' ' + d.origem + ' ' + d.jira).toLowerCase().includes(q));
+      (q === '' || (d.title + ' ' + d.desc + ' ' + d.responsavel + ' ' + d.origem + ' ' + d.jira + ' ' + d.categoria).toLowerCase().includes(q));
 
     const filtered = demands.filter(matches);
     const isInactive = d => this.INACTIVE_STATUSES.includes(d.status);
@@ -615,6 +663,8 @@ class Component extends DCLogic {
         tempBadge: this.tempBadgeStyle(t),
         statusLabel: d.status || '',
         statusBadge: this.statusBadgeStyle(d.status),
+        catLabel: d.categoria || '',
+        catBadge: this.catBadgeStyle(d.categoria),
         select: () => this.select(d.id),
         cardStyle: {
           background: inactive ? '#FAFAFA' : '#fff',
@@ -707,6 +757,14 @@ class Component extends DCLogic {
       styleObj: this.chipStyle(F.temp === c.key),
     }));
 
+    const catChips = [{ key: 'all', label: 'Todas' }].concat(
+      Object.keys(this.CATEGORIAS).map(k => ({ key: k, label: this.CATEGORIAS[k].label }))
+    ).map(c => ({
+      label: c.label,
+      onClick: () => this.setFilter('categoria', c.key),
+      styleObj: this.chipStyle(F.categoria === c.key),
+    }));
+
     const sd = demands.find(d => d.id === this.state.selectedId);
     let selected = null;
     if (sd) {
@@ -721,6 +779,10 @@ class Component extends DCLogic {
         tempBadge: this.tempBadgeStyle(t),
         statusLabel: sd.status || '',
         statusBadge: this.statusBadgeStyle(sd.status),
+        catLabel: sd.categoria || '',
+        catBadge: this.catBadgeStyle(sd.categoria),
+        catDesc: this.CATEGORIAS[sd.categoria] ? this.CATEGORIAS[sd.categoria].desc : '',
+        hasCat: !!this.CATEGORIAS[sd.categoria],
         jiraUrl: 'https://avantpro.atlassian.net/browse/' + sd.jira,
         whyBox: { background: t.bg, borderRadius: '10px', padding: '14px 16px' },
       };
@@ -736,6 +798,8 @@ class Component extends DCLogic {
           buLabel: this.BUS[d.bu] ? this.BUS[d.bu].label : d.bu,
           tempLabel: t.label,
           tempBadge: this.tempBadgeStyle(t),
+          catLabel: d.categoria || '',
+          catBadge: this.catBadgeStyle(d.categoria),
           title: d.title,
           responsavel: d.responsavel,
           jira: d.jira,
@@ -772,7 +836,7 @@ class Component extends DCLogic {
 
     const readyOnlyActive = this.state.readyOnly;
     return {
-      buChips, tempChips, dots, list, hovered,
+      buChips, tempChips, catChips, dots, list, hovered,
       q: F.q,
       onSearch: (e) => this.setFilter('q', e.target.value),
       onClear: () => this.clearFilters(),
@@ -823,6 +887,7 @@ class Component extends DCLogic {
       onPatchBu:             (e) => this.patchDraft('bu', e.target.value),
       onPatchTemp:           (e) => this.patchDraft('temp', e.target.value),
       onPatchStatus:         (e) => this.patchDraft('status', e.target.value),
+      onPatchCategoria:      (e) => this.patchDraft('categoria', e.target.value),
       onPatchOrigem:         (e) => this.patchDraft('origem', e.target.value),
       onPatchResponsavel:    (e) => this.patchDraft('responsavel', e.target.value),
       onPatchJira:           (e) => this.patchDraft('jira', e.target.value),
